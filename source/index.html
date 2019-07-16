@@ -5,8 +5,117 @@
     <title>HTML Academy: Погнали</title>
   </head>
   <body>
-
-    <p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/adaptive">HTML и CSS, уровень 2</a>».</p>
-
+    <header class="page-header">
+      <a class="page-header__logo" href="#">
+        <img class="page-header__logo-image" src="http://placehold.it/150x100" alt="Логотип сервиса для поиска попутчиков поехали">
+      </a>
+      <nav class="main-nav">
+        <button class="main-nav__toggle" type="button">Открыть меню</button>
+        <div class="main-nav__wrapper">
+        <ul class="main-nav__list site-list">
+          <li class="site-list__item"><a href="#">О сервисе</a></li>
+          <li class="site-list__item"><a href="#">Направления</a></li>
+          <li class="site-list__item"><a href="#">Попутчики</a></li>
+        </ul>
+        <ul class="main-nav__list user-list">
+          <li class="user-list__item"><a class="user-list__login" href="#">Авторизация</a></li>
+        </ul>
+        <ul class="main-nav__list contacts-list">
+          <li class="contacts-list__item">8 800 555-26-28</li>
+          <li class="contacts-list__item">mail@htmlacademy.ru</li>
+        </ul>
+        <ul class="main-nav__list social-list">
+          <li class="social-list__item"><a href="#"></a>Facebook</li>
+          <li class="social-list__item"><a href="#"></a>Vk</li>
+          <li class="social-list__item"><a href="#"></a>Instagram</li>
+        </ul>
+        </div>
+      </nav>
+    </header>
+    <main class="page-main">
+      <h1 class="visually-hidden">Приложение Погнали - лучшее для поиска попутчиков</h1>
+      <section class="intro">
+        <h2 class="visually-hidden">Контакты и авторизация</h2>
+        <header class="intro__header">
+          <b class="intro__slogan">
+            В путешествие с крутыми попутчиками!
+          </b>
+        </header>
+        <ul class="intro__list call-write-list">
+          <li class="call-write-list__item"><button type="button">Позвонить</button></li>
+          <li class="call-write-list__item"><button type="button">Написать</button></li>
+        </ul>
+        <ul class="intro__list user-list">
+          <li class="intro-list__item"><a class="user-list__login" href="#">Авторизация</a></li>
+        </ul>
+        <blockquote class="intro-review review">
+          <p class="review__text">
+            "Лучшее приложение, что я видел в жизни!"
+          </p>
+          <cite class="review__author">
+            Мурат Эльтазин главный редактор газеты "гаджетлайф"
+          </cite>
+        </blockquote>
+      </section>
+      <section class="instruction">
+        <h2 class="visually-hidden">Как это работает?</h2>
+        <ul class="instruction__list steps-list">
+        <li class="steps-list__item steps-list__item--first">
+          <p>Выберите направление</p>
+          <span>1</span>
+        </li>
+        <li class="steps-list__item steps-list__item--second">
+          <p>Изучите идеи путешественников</p>
+          <span>2</span>
+        </li>
+        <li class="steps-list__item steps-list__item--third">
+          <p>Находите тех, кто похож на вас</p>
+          <span>3</span>
+        </li>
+        <li class="steps-list__item steps-list__item--fourth">
+          <p>Путешествуйте вместе!</p>
+          <span>4</span>
+        </li>
+        </ul>
+      </section>
+      <section class="about-service">
+        <h2 class="about-service__title">О сервисе</h2>
+        <p class="about-service__paragraph">
+          Любое путешествие веселее
+          с попутчиками, которые на одной волне с тобой! Делитесь своими идеями путешествий и черпайте вдохновение в чужих.
+        </p>
+        <p class="about-service__paragraph about-service__paragraph--bold">
+          А если найдете кого-то близкого по духу - скорее зовите в совместный трип!
+        </p>
+      </section>
+      <section class="destinations">
+        <h2 class="destinations__title">Направления</h2>
+        <p>Мы не продаем туры и ничего не рекламируем. Люди сами пишут о странах куда хотели бы отправиться и чем там можно заняться.</p>
+        <ul class="destinations__list country-list">
+          <li class="country-list__item">
+            <img class="country-list__image" src="http://placehold.it/150x100" alt="Пляжи Тайланда">
+            <h3 class="country-list__title">Тайланд</h3>
+            <p class="country-list__description">Джунгли зовут!</p>
+            <span class="country-list__flag">Флаг Тайланда</span>
+            <span class="country-list__views">18321</span>
+          </li>
+          <li class="country-list__item">
+            <img class="country-list__image" src="http://placehold.it/150x100" alt="Улицы Франции">
+            <h3 class="country-list__title">Франция</h3>
+            <p class="country-list__description">трэ бьен, манифик!</p>
+            <span class="country-list__flag">Флаг Франции</span>
+            <span class="country-list__views">12518</span>
+          </li>
+          <li class="country-list__item">
+            <img class="country-list__image" src="http://placehold.it/150x100" alt="Карлов мост">
+            <h3 class="country-list__title">Чехия</h3>
+            <p class="country-list__description">Закоулки старой Европы</p>
+            <span class="country-list__flag">Флаг Чехии</span>
+            <span class="country-list__views">5326</span>
+          </li>
+        </ul>
+        <a class="destination__to-all button" href="#">Показать все</a>
+      </section>
+    </main>
   </body>
 </html>
