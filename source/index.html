@@ -90,32 +90,144 @@
       </section>
       <section class="destinations">
         <h2 class="destinations__title">Направления</h2>
-        <p>Мы не продаем туры и ничего не рекламируем. Люди сами пишут о странах куда хотели бы отправиться и чем там можно заняться.</p>
+        <p class="destinations__about">Мы не продаем туры и ничего не рекламируем. Люди сами пишут о странах куда хотели бы отправиться и чем там можно заняться.</p>
         <ul class="destinations__list country-list">
-          <li class="country-list__item">
-            <img class="country-list__image" src="http://placehold.it/150x100" alt="Пляжи Тайланда">
-            <h3 class="country-list__title">Тайланд</h3>
-            <p class="country-list__description">Джунгли зовут!</p>
-            <span class="country-list__flag">Флаг Тайланда</span>
-            <span class="country-list__views">18321</span>
+          <li class="country-list__item country-card">
+            <img class="country-card__image" src="http://placehold.it/150x100" alt="Пляжи Тайланда">
+            <h3 class="country-card__title">Тайланд</h3>
+            <p class="country-card__description">Джунгли зовут!</p>
+            <span class="country-card__flag">Флаг Тайланда</span>
+            <span class="country-card__views">18321</span>
           </li>
-          <li class="country-list__item">
-            <img class="country-list__image" src="http://placehold.it/150x100" alt="Улицы Франции">
-            <h3 class="country-list__title">Франция</h3>
-            <p class="country-list__description">трэ бьен, манифик!</p>
-            <span class="country-list__flag">Флаг Франции</span>
-            <span class="country-list__views">12518</span>
+          <li class="country-list__item country-card">
+            <img class="country-card__image" src="http://placehold.it/150x100" alt="Улицы Франции">
+            <h3 class="country-card__title">Франция</h3>
+            <p class="country-card__description">трэ бьен, манифик!</p>
+            <span class="country-card__flag">Флаг Франции</span>
+            <span class="country-card__views">12518</span>
           </li>
-          <li class="country-list__item">
-            <img class="country-list__image" src="http://placehold.it/150x100" alt="Карлов мост">
-            <h3 class="country-list__title">Чехия</h3>
-            <p class="country-list__description">Закоулки старой Европы</p>
-            <span class="country-list__flag">Флаг Чехии</span>
-            <span class="country-list__views">5326</span>
+          <li class="country-list__item country-card">
+            <img class="country-card__image" src="http://placehold.it/150x100" alt="Карлов мост">
+            <h3 class="country-card__title">Чехия</h3>
+            <p class="country-card__description">Закоулки старой Европы</p>
+            <span class="country-card__flag">Флаг Чехии</span>
+            <span class="country-card__views">5326</span>
           </li>
         </ul>
         <a class="destination__to-all button" href="#">Показать все</a>
       </section>
+      <section class="companions">
+        <h2 class="companions__title">Попутчики</h2>
+        <p class="companions__about">Все мы индивидуальны и у каждого свой взгляд на идеальный отдых. Одному нужен пляж и коктейль, а другому маршрут для хайкинга.</p>
+        <p class="companions__about companions__about--bold">Теперь можно легко найти единомышленников!</p>
+        <ul class="companions__list people-list">
+          <li class="people-list__item people-card">
+            <img class="people-card__image" src="http://placehold.it/150x100" alt="Таня Фирсова">
+            <ul class="people-card__flags-list country-flags">
+              <li class="country-flags__item">
+                <span>Флаг1</span>
+              </li>
+              <li class="country-flags__item">
+                <span>Флаг2</span>
+              </li>
+              <li class="country-flags__item">
+                <span>Флаг3</span>
+              </li>
+            </ul>
+            <h3 class="people-card__title">Таня Фирсова</h3>
+            <p class="people-card__hashtags">#ЗОЖ #ПП #Фитнес #пляж #авокадо #смузи</p>
+            <ul class="people-card__vehicle-list vehicle-type">
+              <li class="vehicle-type__item vehicle-type__item--plane vehicle-icon">
+                <span class="vehicle-icon vehicle-icon--active">Самолет</span>
+              </li>
+              <li class="vehicle-type__item vehicle-type__item--bus vehicle-icon">
+                <span class="vehicle-icon">Автобус</span>
+              </li>
+              <li class="vehicle-type__item vehicle-type__item--velo vehicle-icon">
+                <span class="vehicle-icon">Велосипед</span>
+              </li>
+              <li class="vehicle-type__item vehicle-type__item--foots vehicle-icon">
+                <span class="vehicle-icon">Пешком</span>
+              </li>
+              <span class="people-card__level">99 level</span>
+            </ul>
+          </li>
+          <li class="people-list__item people-card">
+            <img class="people-card__image" src="http://placehold.it/150x100" alt="Петя Дёмин">
+            <ul class="people-card__flags-list country-flags">
+              <li class="country-flags__item">
+                <span>Флаг1</span>
+              </li>
+              <li class="country-flags__item">
+                <span>Флаг2</span>
+              </li>
+            </ul>
+            <h3 class="people-card__title">Петя Дёмин</h3>
+            <p class="people-card__hashtags">#бургер #бар #футбол #концерт #крафт</p>
+            <ul class="people-card__vehicle-list vehicle-type">
+              <li class="vehicle-type__item vehicle-type__item--plane vehicle-icon">
+                <span class="vehicle-icon vehicle-icon--active">Самолет</span>
+              </li>
+              <li class="vehicle-type__item vehicle-type__item--bus vehicle-icon">
+                <span class="vehicle-icon vehicle-icon--active">Автобус</span>
+              </li>
+              <li class="vehicle-type__item vehicle-type__item--velo vehicle-icon">
+                <span class="vehicle-icon">Велосипед</span>
+              </li>
+              <li class="vehicle-type__item vehicle-type__item--foots vehicle-icon">
+                <span class="vehicle-icon vehicle-icon--active">Пешком</span>
+              </li>
+              <span class="people-card__level">99 level</span>
+            </ul>
+          </li>
+        </ul>
+      </section>
+      <section class="tariffs">
+        <h2 class="visually-hidden">Цены на наши услуги</h2>
+        <p class="tariffs__paragraph">Добавьте свой профиль</p>
+        <img src="http://placehold.it/150x100" alt="Платные услуги">
+        <ul class="tariffs__list our-services">
+          <li class="our-services__item">
+            <p class="our-services__paragraph">
+              Базовое размещение<br>Бесплатно
+            </p>
+          </li>
+          <li class="our-services__item">
+            <p class="our-services__paragraph">
+              Вывод на первых позициях<br>99 руб./месяц
+            </p>
+          </li>
+          <li class="our-services__item">
+            <p class="our-services__paragraph">
+              Кастомный цвет карточки<br>59 руб./месяц
+            </p>
+          </li>
+        </ul>
+        <a class="tariffs__business-tariffs" href="#">Показать тарифы для бизнеса</a>
+      </section>
     </main>
+
+    <footer class="page-footer">
+      <a class="page-footer__logo" href="#">
+        <img class="page-footer__logo-image" src="http://placehold.it/150x100" alt="Логотип сервиса для поиска попутчиков поехали">
+      </a>
+      <div class="page-footer__social social">
+        <ul class="social-list">
+          <li class="social__item">
+            <a class="social__link social__link--vk" href="#">vk.com</a>
+          </li>
+           <li class="social__item">
+            <a class="social__link social__link--insta" href="#">instagram.com</a>
+          </li>
+           <li class="social__item">
+            <a class="social__link social__link--fb" href="#">facebook.com</a>
+          </li>
+        </ul>
+      </div>
+      <div class="page-footer__copyright copyright">
+        <b class="copyright__text">Разработано:</b>
+        <a class="copyright__link" href="#">htmlacademy.ru</a>
+      </div>
+    </footer>
   </body>
 </html>
