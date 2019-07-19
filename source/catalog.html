@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>HTML Academy: Погнали</title>
+  </head>
+  <body>
+    <header class="page-header">
+      <a class="page-header__logo" href="#">
+        <img class="page-header__logo-image" src="http://placehold.it/150x100" alt="Логотип сервиса для поиска попутчиков поехали">
+      </a>
+      <nav class="main-nav">
+        <button class="main-nav__toggle" type="button">Открыть меню</button>
+        <div class="main-nav__wrapper">
+        <ul class="main-nav__list site-list">
+          <li class="site-list__item"><a href="#">О сервисе</a></li>
+          <li class="site-list__item"><a href="#">Направления</a></li>
+          <li class="site-list__item"><a href="#">Попутчики</a></li>
+        </ul>
+        <ul class="main-nav__list user-list">
+          <li class="user-list__item"><a class="user-list__login" href="#">Авторизация</a></li>
+        </ul>
+        <ul class="main-nav__list contacts-list">
+          <li class="contacts-list__item">8 800 555-26-28</li>
+          <li class="contacts-list__item">mail@htmlacademy.ru</li>
+        </ul>
+        <ul class="main-nav__list social-list">
+          <li class="social-list__item"><a href="#"></a>Facebook</li>
+          <li class="social-list__item"><a href="#"></a>Vk</li>
+          <li class="social-list__item"><a href="#"></a>Instagram</li>
+        </ul>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <section class="intro-destination">
+        <h1 class="visually-hidden">Форма добавления нового маршрута путешествия</h1>
+        <h2 class="intro-destination__title">Направления</h2>
+      </section>
+      <section class="my-card">
+        <h2 class="visually-hidden">Моя анкета</h2>
+        <img class="my-card__level" src="http://placehold.it/150x100" alt="Мой уровень">
+        <img class="my-card__avatar" src="http://placehold.it/150x100" alt="Мой аватар">
+        <a class="my-card__button" href="#">Сменить фото</a>
+        <div class="my-card__hashtags hashtags">
+          <h3 class="hashtags__title">Теги</h3>
+          <p class="hashtags__hashtags-massive">#бургер #бар #футбол #концерт #крафт</p>
+        </div>
+        <div class="my-card__vehicle vehicle">
+          <h3 class="vehicle__title">Транспорт</h3>
+<!--    TODO: Могу ли я просто скопировать список со способами путешествий ниже с главной и использовать его, лишь изменив класс привязки к секции?      -->
+          <ul class="vehicle__vehicle-list vehicle-type">
+              <li class="vehicle-type__item vehicle-type__item--plane vehicle-icon">
+                <span class="vehicle-icon vehicle-icon--active">Самолет</span>
+              </li>
+              <li class="vehicle-type__item vehicle-type__item--bus vehicle-icon">
+                <span class="vehicle-icon vehicle-icon--active">Автобус</span>
+              </li>
+              <li class="vehicle-type__item vehicle-type__item--velo vehicle-icon">
+                <span class="vehicle-icon">Велосипед</span>
+              </li>
+              <li class="vehicle-type__item vehicle-type__item--foots vehicle-icon">
+                <span class="vehicle-icon vehicle-icon--active">Пешком</span>
+              </li>
+            </ul>
+        </div>
+      </section>
+      <section class="my-plans">
+        <h2 class="my-plans__title">Мои планы</h2>
+<!--   TODO: Есть ли выгода в использовании именно тут упорядоченного списка?     -->
+        <ol class="my-plans__list plans-list">
+          <li class="plans-list__item">
+            <h3 class="plans-list__title">Франция, Италия</h3>
+            <div class="plans-list__wrapper">
+              <p class="plans-list__companions">3 попутчика</p>
+              <p class="plans-list__dates">26 мар - 29 мар</p>
+            </div>
+            <a class="plans-list__link-change" href="#">Изменить</a>
+          </li>
+          <li class="plans-list__item">
+            <h3 class="plans-list__title">Тайланд, Индонезия</h3>
+            <div class="plans-list__wrapper">
+              <p class="plans-list__companions">1 попутчик</p>
+              <p class="plans-list__dates">1 июл - 15 июл</p>
+            </div>
+            <a class="plans-list__link-change" href="#">Изменить</a>
+          </li>
+        </ol>
+      </section>
+      <section class="add-plan">
+        <h2 class="add-plan__title">Добавить план:</h2>
+<!--   TODO: Вот такая конструкция из трех классов норм? Я их сделал для стилизации заголовка и параграфа, которые одинаковые во всех трех шагах     -->
+        <div class="add-plan__steps steps steps-1">
+          <h3 class="steps__title">Шаг 1.<br>Даты пребывания</h3>
+          <p class="steps__about">Укажите предпочтительное количество попутчиков, которых  вы хотели бы позвать в поездку и ее предполагаемую длительность.</p>
+<!--     TODO: Не понимаю как разметить поля "Ищу попутчиков" и "Длительность"     -->
+          <input class="steps-1__childs-checkbox" type="checkbox" id="childs" name="childs" checked>
+<!--     TODO: Класс для label тоже нужен?     -->
+          <label for="childs">Можно с детьми</label>
+<!--     TODO: С календарем тоже не знаю что делать     -->
+          <a class="steps__button button" href="#">Следующий шаг</a>
+        </div>
+        <div class="add-plan__steps steps steps-2">
+          <h3 class="steps__title">Шаг 2.<br>Маршрут</h3>
+          <p class="steps__about">Укажите страны, которые вы хотели по посетить. Это может быть одна или сразу несколько.</p>
+
+
+          <a class="steps__button button" href="#">Следующий шаг</a>
+        </div>
+
+      </section>
+    </main>
+
+    <footer class="page-footer">
+      <a class="page-footer__logo" href="#">
+        <img class="page-footer__logo-image" src="http://placehold.it/150x100" alt="Логотип сервиса для поиска попутчиков поехали">
+      </a>
+      <div class="page-footer__social social">
+        <ul class="social-list">
+          <li class="social__item">
+            <a class="social__link social__link--vk" href="#">vk.com</a>
+          </li>
+           <li class="social__item">
+            <a class="social__link social__link--insta" href="#">instagram.com</a>
+          </li>
+           <li class="social__item">
+            <a class="social__link social__link--fb" href="#">facebook.com</a>
+          </li>
+        </ul>
+      </div>
+      <div class="page-footer__copyright copyright">
+        <b class="copyright__text">Разработано:</b>
+        <a class="copyright__link" href="#">htmlacademy.ru</a>
+      </div>
+    </footer>
+  </body>
+</html>
