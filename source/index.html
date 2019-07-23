@@ -2,60 +2,71 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="css/style.css">
     <title>HTML Academy: Погнали</title>
   </head>
   <body>
-    <header class="page-header">
-      <a class="page-header__logo" href="#">
-        <img class="page-header__logo-image" src="http://placehold.it/150x100" alt="Логотип сервиса для поиска попутчиков поехали">
-      </a>
-      <nav class="main-nav">
-        <button class="main-nav__toggle" type="button">Открыть меню</button>
-        <div class="main-nav__wrapper">
-        <ul class="main-nav__list site-list">
-          <li class="site-list__item"><a href="#">О сервисе</a></li>
-          <li class="site-list__item"><a href="#">Направления</a></li>
-          <li class="site-list__item"><a href="#">Попутчики</a></li>
-        </ul>
-        <ul class="main-nav__list user-list">
-          <li class="user-list__item"><a class="user-list__login" href="#">Авторизация</a></li>
-        </ul>
-        <ul class="main-nav__list contacts-list">
-          <li class="contacts-list__item">8 800 555-26-28</li>
-          <li class="contacts-list__item">mail@htmlacademy.ru</li>
-        </ul>
-        <ul class="main-nav__list social-list">
-          <li class="social-list__item"><a href="#"></a>Facebook</li>
-          <li class="social-list__item"><a href="#"></a>Vk</li>
-          <li class="social-list__item"><a href="#"></a>Instagram</li>
-        </ul>
+    <header class="page-header page-header--open">
+      <div class="container">
+        <div class="page-header__wrapper-menu wrapper-menu">
+          <a class="wrapper-menu__logo" href="#">
+            <img class="wrapper-menu__logo-image" src="img/logo-mobile-blue@1x.png" width="100" height="19" alt="Логотип сервиса для поиска попутчиков поехали">
+          </a>
+          <button class="wrapper-menu__toggle wrapper-menu__toggle--open" type="button"></button>
         </div>
-      </nav>
+        <nav class="main-nav">
+          <ul class="main-nav__site-list site-list">
+            <li><a class="site-list__item" href="#">О сервисе</a></li>
+            <li><a class="site-list__item" href="#">Направления</a></li>
+            <li><a class="site-list__item" href="#">Попутчики</a></li>
+          </ul>
+          <ul class="main-nav__user-list user-list">
+            <li class="user-list__login-button"><a class="user-list__link" href="#">Авторизация</a></li>
+          </ul>
+          <ul class="main-nav__contacts-list contacts-list">
+            <li class="contacts-list__item">
+              <span class="contacts-list__text">8 800 555-26-28</span>
+            </li>
+            <li class="contacts-list__item">
+              <span class="contacts-list__text">mail@htmlacademy.ru</span>
+            </li>
+          </ul>
+          <ul class="main-nav__social-list social-list">
+            <li class="social-list__item"><a href="#">Facebook</a></li>
+            <li class="social-list__item"><a href="#">Vk</a></li>
+            <li class="social-list__item"><a href="#">Instagram</a></li>
+          </ul>
+        </nav>
+      </div>
     </header>
     <main class="page-main">
       <h1 class="visually-hidden">Приложение Погнали - лучшее для поиска попутчиков</h1>
       <section class="intro">
+        <div class="container">
         <h2 class="visually-hidden">Контакты и авторизация</h2>
-        <header class="intro__header">
-          <b class="intro__slogan">
-            В путешествие с крутыми попутчиками!
-          </b>
-        </header>
-        <ul class="intro__list call-write-list">
-          <li class="call-write-list__item"><button type="button">Позвонить</button></li>
-          <li class="call-write-list__item"><button type="button">Написать</button></li>
-        </ul>
-        <ul class="intro__list user-list">
-          <li class="intro-list__item"><a class="user-list__login" href="#">Авторизация</a></li>
+        <div class="intro__header">
+          <b class="intro__slogan">В путешествие<br> с крутыми попутчиками!</b>
+        </div>
+        <ul class="intro__list intro-list">
+          <li class="intro-list__item">
+            <button class="intro-list__button intro-list__button--phone" type="button"></button>
+          </li>
+          <li class="intro-list__item">
+            <button class="intro-list__button intro-list__button--email" type="button"></button>
+          </li>
+          <li class="intro-list__item login-button">
+            <a class="login-button__link" href="#">Авторизация</a>
+          </li>
         </ul>
         <blockquote class="intro-review review">
           <p class="review__text">
-            "Лучшее приложение, что я видел в жизни!"
+            "Лучшее приложение,<br> что я видел в жизни!"
           </p>
           <cite class="review__author">
-            Мурат Эльтазин главный редактор газеты "гаджетлайф"
+            Мурат Эльтазин<br> главный редактор<br> газеты "гаджетлайф"
           </cite>
         </blockquote>
+        </div>
       </section>
       <section class="instruction">
         <h2 class="visually-hidden">Как это работает?</h2>
@@ -207,7 +218,7 @@
       </section>
     </main>
 
-    <footer class="page-footer">
+    <footer class="page-footer wrapper">
       <a class="page-footer__logo" href="#">
         <img class="page-footer__logo-image" src="http://placehold.it/150x100" alt="Логотип сервиса для поиска попутчиков поехали">
       </a>
