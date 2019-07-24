@@ -2,14 +2,25 @@
   padding-top: 20px;
   position: relative;
 
-  background:
-    url(../img/traveller-illustration-mobile@1x.png) no-repeat 51% 39%,
-    url(../img/globe-back-mobile@1x.jpg) no-repeat 50% -120%;
   background-color: #161c36;
   color: #ffffff;
 
+  &__wrapper {
+    background: url(../img/globe-back-mobile@1x.jpg) no-repeat 50% 50%;
+    width: 320px;
+    height: 400px;
+  }
+
+  &__wrapper-1 {
+    position: absolute;
+    background: url(../img/traveller-illustration-mobile@1x.png);
+    width: 192px;
+    height: 255px;
+    background-repeat: no-repeat;
+    transform: translate(50px, 147px);
+  }
+
   &__header {
-    padding-bottom: 345px;
     text-align: center;
   }
 
@@ -20,10 +31,19 @@
   }
 
   &__list {
-    position: absolute;
-    top: 350px;
-    left: 585px;
+    position: relative;
+    margin-top: -20px;
+  }
 
-    width: 270px;
+  &__review {
+    margin: 0;
+    padding: 0;
+    padding-left: 25px;
+    padding-top: 30px;
+    margin-bottom: 115px;
+  }
+
+  &__instruction {
+    padding-bottom: 38px;
   }
 }

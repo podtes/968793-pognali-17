@@ -1,0 +1,50 @@
+.vehicle-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  width: 100%;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  &__item {
+    width: 26px;
+    height: 22px;
+    margin-right: 10px;
+    opacity: 0.15;
+
+    &--active {
+      opacity: 1;
+    }
+  }
+
+  &__plane {
+    display: block;
+    background: url(../img/plane.svg) no-repeat 50% 50%;
+    width: 26px;
+    height: 22px;
+  }
+
+  &__bus {
+    display: block;
+    background: url(../img/bus.svg) no-repeat 50% 50%;
+    width: 26px;
+    height: 22px;
+  }
+
+  &__velo {
+    display: block;
+    background: url(../img/bike.svg) no-repeat 50% 50%;
+    width: 26px;
+    height: 22px;
+  }
+
+  &__foot {
+    display: block;
+    background: url(../img/run.svg) no-repeat 50% 50%;
+    width: 26px;
+    height: 22px;
+  }
+}
