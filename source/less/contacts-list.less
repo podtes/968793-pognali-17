@@ -1,0 +1,24 @@
+.contacts-list {
+  font-weight: bold;
+  text-transform: uppercase;
+
+  text-align: left;
+
+  &__item {
+    padding-left: 60px;
+    margin-bottom: 30px;
+
+    position: relative;
+
+    &::before {
+      position: absolute;
+      content: "";
+      top: -12px;
+      left: 0;
+      background-color: #121936;
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+    }
+  }
+}

@@ -1,0 +1,109 @@
+.companions-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  &__item {
+    padding: 15px 20px 20px 20px;
+    margin-bottom: 10px;
+    background-color: #ffffff;
+    border-radius: 20px;
+  }
+
+  &__top-wrapper {
+    margin-bottom: 15px;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+
+  &__bottom-wrapper {
+    margin-bottom: 15px;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  &__image-wrapper {
+    position: relative;
+    margin-right: 15px;
+  }
+
+    &__title-wrapper {
+    position: relative;
+    flex-grow: 1;
+  }
+
+  &__image {
+    border-radius: 50%;
+  }
+
+  &__like {
+    display: block;
+
+    position: absolute;
+    top: 41px;
+    left:50px;
+
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+
+    background-color: #f9eaea;
+  }
+
+  &__likes-value {
+    font-size: 14px;
+    line-height: 21px;
+    color: #161c35;
+    font-weight: bold;
+  }
+
+  &__title {
+    margin: 0;
+    margin-bottom: 7px;
+    padding: 0;
+
+    font-size: 20px;
+    line-height: 20px;
+    color: #1d2e5b;
+
+    &--offline {
+
+      &::after {
+        position: absolute;
+        content: "";
+        top: 8px;
+        right: 0;
+        width: 5px;
+        height: 5px;
+        border-radius: 50%;
+        background-color: darkred;
+      }
+    }
+
+    &--online {
+
+      &::after {
+        position: absolute;
+        content: "";
+        top: 8px;
+        right: 0;
+        width: 5px;
+        height: 5px;
+        border-radius: 50%;
+        background-color: green;
+      }
+    }
+  }
+
+  &__hashtags {
+    margin: 0;
+    padding: 0;
+
+    font-size: 15px;
+    line-height: 18px;
+  }
+}
