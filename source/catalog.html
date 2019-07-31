@@ -2,6 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Погнали</title>
     <link rel="stylesheet" href="css/style.css">
   </head>
@@ -10,8 +11,8 @@
       <div class="container">
         <div class="page-header__wrapper-menu wrapper-menu">
           <a class="wrapper-menu__logo" href="#">
-<!--            <img class="wrapper-menu__logo-image" src="img/logo-mobile-blue@1x.png" width="100" height="19" alt="Логотип сервиса для поиска попутчиков поехали">-->
-            <img class="wrapper-menu__logo-image--open" src="img/logo-mobile-white@1x.png" width="100" height="19" alt="Логотип сервиса для поиска попутчиков поехали">
+<!--            <img class="wrapper-menu__logo-image" src="./img/logo-mobile-blue@1x.png" width="100" height="19" alt="Логотип сервиса для поиска попутчиков поехали">-->
+            <img class="wrapper-menu__logo-image--open" src="./img/logo-mobile-white@1x.png" width="100" height="19" alt="Логотип сервиса для поиска попутчиков поехали">
           </a>
           <button class="wrapper-menu__toggle wrapper-menu__toggle--open" type="button"></button>
         </div>
@@ -55,9 +56,11 @@
 
     <main class="page-main">
       <section class="intro-companions">
-        <div class="intro-companions__wrapper container">
-          <h1 class="visually-hidden">Выбор подходящего попутчика</h1>
-          <h2 class="intro-companions__title">Попутчики</h2>
+        <div class="intro-companions__wrapper">
+          <div class="container">
+            <h1 class="visually-hidden">Выбор подходящего попутчика</h1>
+            <h2 class="intro-companions__title">Попутчики</h2>
+          </div>
         </div>
       </section>
       <section class="all-companions">
@@ -66,7 +69,7 @@
           <li class="companions-list__item">
             <div class="companions-list__top-wrapper">
               <div class="companions-list__image-wrapper">
-                <img class="companions-list__image" src="img/firsova-mobile@1x.jpg" alt="Таня Фирсова" width="70px" heigth="70">
+                <img class="companions-list__image" src="./img/firsova-mobile@1x.jpg" alt="Таня Фирсова" width="70px" heigth="70">
                 <span class="companions-list__like companions-list__like--active"></span>
               </div>
               <div class="companions-list__title-wrapper">
@@ -120,7 +123,7 @@
           <li class="companions-list__item">
             <div class="companions-list__top-wrapper">
               <div class="companions-list__image-wrapper">
-                <img class="companions-list__image" src="img/demin-mobile@1x.jpg" alt="Таня Фирсова" width="70" heigth="70">
+                <img class="companions-list__image" src="./img/demin-mobile@1x.jpg" alt="Таня Фирсова" width="70" heigth="70">
                 <span class="companions-list__like companions-list__like--active"></span>
               </div>
               <div class="companions-list__title-wrapper">
@@ -170,7 +173,7 @@
           <li class="companions-list__item">
             <div class="companions-list__top-wrapper">
               <div class="companions-list__image-wrapper">
-                <img class="companions-list__image" src="img/firsova-mobile@1x.jpg" alt="Таня Фирсова" width="70px" heigth="70">
+                <img class="companions-list__image" src="./img/firsova-mobile@1x.jpg" alt="Таня Фирсова" width="70px" heigth="70">
                 <span class="companions-list__like companions-list__like--active"></span>
               </div>
               <div class="companions-list__title-wrapper">
@@ -224,7 +227,7 @@
           <li class="companions-list__item">
             <div class="companions-list__top-wrapper">
               <div class="companions-list__image-wrapper">
-                <img class="companions-list__image" src="img/firsova-mobile@1x.jpg" alt="Таня Фирсова" width="70px" heigth="70">
+                <img class="companions-list__image" src="./img/firsova-mobile@1x.jpg" alt="Таня Фирсова" width="70px" heigth="70">
                 <span class="companions-list__like companions-list__like--active"></span>
               </div>
               <div class="companions-list__title-wrapper">
@@ -288,7 +291,7 @@
     <footer class="page-footer">
       <div class="container">
         <a class="page-footer__logo" href="#">
-          <img class="page-footer__logo-image" src="img/logo-mobile-blue@1x.png" alt="Логотип сервиса для поиска попутчиков поехали" width="97" height="15">
+          <img class="page-footer__logo-image" src="./img/logo-mobile-blue@1x.png" alt="Логотип сервиса для поиска попутчиков поехали" width="97" height="15">
         </a>
         <ul class="page-footer__social-list social-list">
           <li>
@@ -296,12 +299,12 @@
               <span class="visually-hidden">Погнали Фейсбук</span>
             </a>
           </li>
-           <li>
+          <li>
             <a class="social-list__item social-list__item--footer social-list__item--vk" href="#">
               <span class="visually-hidden">Погнали Вконтакте</span>
             </a>
           </li>
-           <li>
+          <li>
             <a class="social-list__item social-list__item--footer social-list__item--insta" href="#">
               <span class="visually-hidden">Погнали Инстаграм</span>
             </a>

@@ -2,6 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/style.css">
     <title>HTML Academy: Погнали</title>
   </head>
@@ -10,8 +11,8 @@
       <div class="container">
         <div class="page-header__wrapper-menu wrapper-menu">
           <a class="wrapper-menu__logo" href="#">
-            <img class="wrapper-menu__logo-image--open" src="img/logo-mobile-blue@1x.png" width="100" height="19" alt="Логотип сервиса для поиска попутчиков поехали">
-<!--            <img class="wrapper-menu__logo-image--close" src="img/logo-mobile-white@1x.png" width="100" height="19" alt="Логотип сервиса для поиска попутчиков поехали">-->
+            <img class="wrapper-menu__logo-image--open" src="./img/logo-mobile-blue@1x.png" width="100" height="19" alt="Логотип сервиса для поиска попутчиков поехали">
+<!--            <img class="wrapper-menu__logo-image--close" src="./img/logo-mobile-white@1x.png" width="100" height="19" alt="Логотип сервиса для поиска попутчиков поехали">-->
           </a>
           <button class="wrapper-menu__toggle wrapper-menu__toggle--open" type="button"></button>
         </div>
@@ -56,10 +57,12 @@
       <h1 class="visually-hidden">Приложение Погнали - лучшее для поиска попутчиков</h1>
       <section class="intro">
         <h2 class="visually-hidden">Контакты и авторизация</h2>
-        <div class="intro__wrapper container">
-        <div class="intro__wrapper-1"></div>
-          <div class="intro__header">
-            <b class="intro__slogan">В путешествие<br> с крутыми попутчиками!</b>
+        <div class="intro__wrapper">
+          <div class="container">
+          <div class="intro__wrapper-man"></div>
+            <div class="intro__header">
+              <b class="intro__slogan">В путешествие<br> с крутыми попутчиками!</b>
+            </div>
           </div>
         </div>
         <div class="container">
@@ -108,66 +111,70 @@
         </div>
       </section>
       <section class="about-service">
-        <div class="about-service__wrapper-background container">
-          <div class="about-service__wrapper">
-            <h2 class="about-service__title section-title">О сервисе</h2>
-            <p class="about-service__paragraph text text--light">
-                Любое путешествие веселее
-                с попутчиками, которые на одной волне с тобой! Делитесь своими идеями путешествий и черпайте вдохновение в чужих.
-            </p>
-            <p class="about-service__paragraph text text--bold">
-                А если найдете кого-то близкого по духу - скорее зовите в совместный трип!
-            </p>
+        <div class="about-service__wrapper-background">
+          <div class="container">
+            <div class="about-service__wrapper">
+              <h2 class="about-service__title section-title">О сервисе</h2>
+              <p class="about-service__paragraph text text--light">
+                  Любое путешествие веселее
+                  с попутчиками, которые на одной волне с тобой! Делитесь своими идеями путешествий и черпайте вдохновение в чужих.
+              </p>
+              <p class="about-service__paragraph text text--bold">
+                  А если найдете кого-то близкого по духу - скорее зовите в совместный трип!
+              </p>
+            </div>
           </div>
         </div>
       </section>
       <section class="destinations">
-        <div class="destinations__wrapper-background container">
-          <div class="destinations__wrapper">
-            <h2 class="destinations__title section-title">Направления</h2>
-            <p class="destinations__about text text--light">Мы не продаем туры и ничего не рекламируем. Люди сами пишут о странах, куда хотели бы отправиться и чем можно там заняться.</p>
+        <div class="destinations__wrapper-background">
+          <div class="container">
+            <div class="destinations__wrapper">
+              <h2 class="destinations__title section-title">Направления</h2>
+              <p class="destinations__about text text--light">Мы не продаем туры и ничего не рекламируем. Люди сами пишут о странах, куда хотели бы отправиться и чем можно там заняться.</p>
+            </div>
+            <ul class="destinations__list country-list">
+              <li class="country-list__item country-card">
+                <div class="country-card__img-wrapper">
+                  <img class="country-card__image" src="./img/thailand-mobile@1x.jpg" alt="Пляжи Тайланда" width="270" height="110">
+                </div>
+                <div class="country-card__wrapper">
+                  <h3 class="country-card__title">Тайланд</h3>
+                  <p class="country-card__description">Джунгли зовут!</p>
+                  <span class="country-card__flag"></span>
+                  <span class="country-card__views">18321</span>
+                </div>
+              </li>
+              <li class="country-list__item country-card">
+                <div class="country-card__img-wrapper">
+                  <img class="country-card__image" src="./img/france-mobile@1x.jpg" alt="Улицы Франции" width="270" height="110">
+                </div>
+                <div class="country-card__wrapper">
+                  <h3 class="country-card__title">Франция</h3>
+                  <p class="country-card__description">Трэ бьен, манифик!</p>
+                  <span class="country-card__flag country-card__flag--france"></span>
+                  <span class="country-card__views">12518</span>
+                </div>
+              </li>
+              <li class="country-list__item country-card">
+                <div class="country-card__img-wrapper">
+                  <img class="country-card__image" src="./img/czech-mobile@1x.jpg" alt="Карлов мост" width="270" height="110">
+                </div>
+                <div class="country-card__wrapper">
+                  <h3 class="country-card__title">Чехия</h3>
+                  <p class="country-card__description">Закоулки старой Европы</p>
+                  <span class="country-card__flag"></span>
+                  <span class="country-card__views">5326</span>
+                </div>
+              </li>
+            </ul>
+            <a class="destination__to-all button" href="#">Показать все</a>
           </div>
-          <ul class="destinations__list country-list">
-            <li class="country-list__item country-card">
-              <div class="country-card__img-wrapper">
-                <img class="country-card__image" src="img/thailand-mobile@1x.jpg" alt="Пляжи Тайланда" width="270" height="110">
-              </div>
-              <div class="country-card__wrapper">
-                <h3 class="country-card__title">Тайланд</h3>
-                <p class="country-card__description">Джунгли зовут!</p>
-                <span class="country-card__flag"></span>
-                <span class="country-card__views">18321</span>
-              </div>
-            </li>
-            <li class="country-list__item country-card">
-              <div class="country-card__img-wrapper">
-                <img class="country-card__image" src="img/france-mobile@1x.jpg" alt="Улицы Франции" width="270" height="110">
-              </div>
-              <div class="country-card__wrapper">
-                <h3 class="country-card__title">Франция</h3>
-                <p class="country-card__description">Трэ бьен, манифик!</p>
-                <span class="country-card__flag country-card__flag--france"></span>
-                <span class="country-card__views">12518</span>
-              </div>
-            </li>
-            <li class="country-list__item country-card">
-              <div class="country-card__img-wrapper">
-                <img class="country-card__image" src="img/czech-mobile@1x.jpg" alt="Карлов мост" width="270" height="110">
-              </div>
-              <div class="country-card__wrapper">
-                <h3 class="country-card__title">Чехия</h3>
-                <p class="country-card__description">Закоулки старой Европы</p>
-                <span class="country-card__flag"></span>
-                <span class="country-card__views">5326</span>
-              </div>
-            </li>
-          </ul>
-          <a class="destination__to-all button" href="#">Показать все</a>
         </div>
       </section>
       <section class="companions">
-        <div class="container">
-          <div class="companions__wrapper-background">
+        <div class="companions__wrapper-background">
+          <div class="container">
             <div class="companions__wrapper">
               <h2 class="companions__title section-title">Попутчики</h2>
               <p class="companions__about text text--light">Все мы индивидуальны и у каждого свой взгляд на идеальный отдых. Одному нужен пляж и коктейль, а другому маршрут для хайкинга.</p>
@@ -175,7 +182,7 @@
             </div>
             <ul class="companions__list people-list">
               <li class="people-list__item people-card">
-                <img class="people-card__image" src="img/firsova-mobile@1x.jpg" alt="Таня Фирсова" width="270" height="270">
+                <img class="people-card__image" src="./img/firsova-mobile@1x.jpg" alt="Таня Фирсова" width="270" height="270">
                 <ul class="people-card__flags-list flags-list">
                   <li class="flags-list__item">
                     <span></span>
@@ -208,7 +215,7 @@
                 </div>
               </li>
               <li class="people-list__item people-card">
-                <img class="people-card__image" src="img/demin-mobile@1x.jpg" alt="Петя Дёмин"  width="270" height="270">
+                <img class="people-card__image" src="./img/demin-mobile@1x.jpg" alt="Петя Дёмин"  width="270" height="270">
                 <ul class="people-card__flags-list flags-list">
                   <li class="flags-list__item">
                     <span></span>
@@ -248,7 +255,7 @@
           <div class="tariffs__wrapper-left">
             <div class="tariffs__wrapper">
               <p class="tariffs__paragraph section-title">Добавьте свой профиль</p>
-              <img src="img/rates@1x.png" alt="Платные услуги" width="100" height="100">
+              <img src="./img/rates@1x.png" alt="Платные услуги" width="100" height="100">
             </div>
             <ul class="tariffs__list our-services">
               <li class="our-services__item">
@@ -279,7 +286,7 @@
     <footer class="page-footer">
       <div class="container">
         <a class="page-footer__logo" href="#">
-          <img class="page-footer__logo-image" src="img/logo-mobile-blue@1x.png" alt="Логотип сервиса для поиска попутчиков поехали" width="97" height="15">
+          <img class="page-footer__logo-image" src="./img/logo-mobile-blue@1x.png" alt="Логотип сервиса для поиска попутчиков поехали" width="97" height="15">
         </a>
         <ul class="page-footer__social-list social-list">
           <li>
@@ -287,12 +294,12 @@
               <span class="visually-hidden">Погнали Фейсбук</span>
             </a>
           </li>
-           <li>
+          <li>
             <a class="social-list__item social-list__item--footer social-list__item--vk" href="#">
               <span class="visually-hidden">Погнали Вконтакте</span>
             </a>
           </li>
-           <li>
+          <li>
             <a class="social-list__item social-list__item--footer social-list__item--insta" href="#">
               <span class="visually-hidden">Погнали Инстаграм</span>
             </a>
@@ -301,7 +308,7 @@
         <div class="page-footer__copyright copyright">
           <b class="copyright__text">Разработано:</b>
           <a class="copyright__logo" href="htmlacademy.ru">
-            <img class="copyright-logo-image" src="img/htmlacademy.svg" alt="HTML Academy" width="27" height="34">
+            <img class="copyright-logo-image" src="./img/htmlacademy.svg" alt="HTML Academy" width="27" height="34">
           </a>
         </div>
       </div>
