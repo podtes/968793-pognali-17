@@ -17,3 +17,17 @@
     display: block;
   }
 }
+
+@media(min-width: @tab-width) {
+  .copyright {
+    padding: 0;
+    border: none;
+    min-width: 155px;
+    align-items: center;
+
+    &__text {
+      font-size: 20px;
+      line-height: 24px;
+    }
+  }
+}

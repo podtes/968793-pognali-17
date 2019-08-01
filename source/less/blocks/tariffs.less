@@ -1,11 +1,13 @@
 .tariffs {
   padding-top: 65px;
+  padding-bottom: 30px;
   margin-top: -30px;
 
   background-color: #edeff6;
   color: #000000;
 
   &__wrapper {
+    position: relative;
     margin-bottom: 32px;
 
     display: flex;
@@ -22,5 +24,28 @@
     line-height: 16px;
     font-weight: bold;
     color: #192144;
+  }
+}
+
+
+@media(min-width: @tab-width) {
+
+  .tariffs {
+
+    &__wrapper {
+      justify-content: center;
+    }
+
+    &__image {
+      position: absolute;
+      top: 280px;
+      right: 0;
+    }
+
+
+    &__business-tariffs {
+      font-size: 20px;
+      line-height: 20px;
+    }
   }
 }
