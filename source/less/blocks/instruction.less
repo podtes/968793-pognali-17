@@ -2,7 +2,19 @@
   background-color: #192144;
 
   &__list {
+    position: relative;
+    top: -84px;
     margin: 0;
     padding: 0;
+  }
+}
+
+@media(min-width: @tab-width) {
+
+  .instruction {
+
+    &__list {
+      top:0;
+    }
   }
 }

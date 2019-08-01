@@ -1,5 +1,5 @@
 .main-nav {
-  display: none;
+  display: block;
 
   padding-top: 45px;
   padding-bottom: 40px;
@@ -24,5 +24,20 @@
 
   &__contacts-list {
     margin-bottom: 53px;
+  }
+}
+
+@media (min-width: @tab-width) {
+  .main-nav {
+    padding: 0 60px;
+    padding-bottom: 40px;
+    text-align: left;
+
+    &__user-list {
+      position: absolute;
+      top: 15px;
+      right: 40px;
+      width: 190px;
+    }
   }
 }

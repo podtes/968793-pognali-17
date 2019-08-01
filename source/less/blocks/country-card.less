@@ -4,9 +4,9 @@
   &__wrapper {
     position: relative;
     padding: 30px;
-    margin-top: -25px;
+    margin-top: -15px;
     background-color: #ffffff;
-    border-radius: 15px;
+    border-radius: 10px;
   }
 
   &__img-wrapper {
@@ -52,5 +52,40 @@
     line-height: 30px;
     color: #444444;
     opacity: 0.3;
+  }
+
+  &__image {
+    display: block;
+  }
+}
+
+@media(min-width:@tab-width) {
+  .country-card {
+    margin-bottom: 40px;
+    display: flex;
+    width: 100%;
+    border-radius: 15px;
+    overflow: hidden;
+
+    &__img-wrapper {
+      order: 1;
+      border-radius: 0;
+    }
+
+    &__wrapper {
+      flex-grow: 1;
+      margin-top: 0;
+      border-radius: 0;
+    }
+
+    &__views {
+      bottom: 12px;
+      left: 30px;
+    }
+
+    &__flag {
+      top: 30px;
+      left: 400px;
+    }
   }
 }

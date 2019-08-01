@@ -12,7 +12,6 @@
         <div class="page-header__wrapper-menu wrapper-menu">
           <a class="wrapper-menu__logo" href="#">
             <img class="wrapper-menu__logo-image--open" src="./img/logo-mobile-blue@1x.png" width="100" height="19" alt="Логотип сервиса для поиска попутчиков поехали">
-<!--            <img class="wrapper-menu__logo-image--close" src="./img/logo-mobile-white@1x.png" width="100" height="19" alt="Логотип сервиса для поиска попутчиков поехали">-->
           </a>
           <button class="wrapper-menu__toggle wrapper-menu__toggle--open" type="button"></button>
         </div>
@@ -56,13 +55,15 @@
     <main class="page-main">
       <h1 class="visually-hidden">Приложение Погнали - лучшее для поиска попутчиков</h1>
       <section class="intro">
+        <div class="container">
+        <div class="intro__header">
+          <b class="intro__slogan">В путешествие<br> с крутыми попутчиками! </b>
+        </div>
+        </div>
         <h2 class="visually-hidden">Контакты и авторизация</h2>
         <div class="intro__wrapper">
           <div class="container">
           <div class="intro__wrapper-man"></div>
-            <div class="intro__header">
-              <b class="intro__slogan">В путешествие<br> с крутыми попутчиками!</b>
-            </div>
           </div>
         </div>
         <div class="container">
@@ -113,15 +114,21 @@
       <section class="about-service">
         <div class="about-service__wrapper-background">
           <div class="container">
-            <div class="about-service__wrapper">
-              <h2 class="about-service__title section-title">О сервисе</h2>
-              <p class="about-service__paragraph text text--light">
-                  Любое путешествие веселее
-                  с попутчиками, которые на одной волне с тобой! Делитесь своими идеями путешествий и черпайте вдохновение в чужих.
-              </p>
-              <p class="about-service__paragraph text text--bold">
-                  А если найдете кого-то близкого по духу - скорее зовите в совместный трип!
-              </p>
+            <div class="about-service__wrapper-all">
+              <div class="about-service__wrapper">
+                <h2 class="about-service__title section-title">О сервисе</h2>
+                <p class="about-service__paragraph text text--light">
+                    Любое путешествие веселее
+                    с попутчиками, которые на одной волне с тобой! Делитесь своими идеями путешествий и черпайте вдохновение в чужих.
+                </p>
+                <p class="about-service__paragraph text text--bold">
+                    А если найдете кого-то близкого по духу - скорее зовите в совместный трип!
+                </p>
+                <a class="about-service__more button" href="#">Подробнее</a>
+              </div>
+              <div class="about-service__image">
+                <img class="about-service__image" src="img/about-tablet@1x.png" alt="Про наши сервисы" width="376" height="548">
+              </div>
             </div>
           </div>
         </div>
@@ -260,7 +267,8 @@
             <ul class="tariffs__list our-services">
               <li class="our-services__item">
                 <p class="our-services__paragraph">
-                  Базовое размещение<br> Бесплатно
+                  <span>Базовое размещение</span>
+                  <span>Бесплатно</span>
                 </p>
                 <span class="our-services__number"><span></span></span>
               </li>
