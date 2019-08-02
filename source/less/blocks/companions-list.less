@@ -4,6 +4,10 @@
   list-style: none;
 
   &__item {
+    position: relative;
+    display: flex;
+    flex-wrap:wrap;
+
     padding: 15px 20px 20px 20px;
     margin-bottom: 10px;
     background-color: #ffffff;
@@ -15,13 +19,17 @@
 
     display: flex;
     flex-wrap: wrap;
-    justify-content: flex-start;
+    justify-content: space-between;
+  }
+
+  &__wrapper-tablet {
   }
 
   &__bottom-wrapper {
     margin-bottom: 15px;
 
     display: flex;
+    align-items: center;
     flex-wrap: wrap;
     justify-content: space-between;
   }
@@ -31,21 +39,21 @@
     margin-right: 15px;
   }
 
-  &__title-wrapper {
-    position: relative;
-    flex-grow: 1;
-  }
-
   &__image {
     border-radius: 50%;
   }
 
+  &__likes-value-wrapper {
+    position: absolute;
+    top: 55px;
+    left: 70px;
+    display: flex;
+    align-items: center;
+  }
+
   &__like {
     display: block;
-
-    position: absolute;
-    top: 41px;
-    left: 50px;
+    margin-right: 5px;
 
     width: 30px;
     height: 30px;
@@ -62,10 +70,12 @@
   }
 
   &__title {
+    position: absolute;
+    width: 80px;
+    top: 15px;
+    left: 103px;
     margin: 0;
-    margin-bottom: 7px;
     padding: 0;
-
     font-size: 20px;
     line-height: 20px;
     color: #1d2e5b;
@@ -75,7 +85,7 @@
         position: absolute;
         content: "";
         top: 8px;
-        right: 0;
+        right: -70px;
         width: 5px;
         height: 5px;
         border-radius: 50%;
@@ -88,7 +98,7 @@
         position: absolute;
         content: "";
         top: 8px;
-        right: 0;
+        right: -70px;
         width: 5px;
         height: 5px;
         border-radius: 50%;
@@ -103,5 +113,78 @@
 
     font-size: 15px;
     line-height: 18px;
+  }
+}
+
+
+@media(min-width: @tab-width) {
+  .companions-list {
+
+    &__top-wrapper {
+      margin-right: auto;
+    }
+
+    &__wrapper-tablet {
+      width: 270px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    &__image-wrapper {
+      width: 200px;
+    }
+
+    &__likes-value-wrapper {
+      position: inherit;
+      order: 2;
+    }
+
+    &__title {
+      width: 100%;
+      margin-bottom: 25px;
+      position: inherit;
+      font-size: 30px;
+      line-height: 30px;
+
+      &--offline {
+        &::after {
+          right: 230px;
+          top: 28px;
+        }
+      }
+
+      &--online {
+        &::after {
+          right: 230px;
+          top: 28px;
+        }
+      }
+    }
+
+    &__like {
+      width: 50px;
+      height: 50px;
+    }
+
+    &__likes-value {
+      font-size: 20px;
+      line-height: 30px;
+    }
+
+    &__hashtags {
+      margin-bottom: 50px;
+      font-size: 20px;
+      line-height: 24px;
+      order: 1;
+    }
+
+    &__flags-wrapper {
+      order: 10;
+    }
+
+    &__bottom-wrapper {
+      flex-direction: column;
+      order: 5;
+    }
   }
 }

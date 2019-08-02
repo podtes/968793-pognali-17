@@ -16,5 +16,30 @@
     text-transform: uppercase;
     color: #161c35;
     border-radius: 30px;
+    flex-grow: 1;
+  }
+
+  &--catalog-small {
+    display: none;
+  }
+}
+
+@media(min-width: @tab-width) {
+
+  .button {
+    &--catalog {
+      display: none;
+    }
+
+    &--catalog-small {
+      display: block;
+      flex-grow: 1;
+      padding: 10px;
+      text-transform: uppercase;
+      font-size: 20px;
+      line-height: 30px;
+      text-align: center;
+      border-radius: 30px;
+    }
   }
 }

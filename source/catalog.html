@@ -58,7 +58,10 @@
         <div class="intro-companions__wrapper">
           <div class="container">
             <h1 class="visually-hidden">Выбор подходящего попутчика</h1>
-            <h2 class="intro-companions__title">Попутчики</h2>
+            <div class="intro-companions__wrapper-link">
+              <h2 class="intro-companions__title">Попутчики</h2>
+              <a class="intro-companions__link-back link-back" href="#">На главную</a>
+            </div>
           </div>
         </div>
       </section>
@@ -69,35 +72,38 @@
             <div class="companions-list__top-wrapper">
               <div class="companions-list__image-wrapper">
                 <img class="companions-list__image" src="./img/firsova-mobile@1x.jpg" alt="Таня Фирсова" width="70px" heigth="70">
-                <span class="companions-list__like companions-list__like--active"></span>
               </div>
-              <div class="companions-list__title-wrapper">
-                <h3 class="companions-list__title companions-list__title--offline">Таня<br> Фирсова</h3>
-                <span class="companions-list__likes-value">1,5 M</span>
+              <div class="companions-list__wrapper-tablet">
+                <h3 class="companions-list__title companions-list__title--offline">Таня Фирсова</h3>
+                <div class="companions-list__likes-value-wrapper">
+                  <a class="companions-list__come-on button button--catalog-small" href="#">Позвать!</a>
+                  <span class="companions-list__like companions-list__like--active"></span>
+                  <span class="companions-list__likes-value">1,5 M</span>
+                </div>
+                <p class="companions-list__hashtags">#ЗОЖ #ПП #Фитнес #пляж #авокадо #смузи</p>
               </div>
             </div>
-            <p class="companions-list__hashtags">#ЗОЖ #ПП #Фитнес #пляж #авокадо #смузи</p>
             <div class="companions-list__flags-wrapper">
-              <span>хочет посетить:</span>
-              <ul class="companions-list__flags country-list">
-                <li class="country-list__item">
+              <span class="flags-wrapper__title">хочет посетить:</span>
+              <ul class="companions-list__flags country-list country-list--catalog">
+                <li class="country-list__item country-list__item--catalog">
                   <span></span>
                   <span>Шри-Ланка</span>
                 </li>
-                <li class="country-list__item">
+                <li class="country-list__item country-list__item--catalog">
                   <span></span>
                   <span>Тайланд</span>
                 </li>
-                <li class="country-list__item">
+                <li class="country-list__item country-list__item--catalog">
                   <span></span>
                   <span>Сейшелы</span>
                 </li>
               </ul>
             </div>
             <div class="companions-list__bottom-wrapper">
-              <div class="companions-list__vehicle-wrapper">
-                <span>транспорт:</span>
-                <ul class="companions-list__vehicle-list vehicle-list">
+              <div class="companions-list__vehicle-wrapper vehicle-wrapper">
+                <span class="vehicle-wrapper__title">транспорт:</span>
+                <ul class="companions-list__vehicle-list vehicle-list vehicle-list--vertical">
                   <li class="vehicle-list__item vehicle-list__item--background vehicle-list__item--active ">
                     <span class="vehicle-list__plane"></span>
                   </li>
@@ -112,58 +118,8 @@
                   </li>
                 </ul>
               </div>
-              <div class="companions-list__level-wrapper">
-              <span>левел:</span>
-              <span class="companions-card__level"></span>
-              </div>
-            </div>
-            <a class="companions-list__come-on button button--catalog" href="#">Позвать!</a>
-          </li>
-          <li class="companions-list__item">
-            <div class="companions-list__top-wrapper">
-              <div class="companions-list__image-wrapper">
-                <img class="companions-list__image" src="./img/demin-mobile@1x.jpg" alt="Таня Фирсова" width="70" heigth="70">
-                <span class="companions-list__like companions-list__like--active"></span>
-              </div>
-              <div class="companions-list__title-wrapper">
-                <h3 class="companions-list__title companions-list__title--online">Петя<br> Дёмин</h3>
-                <span class="companions-list__likes-value">150</span>
-              </div>
-            </div>
-            <p class="companions-list__hashtags">#бургер #бар #футбол #концерт #крафт</p>
-            <div class="companions-list__flags-wrapper">
-              <span>хочет посетить:</span>
-              <ul class="companions-list__flags country-list">
-                <li class="country-list__item">
-                  <span></span>
-                  <span>Бельгия</span>
-                </li>
-                <li class="country-list__item">
-                  <span></span>
-                  <span>Чехия</span>
-                </li>
-              </ul>
-            </div>
-            <div class="companions-list__bottom-wrapper">
-              <div class="companions-list__vehicle-wrapper">
-                <span>транспорт:</span>
-                <ul class="companions-list__vehicle-list vehicle-list">
-                  <li class="vehicle-list__item vehicle-list__item--background vehicle-list__item--active ">
-                    <span class="vehicle-list__plane"></span>
-                  </li>
-                  <li class="vehicle-list__item vehicle-list__item--background vehicle-list__item--active">
-                    <span class="vehicle-list__bus"></span>
-                  </li>
-                  <li class="vehicle-list__item vehicle-list__item--background vehicle-list__item--velo vehicle-icon">
-                    <span class="vehicle-list__velo"></span>
-                  </li>
-                  <li class="vehicle-list__item vehicle-list__item--background vehicle-list__item--active">
-                    <span class="vehicle-list__foot"></span>
-                  </li>
-                </ul>
-              </div>
-              <div class="companions-list__level-wrapper">
-              <span>левел:</span>
+              <div class="companions-list__level-wrapper level-wrapper">
+              <span class="level-wrapper__title">левел:</span>
               <span class="companions-card__level"></span>
               </div>
             </div>
@@ -173,35 +129,38 @@
             <div class="companions-list__top-wrapper">
               <div class="companions-list__image-wrapper">
                 <img class="companions-list__image" src="./img/firsova-mobile@1x.jpg" alt="Таня Фирсова" width="70px" heigth="70">
-                <span class="companions-list__like companions-list__like--active"></span>
               </div>
-              <div class="companions-list__title-wrapper">
-                <h3 class="companions-list__title companions-list__title--offline">Таня<br> Фирсова</h3>
-                <span class="companions-list__likes-value">1,5 M</span>
+              <div class="companions-list__wrapper-tablet">
+                <h3 class="companions-list__title companions-list__title--offline">Таня Фирсова</h3>
+                <div class="companions-list__likes-value-wrapper">
+                  <a class="companions-list__come-on button button--catalog-small" href="#">Позвать!</a>
+                  <span class="companions-list__like companions-list__like--active"></span>
+                  <span class="companions-list__likes-value">1,5 M</span>
+                </div>
+                <p class="companions-list__hashtags">#ЗОЖ #ПП #Фитнес #пляж #авокадо #смузи</p>
               </div>
             </div>
-            <p class="companions-list__hashtags">#ЗОЖ #ПП #Фитнес #пляж #авокадо #смузи</p>
             <div class="companions-list__flags-wrapper">
-              <span>хочет посетить:</span>
-              <ul class="companions-list__flags country-list">
-                <li class="country-list__item">
+              <span class="flags-wrapper__title">хочет посетить:</span>
+              <ul class="companions-list__flags country-list country-list--catalog">
+                <li class="country-list__item country-list__item--catalog">
                   <span></span>
                   <span>Шри-Ланка</span>
                 </li>
-                <li class="country-list__item">
+                <li class="country-list__item country-list__item--catalog">
                   <span></span>
                   <span>Тайланд</span>
                 </li>
-                <li class="country-list__item">
+                <li class="country-list__item country-list__item--catalog">
                   <span></span>
                   <span>Сейшелы</span>
                 </li>
               </ul>
             </div>
             <div class="companions-list__bottom-wrapper">
-              <div class="companions-list__vehicle-wrapper">
-                <span>транспорт:</span>
-                <ul class="companions-list__vehicle-list vehicle-list">
+              <div class="companions-list__vehicle-wrapper vehicle-wrapper">
+                <span class="vehicle-wrapper__title">транспорт:</span>
+                <ul class="companions-list__vehicle-list vehicle-list vehicle-list--vertical">
                   <li class="vehicle-list__item vehicle-list__item--background vehicle-list__item--active ">
                     <span class="vehicle-list__plane"></span>
                   </li>
@@ -216,8 +175,8 @@
                   </li>
                 </ul>
               </div>
-              <div class="companions-list__level-wrapper">
-              <span>левел:</span>
+              <div class="companions-list__level-wrapper level-wrapper">
+              <span class="level-wrapper__title">левел:</span>
               <span class="companions-card__level"></span>
               </div>
             </div>
@@ -227,35 +186,38 @@
             <div class="companions-list__top-wrapper">
               <div class="companions-list__image-wrapper">
                 <img class="companions-list__image" src="./img/firsova-mobile@1x.jpg" alt="Таня Фирсова" width="70px" heigth="70">
-                <span class="companions-list__like companions-list__like--active"></span>
               </div>
-              <div class="companions-list__title-wrapper">
-                <h3 class="companions-list__title companions-list__title--offline">Таня<br> Фирсова</h3>
-                <span class="companions-list__likes-value">1,5 M</span>
+              <div class="companions-list__wrapper-tablet">
+                <h3 class="companions-list__title companions-list__title--offline">Таня Фирсова</h3>
+                <div class="companions-list__likes-value-wrapper">
+                  <a class="companions-list__come-on button button--catalog-small" href="#">Позвать!</a>
+                  <span class="companions-list__like companions-list__like--active"></span>
+                  <span class="companions-list__likes-value">1,5 M</span>
+                </div>
+                <p class="companions-list__hashtags">#ЗОЖ #ПП #Фитнес #пляж #авокадо #смузи</p>
               </div>
             </div>
-            <p class="companions-list__hashtags">#ЗОЖ #ПП #Фитнес #пляж #авокадо #смузи</p>
             <div class="companions-list__flags-wrapper">
-              <span>хочет посетить:</span>
-              <ul class="companions-list__flags country-list">
-                <li class="country-list__item">
+              <span class="flags-wrapper__title">хочет посетить:</span>
+              <ul class="companions-list__flags country-list country-list--catalog">
+                <li class="country-list__item country-list__item--catalog">
                   <span></span>
                   <span>Шри-Ланка</span>
                 </li>
-                <li class="country-list__item">
+                <li class="country-list__item country-list__item--catalog">
                   <span></span>
                   <span>Тайланд</span>
                 </li>
-                <li class="country-list__item">
+                <li class="country-list__item country-list__item--catalog">
                   <span></span>
                   <span>Сейшелы</span>
                 </li>
               </ul>
             </div>
             <div class="companions-list__bottom-wrapper">
-              <div class="companions-list__vehicle-wrapper">
-                <span>транспорт:</span>
-                <ul class="companions-list__vehicle-list vehicle-list">
+              <div class="companions-list__vehicle-wrapper vehicle-wrapper">
+                <span class="vehicle-wrapper__title">транспорт:</span>
+                <ul class="companions-list__vehicle-list vehicle-list vehicle-list--vertical">
                   <li class="vehicle-list__item vehicle-list__item--background vehicle-list__item--active ">
                     <span class="vehicle-list__plane"></span>
                   </li>
@@ -270,8 +232,65 @@
                   </li>
                 </ul>
               </div>
-              <div class="companions-list__level-wrapper">
-              <span>левел:</span>
+              <div class="companions-list__level-wrapper level-wrapper">
+              <span class="level-wrapper__title">левел:</span>
+              <span class="companions-card__level"></span>
+              </div>
+            </div>
+            <a class="companions-list__come-on button button--catalog" href="#">Позвать!</a>
+          </li>
+          <li class="companions-list__item">
+            <div class="companions-list__top-wrapper">
+              <div class="companions-list__image-wrapper">
+                <img class="companions-list__image" src="./img/firsova-mobile@1x.jpg" alt="Таня Фирсова" width="70px" heigth="70">
+              </div>
+              <div class="companions-list__wrapper-tablet">
+                <h3 class="companions-list__title companions-list__title--offline">Таня Фирсова</h3>
+                <div class="companions-list__likes-value-wrapper">
+                  <a class="companions-list__come-on button button--catalog-small" href="#">Позвать!</a>
+                  <span class="companions-list__like companions-list__like--active"></span>
+                  <span class="companions-list__likes-value">1,5 M</span>
+                </div>
+                <p class="companions-list__hashtags">#ЗОЖ #ПП #Фитнес #пляж #авокадо #смузи</p>
+              </div>
+            </div>
+            <div class="companions-list__flags-wrapper">
+              <span class="flags-wrapper__title">хочет посетить:</span>
+              <ul class="companions-list__flags country-list country-list--catalog">
+                <li class="country-list__item country-list__item--catalog">
+                  <span></span>
+                  <span>Шри-Ланка</span>
+                </li>
+                <li class="country-list__item country-list__item--catalog">
+                  <span></span>
+                  <span>Тайланд</span>
+                </li>
+                <li class="country-list__item country-list__item--catalog">
+                  <span></span>
+                  <span>Сейшелы</span>
+                </li>
+              </ul>
+            </div>
+            <div class="companions-list__bottom-wrapper">
+              <div class="companions-list__vehicle-wrapper vehicle-wrapper">
+                <span class="vehicle-wrapper__title">транспорт:</span>
+                <ul class="companions-list__vehicle-list vehicle-list vehicle-list--vertical">
+                  <li class="vehicle-list__item vehicle-list__item--background vehicle-list__item--active ">
+                    <span class="vehicle-list__plane"></span>
+                  </li>
+                  <li class="vehicle-list__item vehicle-list__item--background vehicle-list__item--active">
+                    <span class="vehicle-list__bus"></span>
+                  </li>
+                  <li class="vehicle-list__item vehicle-list__item--background vehicle-list__item--velo vehicle-icon">
+                    <span class="vehicle-list__velo"></span>
+                  </li>
+                  <li class="vehicle-list__item vehicle-list__item--background vehicle-list__item--active">
+                    <span class="vehicle-list__foot"></span>
+                  </li>
+                </ul>
+              </div>
+              <div class="companions-list__level-wrapper level-wrapper">
+              <span class="level-wrapper__title">левел:</span>
               <span class="companions-card__level"></span>
               </div>
             </div>
@@ -280,8 +299,16 @@
         </ul>
         <a class="all-companions__show-more" href="#">Показать ещё</a>
         <div class="all-companions__companions-nav companions-nav">
-          <button class="companions-nav__button companions-nav__button--prev" type="button">Предыдущий</button>
-          <button class="companions-nav__button companions-nav__button--next" type="button">Следующий</button>
+          <ul class="companions-nav__pagination-list">
+            <li><a class="companions-nav__pagination-link companions-nav__pagination-link--active" href="#">1</a></li>
+            <li><a class="companions-nav__pagination-link" href="#">2</a></li>
+            <li><a class="companions-nav__pagination-link" href="#">3</a></li>
+            <li><a class="companions-nav__pagination-link" href="#">4</a></li>
+          </ul>
+          <div class="companions-nav__buttons-wrapper">
+            <button class="companions-nav__button companions-nav__button--prev" type="button"><span>Предыдущий</span></button>
+            <button class="companions-nav__button companions-nav__button--next" type="button"><span>Следующий</span></button>
+          </div>
         </div>
       </div>
       </section>
@@ -289,31 +316,33 @@
 
     <footer class="page-footer">
       <div class="container">
-        <a class="page-footer__logo" href="#">
-          <img class="page-footer__logo-image" src="./img/logo-mobile-blue@1x.png" alt="Логотип сервиса для поиска попутчиков поехали" width="97" height="15">
-        </a>
-        <ul class="page-footer__social-list social-list">
-          <li>
-            <a class="social-list__item social-list__item--footer social-list__item--fb" href="#">
-              <span class="visually-hidden">Погнали Фейсбук</span>
-            </a>
-          </li>
-          <li>
-            <a class="social-list__item social-list__item--footer social-list__item--vk" href="#">
-              <span class="visually-hidden">Погнали Вконтакте</span>
-            </a>
-          </li>
-          <li>
-            <a class="social-list__item social-list__item--footer social-list__item--insta" href="#">
-              <span class="visually-hidden">Погнали Инстаграм</span>
-            </a>
-          </li>
-        </ul>
-        <div class="page-footer__copyright copyright">
-          <b class="copyright__text">Разработано:</b>
-          <a class="copyright__logo" href="htmlacademy.ru">
-            <img class="copyright-logo-image" src="img/htmlacademy.svg" alt="HTML Academy" width="27" height="34">
+        <div class="page-footer__wrapper">
+          <a class="page-footer__logo" href="#">
+            <img class="page-footer__logo-image" src="./img/logo-mobile-blue@1x.png" alt="Логотип сервиса для поиска попутчиков поехали" width="97" height="15">
           </a>
+          <ul class="page-footer__social-list social-list">
+            <li>
+              <a class="social-list__item social-list__item--footer social-list__item--fb" href="#">
+                <span class="visually-hidden">Погнали Фейсбук</span>
+              </a>
+            </li>
+            <li>
+              <a class="social-list__item social-list__item--footer social-list__item--vk" href="#">
+                <span class="visually-hidden">Погнали Вконтакте</span>
+              </a>
+            </li>
+            <li>
+              <a class="social-list__item social-list__item--footer social-list__item--insta" href="#">
+                <span class="visually-hidden">Погнали Инстаграм</span>
+              </a>
+            </li>
+          </ul>
+          <div class="page-footer__copyright copyright">
+            <b class="copyright__text">Разработано:</b>
+            <a class="copyright__logo" href="htmlacademy.ru">
+              <img class="copyright-logo-image" src="./img/htmlacademy.svg" alt="HTML Academy" width="27" height="34">
+            </a>
+          </div>
         </div>
       </div>
     </footer>

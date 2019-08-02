@@ -4,7 +4,35 @@
 
   list-style: none;
 
+  &--catalog {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+
   &__item {
     margin-bottom: 10px;
+    text-transform: uppercase;
+    color: #1d2e5b;
+
+    &--catalog {
+      font-size: 15px;
+      line-height: 18px;
+      padding-left: 40px;
+    }
+  }
+}
+
+@media(min-width: @tab-width) {
+
+  .country-list {
+    &--catalog {
+      flex-direction: row;
+    }
+
+    &__item {
+      font-size: 20px;
+      line-height: 30px;
+    }
   }
 }

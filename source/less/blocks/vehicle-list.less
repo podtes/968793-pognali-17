@@ -9,6 +9,9 @@
   flex-wrap: wrap;
   justify-content: center;
 
+  &--vertical {
+  }
+
   &__item {
     width: 26px;
     height: 22px;
@@ -56,5 +59,19 @@
     background: url("../img/run.svg") no-repeat 50% 50%;
     width: 26px;
     height: 22px;
+  }
+}
+
+@media(min-width: @tab-width) {
+
+  .vehicle-list {
+
+    &--vertical {
+      flex-direction: column;
+    }
+
+    &__item--background {
+      background: transparent;
+    }
   }
 }
