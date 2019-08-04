@@ -58,3 +58,23 @@
     height: 22px;
   }
 }
+
+@media (min-width: @tab-width) {
+  .vehicle-list {
+    &--vertical {
+      flex-direction: column;
+    }
+
+    &__item--background {
+      background: transparent;
+    }
+  }
+}
+
+@media (min-width: @desk-width) {
+  .vehicle-list {
+    &--vertical {
+      flex-direction: row;
+    }
+  }
+}

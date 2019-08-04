@@ -1,12 +1,4 @@
 .wrapper-menu {
-  padding: 27px 0;
-
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-
-  border-bottom: 1px solid #cccccc;
-
   &__toggle {
     border: none;
 
@@ -14,6 +6,23 @@
       background: url("../img/menu-close.svg") no-repeat 50% 50%;
       width: 20px;
       height: 20px;
+    }
+  }
+}
+
+@media (min-width: @tab-width) {
+  .wrapper-menu {
+    width: 350px;
+  }
+}
+
+@media (min-width: @desk-width) {
+  .wrapper-menu {
+    width: 345px;
+    padding: 0;
+
+    &__toggle {
+      display: none;
     }
   }
 }

@@ -1,6 +1,6 @@
 .modal-business-tariffs {
   width: 270px;
-  padding: 20px 0 13px 0;
+  padding-top: 20px;
   margin: 20px auto;
 
   background-color: #ffffff;
@@ -21,12 +21,10 @@
 
   &__button {
     padding: 20px 0;
-
     width: 100%;
     background-color: #f3f4f8;
     text-align: center;
     vertical-align: center;
-
     border-radius: 0 0 20px 20px;
     border: none;
 
@@ -35,5 +33,15 @@
     text-transform: uppercase;
     font-weight: bold;
     color: #1d2e5b;
+  }
+}
+
+@media (min-width: @tab-width) {
+  .modal-business-tariffs {
+    width: 688px;
+
+    &__wrapper {
+      padding: 0 90px;
+    }
   }
 }

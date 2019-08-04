@@ -2,23 +2,59 @@
   font-weight: bold;
   text-transform: uppercase;
 
-  text-align: left;
-
   &__item {
-    padding-left: 60px;
+    padding: 0;
     margin-bottom: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
 
-    position: relative;
+  &__button {
+    display: block;
+    margin-right: 15px;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-color: skyblue;
+    border: none;
+  }
+}
 
-    &::before {
-      position: absolute;
-      content: "";
-      top: -12px;
-      left: 0;
-      background-color: #121936;
-      width: 45px;
-      height: 45px;
-      border-radius: 50%;
+@media (min-width: @tab-width) {
+  .contacts-list {
+    font-size: 28px;
+    line-height: 28px;
+
+    &__item {
+      margin-bottom: 0;
+    }
+
+    &__button {
+      width: 70px;
+      height: 70px;
+    }
+  }
+}
+
+@media (min-width: @desk-width) {
+  .contacts-list {
+    min-width: 100px;
+    display: flex;
+    flex-wrap: wrap;
+
+    &__item {
+      margin: 0;
+    }
+
+    &__button {
+      margin-right: 0;
+      width: 50px;
+      height: 50px;
+    }
+
+    &__text {
+      display: none;
     }
   }
 }

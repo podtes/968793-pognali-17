@@ -1,7 +1,5 @@
 .intro-list {
-  padding: 0;
   list-style: none;
-
   display: flex;
   flex-wrap: wrap;
 
@@ -22,5 +20,17 @@
     &--email {
       background-color: #ffbd30;
     }
+  }
+}
+
+@media (min-width: @tab-width) {
+  .intro-list {
+    display: none;
+  }
+}
+
+@media (min-width: @tab-width) {
+  .intro-list {
+    display: none;
   }
 }

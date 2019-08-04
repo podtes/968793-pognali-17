@@ -21,3 +21,19 @@
     }
   }
 }
+
+@media (min-width: 768px) {
+  .social-list {
+    justify-content: flex-start;
+  }
+}
+
+@media (min-width: @desk-width) {
+  .social-list {
+    display: none;
+
+    &--footer {
+      display: flex;
+    }
+  }
+}

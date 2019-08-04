@@ -15,7 +15,15 @@
     background-color: #edeff6;
   }
 
+  &__wrapper-content {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+
   &__list {
+    margin: 0;
+    padding: 0;
     margin-bottom: 20px;
   }
 
@@ -27,5 +35,45 @@
     margin: 0;
     padding: 0;
     margin-bottom: 70px;
+  }
+
+  &__to-all {
+    order: 1;
+  }
+}
+
+@media (min-width: @tab-width) {
+  .destinations {
+    margin-top: 0;
+    padding-top: 80px;
+
+    &__wrapper {
+      padding-right: 310px;
+    }
+  }
+}
+
+@media (min-width: @desk-width) {
+  .destinations {
+    &__wrapper-content {
+      flex-direction: row;
+    }
+
+    &__wrapper {
+      padding-right: 0;
+      width: 350px;
+    }
+
+    &__list {
+      margin-right: 170px;
+      order: -1;
+    }
+
+    &__to-all {
+      align-self: baseline;
+      position: relative;
+      top: 350px;
+      right: 350px;
+    }
   }
 }

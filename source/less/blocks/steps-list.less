@@ -1,30 +1,20 @@
 .steps-list {
-  position: relative;
-  top: -84px;
   list-style: none;
-
   font-size: 18px;
   line-height: 18px;
   font-weight: bold;
 
   &__item {
+    margin-top: -25px;
+    padding: 35px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-
-    border-radius: 15px 15px 0 0;
-
-    &:not(:last-child) {
-      padding: 25px 25px 40px 25px;
-    }
-
-    &:not(:first-child) {
-      margin-top: -15px;
-    }
+    border-radius: 15px;
+    box-sizing: border-box;
 
     &:last-child {
       padding: 25px;
-      border-radius: 15px;
     }
 
     &--first {
@@ -51,5 +41,42 @@
     width: 150px;
 
     color: #192144;
+  }
+}
+
+@media (min-width: @tab-width) {
+  .steps-list {
+    font-size: 24px;
+    line-height: 24px;
+    display: flex;
+    flex-wrap: wrap;
+
+    &__item {
+      display: block;
+      padding: 45px;
+      width: 344px;
+      box-sizing: border-box;
+    }
+
+    p {
+      width: 230px;
+    }
+  }
+}
+
+@media (min-width: @desk-width) {
+  .steps-list {
+    display: flex;
+    flex-wrap: wrap;
+
+    &__item {
+      display: flex;
+      padding: 30px;
+      width: 330px;
+    }
+
+    p {
+      width: 200px;
+    }
   }
 }

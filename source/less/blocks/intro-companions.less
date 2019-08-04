@@ -1,6 +1,5 @@
 .intro-companions {
   padding-top: 30px;
-
   background-color: #161c35;
   color: #ffffff;
 
@@ -8,8 +7,11 @@
     position: relative;
     border-radius: 0 0 20px 20px;
     padding-bottom: 17px;
-
     background-color: #161c35;
+  }
+
+  &__link-back {
+    display: none;
   }
 
   &__title {
@@ -32,6 +34,23 @@
       height: 5px;
       border-radius: 2px;
       background-color: #ff8d30;
+    }
+  }
+}
+
+
+@media (min-width: @tab-width) {
+  .intro-companions {
+    &__wrapper-link {
+      padding: 0 40px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    &__link-back {
+      display: block;
     }
   }
 }

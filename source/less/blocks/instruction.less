@@ -2,7 +2,24 @@
   background-color: #192144;
 
   &__list {
+    position: relative;
+    top: -84px;
     margin: 0;
     padding: 0;
+  }
+}
+
+@media (min-width: @tab-width) {
+  .instruction {
+    background-color: transparent;
+    margin-top: -28px;
+  }
+}
+
+
+@media (min-width: @desk-width) {
+  .instruction {
+    background-color: transparent;
+    margin-top: -120px;
   }
 }

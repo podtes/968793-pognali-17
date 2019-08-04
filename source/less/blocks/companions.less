@@ -17,6 +17,12 @@
     background-color: #192144;
   }
 
+  &__wrapper-content {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+
   &__title {
     margin-bottom: 25px;
   }
@@ -33,5 +39,43 @@
 
   &__list {
     margin-bottom: 20px;
+  }
+}
+
+@media (min-width: @tab-width) {
+  .companions {
+    &__wrapper {
+      padding-right: 220px;
+    }
+  }
+}
+
+@media (min-width: @desk-width) {
+  .companions {
+    &__wrapper-content {
+      padding-top: 30px;
+      padding-bottom: 30px;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    &__wrapper {
+      width: 470px;
+      padding: 0;
+      margin: 0;
+    }
+
+    &__list {
+      margin: 0;
+      padding: 0;
+      order: 10;
+    }
+
+    &__to-all {
+      position: relative;
+      align-self: baseline;
+      top: 350px;
+      left: -500px;
+    }
   }
 }

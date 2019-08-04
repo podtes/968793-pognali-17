@@ -1,9 +1,9 @@
 .main-nav {
-  display: none;
-
-  padding-top: 45px;
-  padding-bottom: 40px;
-  text-align: center;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
 
   &__site-list,
   &__user-list,
@@ -19,10 +19,61 @@
   }
 
   &__user-list {
+    width: 100%;
     margin-bottom: 53px;
   }
 
   &__contacts-list {
-    margin-bottom: 53px;
+    width: 100%;
+    align-content: flex-end;
+    margin-bottom: 25px;
+  }
+}
+
+@media (min-width: @tab-width) {
+  .main-nav {
+    padding: 0 60px;
+    align-items: flex-start;
+
+    &__site-list {
+      margin-bottom: 145px;
+    }
+
+    &__user-list {
+      position: absolute;
+      top: -115px;
+      right: 0;
+      width: 190px;
+    }
+
+    &__contacts-list {
+      margin-bottom: 125px;
+    }
+  }
+}
+
+@media (min-width: @desk-width) {
+  .main-nav {
+    min-width: 910px;
+    padding: 0;
+    flex-direction: row;
+
+    &__site-list {
+      margin-bottom: 0;
+      margin-right: auto;
+    }
+
+    &__user-list {
+      position: relative;
+      top: 0;
+      right: 0;
+      order: 10;
+    }
+
+    &__contacts-list {
+      margin-bottom: 0;
+      width: 100px;
+      order: 5;
+    }
   }
 }

@@ -14,6 +14,10 @@
     border-radius: 0 0 30px 30px;
   }
 
+  &__wrapper-all {
+    display: flex;
+  }
+
   &__wrapper {
     padding-top: 30px;
     padding-left: 15px;
@@ -28,7 +32,57 @@
     padding: 0;
   }
 
+  &__more {
+    display: none;
+  }
+
+  &__image {
+    display: none;
+  }
+
   p:first-of-type {
     margin-bottom: 25px;
+  }
+}
+
+@media (min-width: @tab-width) {
+  .about-service {
+    padding-bottom: 250px;
+
+    &__wrapper {
+      width: 382px;
+      padding-top: 0;
+      box-sizing: border-box;
+    }
+
+    &__wrapper-background {
+      background: none;
+    }
+
+    &__more {
+      display: block;
+    }
+
+    &__image {
+      display: block;
+    }
+  }
+}
+
+@media (min-width: @desk-width) {
+  .about-service {
+    padding-top: 150px;
+
+    &__wrapper-all {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    &__wrapper {
+      margin-left: 70px;
+      padding-left: 0;
+      min-width: 610px;
+    }
   }
 }

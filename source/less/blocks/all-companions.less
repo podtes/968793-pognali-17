@@ -19,3 +19,24 @@
     text-transform: uppercase;
   }
 }
+
+@media (min-width: @tab-width) {
+  .all-companions {
+    &__show-more {
+      font-size: 20px;
+      line-height: 30px;
+    }
+  }
+}
+
+@media (min-width: @desk-width) {
+  .all-companions {
+    &__show-more {
+      width: 800px;
+    }
+
+    &__companions-nav {
+      width: 800px;
+    }
+  }
+}
