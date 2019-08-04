@@ -15,7 +15,7 @@
   }
 
   &__wrapper-all {
-    display: none;
+      display: flex;
   }
 
   &__wrapper {
@@ -50,10 +50,6 @@
   .about-service {
     padding-bottom: 250px;
 
-    &__wrapper-all {
-      display: flex;
-    }
-
     &__wrapper {
       width: 382px;
       padding-top: 0;
@@ -70,6 +66,25 @@
 
     &__image {
       display: block;
+    }
+  }
+}
+
+@media(min-width: @desk-width) {
+
+  .about-service {
+    padding-top: 150px;
+
+    &__wrapper-all {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    &__wrapper {
+      margin-left: 70px;
+      padding-left: 0;
+      min-width: 610px;
     }
   }
 }

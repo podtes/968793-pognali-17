@@ -1,7 +1,4 @@
 .country-list {
-  margin: 0;
-  padding: 0;
-
   list-style: none;
 
   &--catalog {
@@ -12,7 +9,6 @@
 
   &__item {
     margin-bottom: 10px;
-    text-transform: uppercase;
     color: #1d2e5b;
 
     &--catalog {
@@ -34,5 +30,11 @@
       font-size: 20px;
       line-height: 30px;
     }
+  }
+}
+
+@media(min-width: @desk-width) {
+  .country-list {
+    min-width: 560px;
   }
 }

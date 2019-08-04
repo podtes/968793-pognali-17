@@ -19,6 +19,12 @@
     padding-bottom: 38px;
   }
 
+  &__list {
+    margin: 0;
+    margin-bottom: 30px;
+    padding: 0;
+  }
+
   &__business-tariffs {
     font-size: 16px;
     line-height: 16px;
@@ -46,6 +52,21 @@
     &__business-tariffs {
       font-size: 20px;
       line-height: 20px;
+    }
+  }
+}
+
+
+@media(min-width: @desk-width) {
+  .tariffs {
+    &__wrapper {
+      justify-content: flex-start;
+    }
+
+    &__image {
+      width: 205px;
+      height: 205px;
+      top: 85px;
     }
   }
 }

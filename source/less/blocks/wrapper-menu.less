@@ -17,7 +17,20 @@
 }
 
 @media(min-width: @tab-width) {
+
   .wrapper-menu {
     width: 350px;
+  }
+}
+
+@media(min-width: @desk-width) {
+
+  .wrapper-menu {
+    width: 345px;
+    padding: 0;
+
+    &__toggle {
+      display: none;
+    }
   }
 }

@@ -1,17 +1,29 @@
 .login-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   flex-grow: 1;
   background-color: #ffd74b;
   border-radius: 25px;
   max-height: 40px;
 
   &__link {
-    display: block;
-    padding-top: 7px;
-    text-align: center;
     color: #161c35;
     font-size: 17px;
     line-height: 30px;
     font-weight: bold;
     text-transform: uppercase;
+  }
+}
+
+@media(min-width: @desk-width) {
+  .login-button {
+    border-radius: 30px;
+    max-height: 50px;
+
+    &__link {
+      font-size: 20px;
+      line-height: 30px;
+    }
   }
 }

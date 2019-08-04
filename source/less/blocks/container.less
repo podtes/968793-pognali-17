@@ -6,9 +6,16 @@
   box-sizing: border-box;
 }
 
-@media (min-width: 768px) {
+@media (min-width: @tab-width) {
   .container {
     width: 768px;
     padding: 0 40px;
+  }
+}
+
+@media (min-width: @desk-width) {
+  .container {
+    width: 1440px;
+    padding: 0 60px;
   }
 }

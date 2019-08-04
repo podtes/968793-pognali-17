@@ -58,10 +58,29 @@
     display: block;
     padding: 45px;
     width: 344px;
+    box-sizing: border-box;
     }
 
     p {
       width: 230px;
+    }
+  }
+}
+
+@media(min-width: @desk-width) {
+
+  .steps-list {
+    display: flex;
+    flex-wrap: wrap;
+
+  &__item {
+    display: flex;
+    padding: 30px;
+    width: 330px;
+    }
+
+    p {
+      width: 200px;
     }
   }
 }

@@ -1,8 +1,4 @@
 .our-services {
-  margin: 0;
-  margin-bottom: 30px;
-  padding: 0;
-
   list-style: none;
 
   &__item {
@@ -46,6 +42,22 @@
 
     &__number {
       order: -1;
+    }
+  }
+}
+
+@media(min-width: @desk-width) {
+  .our-services {
+    &__item {
+      justify-content: flex-start;
+    }
+
+    &__paragraph {
+      min-width: 815px;
+    }
+
+    &__number {
+      margin-right: 25px;
     }
   }
 }
