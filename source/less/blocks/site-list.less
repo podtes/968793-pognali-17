@@ -2,13 +2,22 @@
   font-size: 30px;
   line-height: 36px;
   text-transform: uppercase;
+  text-align: center;
 
   &__item {
     color: #192144;
   }
 }
 
-@media(min-width: @desk-width) {
+@media (min-width: @tab-width) {
+  .site-list {
+    font-size: 60px;
+    line-height: 71px;
+    text-align: left;
+  }
+}
+
+@media (min-width: @desk-width) {
   .site-list {
     display: flex;
     flex-wrap: wrap;

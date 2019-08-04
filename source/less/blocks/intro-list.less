@@ -1,7 +1,5 @@
 .intro-list {
-  padding: 0;
   list-style: none;
-
   display: flex;
   flex-wrap: wrap;
 
@@ -25,29 +23,14 @@
   }
 }
 
-@media(min-width: @tab-width) {
-
+@media (min-width: @tab-width) {
   .intro-list {
     display: none;
   }
 }
 
-@media(min-width: @desk-width) {
-
+@media (min-width: @tab-width) {
   .intro-list {
-    position: absolute;
-    top: -73px;
-    right: 120px;
-    width: 285px;
-    display: flex;
-
-    &__item {
-      max-height: 50px;
-    }
-
-    &__button {
-      width: 50px;
-      height: 50px;
-    }
+    display: none;
   }
 }

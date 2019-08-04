@@ -1,5 +1,6 @@
 .page-header {
-  padding-bottom: 120px;
+  padding-top: 25px;
+  padding-bottom: 170px;
 
   &--open {
     background-color: #ffffff;
@@ -8,24 +9,41 @@
   &--close {
     background-color: #161c35;
   }
-}
 
-@media(min-width: @tab-width) {
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
 
-  .page-header {
-    padding-bottom: 0;
+  &__wrapper-menu {
+    margin-bottom: 75px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
   }
 }
 
-@media(min-width: @desk-width) {
+@media (min-width: @tab-width) {
+  .page-header {
+    padding-bottom: 70px;
+  }
+}
 
+@media (min-width: @desk-width) {
   .page-header {
     padding-top: 50px;
+    padding-bottom: 0;
     background-color: #161c34;
 
     &__wrapper {
-      display: flex;
-      flex-wrap: wrap;
+      flex-direction: row;
+    }
+
+    &__wrapper-menu {
+      margin-bottom: 0;
+      width: 285px;
+      margin-right: 60px;
     }
   }
 }

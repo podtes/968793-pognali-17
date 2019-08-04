@@ -52,8 +52,7 @@
   }
 }
 
-@media(min-width: @tab-width) {
-
+@media (min-width: @tab-width) {
   .intro {
     position: relative;
     padding-top: 250px;
@@ -76,7 +75,7 @@
       width: 375px;
       height: 455px;
       background-repeat: no-repeat;
-  }
+    }
 
     &__header {
       margin: 0 140px;
@@ -107,13 +106,11 @@
   }
 }
 
-@media(min-width: @desk-width) {
-
+@media (min-width: @desk-width) {
   .intro {
     background-color: #161c34;
     padding-top: 0;
     padding-bottom: 0;
-
 
     &__wrapper {
       margin: 0;
@@ -131,7 +128,7 @@
       width: 430px;
       height: 640px;
       background-repeat: no-repeat;
-  }
+    }
 
     &__header {
       text-align: left;
@@ -139,12 +136,13 @@
       margin-right: 650px;
     }
 
-    &__slogan {
+    &__blockquote-wrapper {
+      position: relative;
     }
 
     &__review {
-      right: 133px;
-      top: 193px;
+      right: 0;
+      top: -450px;
     }
   }
 }

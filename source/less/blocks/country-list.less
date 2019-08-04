@@ -19,8 +19,7 @@
   }
 }
 
-@media(min-width: @tab-width) {
-
+@media (min-width: @tab-width) {
   .country-list {
     &--catalog {
       flex-direction: row;
@@ -33,8 +32,11 @@
   }
 }
 
-@media(min-width: @desk-width) {
+@media (min-width: @desk-width) {
   .country-list {
-    min-width: 560px;
+    &--catalog {
+      flex-direction: column;
+      margin-bottom: 23px;
+    }
   }
 }
