@@ -24,9 +24,8 @@
 
   &__bottom-wrapper {
     margin-bottom: 15px;
-
+    min-width: 230px;
     display: flex;
-    align-items: center;
     flex-wrap: wrap;
     justify-content: space-between;
   }
@@ -34,6 +33,7 @@
   &__image-wrapper {
     position: relative;
     margin-right: 15px;
+    margin-bottom: 10px;
   }
 
   &__image {
@@ -49,14 +49,40 @@
   }
 
   &__like {
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin-right: 5px;
 
     width: 30px;
     height: 30px;
     border-radius: 50%;
 
-    background-color: #f9eaea;
+    background-color: #edeff6;
+
+    &:hover {
+      background-color: #e2e5f2;
+    }
+
+    &--active {
+      background-color: #f9eaea;
+
+      &:hover {
+        background-color: #f9d8d8;
+      }
+    }
+  }
+
+  &__like-icon {
+    background: url(../../img/heart.svg) no-repeat 50% 50%;
+    width: 13px;
+    height: 11px;
+    opacity: 0.3;
+
+    &--active {
+      background: url(../../img/heart-active.svg) no-repeat 50% 50%;
+      opacity: 1;
+    }
   }
 
   &__likes-value {
@@ -77,14 +103,22 @@
     line-height: 20px;
     color: #1d2e5b;
 
+    &:hover {
+      opacity: 0.6;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
+
     &--offline {
       &::after {
         position: absolute;
         content: "";
         top: 8px;
-        right: -70px;
-        width: 5px;
-        height: 5px;
+        right: -60px;
+        width: 6px;
+        height: 6px;
         border-radius: 50%;
         background-color: darkred;
       }
@@ -95,9 +129,9 @@
         position: absolute;
         content: "";
         top: 8px;
-        right: -70px;
-        width: 5px;
-        height: 5px;
+        right: -60px;
+        width: 6px;
+        height: 6px;
         border-radius: 50%;
         background-color: green;
       }
@@ -107,7 +141,7 @@
   &__hashtags {
     margin: 0;
     padding: 0;
-
+    width: 200px;
     font-size: 15px;
     line-height: 18px;
   }
@@ -116,14 +150,31 @@
 
 @media (min-width: @tab-width) {
   .companions-list {
+
+    &__item {
+    padding-top: 35px;
+    padding-right: 25px;
+    padding-bottom: 26px;
+    padding-left: 35px;
+
+      &:last-child {
+        margin-bottom: 60px;
+      }
+    }
+
     &__top-wrapper {
       margin-right: auto;
     }
 
     &__wrapper-tablet {
+      margin-right: auto;
       width: 270px;
       display: flex;
       flex-direction: column;
+    }
+
+    &__bottom-wrapper {
+      align-items: flex-end;
     }
 
     &__image-wrapper {
@@ -145,15 +196,15 @@
 
       &--offline {
         &::after {
-          right: 230px;
-          top: 28px;
+          right: 225px;
+          top: 47px;
         }
       }
 
       &--online {
         &::after {
-          right: 230px;
-          top: 28px;
+          right: 225px;
+          top: 47px;
         }
       }
     }
@@ -163,6 +214,11 @@
       height: 50px;
     }
 
+    &__like-icon {
+      width: 19px;
+      height: 16px;
+    }
+
     &__likes-value {
       font-size: 20px;
       line-height: 30px;
@@ -170,6 +226,7 @@
 
     &__hashtags {
       margin-bottom: 50px;
+      min-width: 230px;
       font-size: 20px;
       line-height: 24px;
       order: 1;
@@ -206,6 +263,7 @@
 
     &__bottom-wrapper {
       position: inherit;
+      align-items: center;
       flex-direction: row;
       order: 10;
     }
@@ -219,7 +277,12 @@
       margin-bottom: 0;
     }
 
+    &__item {
+      margin-bottom: 35px;
+    }
+
     &__title {
+
       &--offline {
         &::after {
           left: 200px;

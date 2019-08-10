@@ -1,5 +1,5 @@
 .companions {
-  padding-top: 50px;
+  padding-top: 100px;
   margin-top: -30px;
 
   background-color: #192144;
@@ -18,9 +18,14 @@
   }
 
   &__wrapper-content {
+    position: relative;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
+  }
+
+  &__image-wrapper {
+    margin-bottom: 15px;
   }
 
   &__title {
@@ -38,6 +43,9 @@
   }
 
   &__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
     margin-bottom: 20px;
   }
 }
@@ -72,10 +80,11 @@
     }
 
     &__to-all {
-      position: relative;
+      width: 275px;
+      position: absolute;
       align-self: baseline;
-      top: 350px;
-      left: -500px;
+      top: 430px;
+      left: 60px;
     }
   }
 }

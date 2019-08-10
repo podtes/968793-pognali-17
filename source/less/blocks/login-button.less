@@ -1,4 +1,6 @@
 .login-button {
+  box-sizing: border-box;
+  padding-top: 2px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -7,12 +9,24 @@
   border-radius: 25px;
   max-height: 40px;
 
+  &:hover {
+      background-color: #ffbd30;
+    }
+
+    &:active {
+      background-color: #ffbd30;
+    }
+
   &__link {
     color: #161c35;
     font-size: 17px;
     line-height: 30px;
     font-weight: bold;
     text-transform: uppercase;
+
+    &:active {
+      opacity: 0.3;
+    }
   }
 }
 

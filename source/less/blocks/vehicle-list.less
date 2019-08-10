@@ -7,55 +7,79 @@
 
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
   justify-content: center;
 
   &__item {
-    width: 26px;
-    height: 22px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin-right: 10px;
-    opacity: 0.15;
+    width: 37px;
+    height: 37px;
+    border-radius: 50%;
+    background-color: transparent;
 
-    &--active {
+    &--active .vehicle-list__icon {
       opacity: 1;
     }
 
+    &:hover .vehicle-list__icon {
+      opacity: 0.3;
+    }
+
+    &:active {
+      background-color: #e2e5f1;
+    }
+
     &--background {
+      margin-right: 0;
       display: flex;
       justify-content: center;
       align-items: center;
       width: 32px;
       height: 32px;
-      background-color: #cccccc;
+      background-color: #edeff6;
       border-radius: 50%;
+    }
+
+    &--background .vehicle-list__icon {
+      width: 17px;
+      height: 15px;
+    }
+
+    &--background:hover .vehicle-list__icon {
+      background-color: #edeff6;
+      opacity: 0.3;
+    }
+
+    &--background:active .vehicle-list__icon {
+      background-color: #edeff6;
+      opacity: 0.15;
     }
   }
 
-  &__plane {
+  &__icon {
     display: block;
-    background: url("../img/plane.svg") no-repeat 50% 50%;
-    width: 26px;
-    height: 22px;
-  }
+    width: 21px;
+    height: 21px;
+    opacity: 0.15;
 
-  &__bus {
-    display: block;
-    background: url("../img/bus.svg") no-repeat 50% 50%;
-    width: 26px;
-    height: 22px;
-  }
+    &--plane {
+      background: url("../img/plane.svg") no-repeat 50% 50%;
+    }
 
-  &__velo {
-    display: block;
-    background: url("../img/bike.svg") no-repeat 50% 50%;
-    width: 26px;
-    height: 22px;
-  }
+    &--bus {
+      background: url("../img/bus.svg") no-repeat 50% 50%;
+    }
 
-  &__foot {
-    display: block;
-    background: url("../img/run.svg") no-repeat 50% 50%;
-    width: 26px;
-    height: 22px;
+    &--velo {
+      background: url("../img/bike.svg") no-repeat 50% 50%;
+    }
+
+    &--foot {
+      background: url("../img/run.svg") no-repeat 50% 50%;
+    }
   }
 }
 
@@ -65,8 +89,18 @@
       flex-direction: column;
     }
 
+    &__item {
+      width: 37px;
+      height: 37px;
+    }
+
     &__item--background {
       background: transparent;
+
+      .vehicle-list__icon {
+        width: 21px;
+        height: 21px;
+      }
     }
   }
 }

@@ -9,6 +9,8 @@
   }
 
   &__flags-list {
+    margin: 0;
+    padding: 0;
     position: absolute;
     top: 258px;
     left: 0;
@@ -58,7 +60,16 @@
         background-color: darkred;
       }
     }
+
+    &:hover {
+        opacity: 0.7;
+      }
+
+      &:active {
+        opacity: 0.3;
+      }
   }
+
 
   &__hashtags {
     margin: 0;
@@ -73,6 +84,28 @@
 
 @media (min-width: @tab-width) {
   .people-card {
-    width: 270px;
+    width: 285px;
+
+    &__wrapper {
+      padding: 30px;
+    }
+
+    &__image {
+      width: 100%;
+    }
+
+    &__flags-list {
+      top: 273px;
+    }
+
+    &__title {
+      font-size: 24px;
+      line-height: 24px;
+    }
+
+    &__hashtags {
+      font-size: 20px;
+      line-height: 24px;
+    }
   }
 }

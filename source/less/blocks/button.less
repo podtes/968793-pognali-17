@@ -1,6 +1,8 @@
 .button {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
   padding: 20px;
-  display: block;
   background-color: #ffd74b;
 
   font-size: 18px;
@@ -10,7 +12,20 @@
 
   border-radius: 10px;
 
+  &:hover {
+    background-color: #ffbd30;
+  }
+
+  &:active &__title{
+    opacity: 0.3;
+  }
+
+  &:active &__icon{
+    opacity: 0.3;
+  }
+
   &--catalog {
+    display: block;
     padding: 12px;
     text-align: center;
     text-transform: uppercase;
@@ -18,15 +33,42 @@
     border-radius: 30px;
     flex-grow: 1;
   }
+
+  &__title {
+  }
+
+  &__icon {
+    display: block;
+    background: url("../../img/triangle-arrow-right.svg") no-repeat 50% 50%;
+    width: 10px;
+    height: 14px;
+  }
 }
 
 @media (min-width: @tab-width) {
   .button {
     &--catalog {
       position: absolute;
-      top: 169px;
-      left: 235px;
+      top: 189px;
+      left: 250px;
       padding: 15px 34px;
+    }
+  }
+}
+
+@media (min-width: @desk-width) {
+  .button {
+    padding: 35px 30px;
+    font-size: 24px;
+    line-height: 24px;
+    border-radius: 20px;
+
+    &--catalog {
+      font-size: 20px;
+      left: 240px;
+      line-height: 30px;
+      padding: 10px 35px;
+      border-radius: 40px;
     }
   }
 }

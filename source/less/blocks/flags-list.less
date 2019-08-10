@@ -1,6 +1,4 @@
 .flags-list {
-  margin: 0;
-  padding: 0;
   list-style: none;
   width: 100%;
   display: flex;
@@ -13,5 +11,16 @@
     width: 36px;
     height: 23px;
     border-radius: 3px;
+  }
+}
+
+
+@media (min-width: @desk-width) {
+  .flags-list {
+    &__item {
+      margin-right: 20px;
+      width: 35px;
+      height: 24px;
+    }
   }
 }

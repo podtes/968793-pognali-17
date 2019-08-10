@@ -1,4 +1,5 @@
 .page-header {
+  position: relative;
   padding-top: 25px;
   padding-bottom: 170px;
 
@@ -32,15 +33,20 @@
 
 @media (min-width: @desk-width) {
   .page-header {
+    margin: 0;
+    padding: 0;
     padding-top: 50px;
-    padding-bottom: 0;
     background-color: #161c34;
 
     &__wrapper {
+      margin: 0;
+      padding: 0;
       flex-direction: row;
     }
 
     &__wrapper-menu {
+      margin: 0;
+      padding: 0;
       margin-bottom: 0;
       width: 285px;
       margin-right: 60px;

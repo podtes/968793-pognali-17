@@ -18,15 +18,39 @@
   }
 
   &__button {
-    padding: 15px 0;
-    display: block;
+    padding: 13px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 50%;
     border: none;
     cursor: pointer;
     background-color: transparent;
 
+    &:hover .companions-nav__icon {
+      opacity: 0.6;
+    }
+
+    &:active .companions-nav__icon {
+      opacity: 0.3;
+    }
+
     &--prev {
       border-right: 1px solid #cccccc;
+    }
+  }
+
+  &__icon {
+    display: block;
+    width: 10px;
+    height: 20px;
+
+    &--prev {
+      background: url(../../img/triangle-arrow-left.svg) no-repeat 50% 50%;
+    }
+
+    &--next {
+      background: url(../../img/triangle-arrow-right.svg) no-repeat 50% 50%;
     }
   }
 }
@@ -62,7 +86,7 @@
     }
 
     &__buttons-wrapper {
-      width: 142px;
+      width: 80px;
     }
 
     &__button {
@@ -70,7 +94,7 @@
       border: none;
 
       span {
-        display: none;
+        display: block;
       }
     }
   }

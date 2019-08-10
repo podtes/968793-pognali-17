@@ -4,22 +4,38 @@
 
   &__item {
     padding: 0;
-    margin-bottom: 30px;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
   }
 
   &__button {
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin-right: 15px;
     width: 45px;
     height: 45px;
     border-radius: 50%;
-    background-color: skyblue;
+    background: #161c35;
     border: none;
+    }
+
+  &__icon-phone {
+    display: block;
+    background: url(../../img/contacts-phone.svg) no-repeat;
+    width: 20px;
+    height: 18px;
+  }
+
+  &__icon-email {
+    display: block;
+    background: url(../../img/contacts-mail.svg) no-repeat;
+    width: 20px;
+    height: 13px;
   }
 }
+
 
 @media (min-width: @tab-width) {
   .contacts-list {

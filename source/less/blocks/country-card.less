@@ -4,6 +4,7 @@
   &__wrapper {
     position: relative;
     padding: 30px;
+    padding-bottom: 20px;
     margin-top: -15px;
     background-color: #ffffff;
     border-radius: 10px;
@@ -16,6 +17,7 @@
 
   &__title {
     margin: 0;
+    margin-bottom: 5px;
     padding: 0;
     font-size: 21px;
     line-height: 21px;
@@ -45,13 +47,23 @@
 
   &__views {
     position: absolute;
-    bottom: 12px;
+    bottom: 37px;
     right: 30px;
 
     font-size: 16px;
     line-height: 30px;
     color: #444444;
     opacity: 0.3;
+
+    &::before {
+      content: "";
+      position: absolute;
+      background: url("../../img/user.svg") no-repeat 50% 50%;
+      width: 10px;
+      height: 10px;
+      top: 9px;
+      right: 50px;
+    }
   }
 
   &__image {
@@ -61,7 +73,6 @@
 
 @media (min-width: @tab-width) {
   .country-card {
-    margin-bottom: 40px;
     display: flex;
     width: 100%;
     border-radius: 15px;
@@ -72,20 +83,99 @@
       border-radius: 0;
     }
 
+    &__image {
+      height: 100%;
+    }
+
     &__wrapper {
+      padding-bottom: 65px;
       flex-grow: 1;
       margin-top: 0;
       border-radius: 0;
     }
 
+    &__title {
+      font-size: 24px;
+      line-height: 24px;
+    }
+
+    &__description {
+      font-size: 20px;
+      line-height: 18px;
+    }
+
     &__views {
+      padding-left: 25px;
+      font-size: 20px;
+      line-height: 30px;
       bottom: 12px;
       left: 30px;
+
+      &::before {
+        top: 3px;
+        left: 0;
+        width: 20px;
+        height: 20px;
+      }
     }
 
     &__flag {
+      width: 70px;
+      height: 45px;
       top: 30px;
-      left: 400px;
+      left: 385px;
+    }
+  }
+}
+
+
+@media (min-width: @desk-width) {
+  .country-card {
+    min-width: 560px;
+
+    &__wrapper {
+      min-width: 373px;
+      padding-top: 20px;
+      padding-bottom: 60px;
+    }
+
+    &__img-wrapper {
+      height: 131px;
+      width: 186px;
+    }
+
+    &__image {
+      height: 100%;
+    }
+
+    &__title {
+      font-size: 24px;
+      line-height: 24px;
+      font-weight: bold;
+    }
+
+    &__description {
+      font-size: 20px;
+      line-height: 18px;
+    }
+
+    &__views {
+      padding-left: 30px;
+      font-size: 20px;
+      line-height: 30px;
+
+      &::before {
+        top: 3px;
+        left: 0;
+        width: 20px;
+        height: 20px;
+      }
+    }
+
+    &__flag {
+      width: 70px;
+      height: 48px;
+      border-radius: 8px;
     }
   }
 }
