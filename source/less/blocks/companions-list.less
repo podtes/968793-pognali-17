@@ -78,13 +78,13 @@
   }
 
   &__like-icon {
-    background: url(../../img/heart.svg) no-repeat 50% 50%;
+    background: url("../../img/heart.svg") no-repeat 50% 50%;
     width: 13px;
     height: 11px;
     opacity: 0.3;
 
     &--active {
-      background: url(../../img/heart-active.svg) no-repeat 50% 50%;
+      background: url("../../img/heart-active.svg") no-repeat 50% 50%;
       opacity: 1;
     }
   }
@@ -160,12 +160,11 @@
 
 @media (min-width: @tab-width) {
   .companions-list {
-
     &__item {
-    padding-top: 35px;
-    padding-right: 25px;
-    padding-bottom: 10px;
-    padding-left: 35px;
+      padding-top: 35px;
+      padding-right: 25px;
+      padding-bottom: 10px;
+      padding-left: 35px;
 
       &:last-child {
         margin-bottom: 60px;
@@ -184,6 +183,10 @@
     }
 
     &__bottom-wrapper {
+      flex-direction: column;
+      position: absolute;
+      top: 20px;
+      right: 40px;
       align-items: flex-end;
     }
 
@@ -249,13 +252,6 @@
     &__flags-wrapper {
       order: 10;
     }
-
-    &__bottom-wrapper {
-      flex-direction: column;
-      position: absolute;
-      top: 20px;
-      right: 40px;
-    }
   }
 }
 
@@ -292,7 +288,6 @@
     }
 
     &__title {
-
       &--offline {
         &::after {
           left: 220px;
