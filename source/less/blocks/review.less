@@ -1,13 +1,30 @@
 .review {
+  font-size: 16px;
+  line-height: 22px;
   &__text {
     margin: 0;
     margin-bottom: 25px;
     padding: 0;
+    font-weight: lighter;
   }
 
   &__author {
     font-weight: bold;
     font-style: normal;
+  }
+}
+
+@media (min-width: @tab-width) {
+  .review {
+    &__text {
+      font-size: 28px;
+      line-height: 33px;
+    }
+
+    &__author {
+      font-size: 21px;
+      line-height: 25px;
+    }
   }
 }
 

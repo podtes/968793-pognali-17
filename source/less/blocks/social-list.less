@@ -59,13 +59,28 @@
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: @tab-width) {
   .social-list {
     justify-content: flex-start;
 
     &__item {
       width: 60px;
       height: 60px;
+
+      &--fb span {
+        width: 15px;
+        height: 30px;
+      }
+
+      &--vk span {
+        width: 32px;
+        height: 16px;
+      }
+
+      &--insta span {
+        width: 24px;
+        height: 24px;
+      }
 
       &--fb svg {
         width: 15px;

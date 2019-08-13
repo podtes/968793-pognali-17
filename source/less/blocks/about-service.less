@@ -20,7 +20,8 @@
 
   &__wrapper {
     padding-top: 30px;
-    padding-left: 15px;
+    padding-left: 25px;
+    padding-right: 35px;
   }
 
   &__title {
@@ -30,6 +31,14 @@
   &__paragraph {
     margin: 0;
     padding: 0;
+
+    &:first-of-type {
+      font-weight: lighter;
+    }
+
+    &:last-of-type {
+      font-weight: bold;
+    }
   }
 
   &__more {
@@ -50,8 +59,10 @@
     padding-bottom: 250px;
 
     &__wrapper {
-      width: 382px;
+      width: 320px;
       padding-top: 0;
+      padding-left: 35px;
+      padding-right: 0;
       box-sizing: border-box;
     }
 
@@ -61,11 +72,22 @@
 
     &__more {
       display: flex;
+      width: 275px;
     }
 
     &__image {
       display: block;
     }
+
+    &__paragraph:last-of-type {
+      margin-bottom: 50px;
+      font-size: 21px;
+      line-height: 25px;
+    }
+
+    p:first-of-type {
+    margin-bottom: 40px;
+  }
   }
 }
 
@@ -83,6 +105,11 @@
       margin-left: 70px;
       padding-left: 0;
       min-width: 620px;
+    }
+
+     &__paragraph:last-of-type {
+      width: 420px;
+       margin-bottom: 90px;
     }
   }
 }

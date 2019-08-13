@@ -27,13 +27,13 @@
             </ul>
             <ul class="main-nav__contacts-list contacts-list">
               <li class="contacts-list__item">
-                <button class="contacts-list__button">
+                <button class="contacts-list__button contacts-list__button--phone">
                   <span class="contacts-list__icon-phone"></span>
                 </button>
                 <span class="contacts-list__text">8 800 555-26-28</span>
               </li>
               <li class="contacts-list__item">
-                <button class="contacts-list__button">
+                <button class="contacts-list__button contacts-list__button--email">
                   <span class="contacts-list__icon-email"></span>
                 </button>
                 <span class="contacts-list__text">mail@htmlacademy.ru</span>
@@ -90,10 +90,10 @@
           </ul>
           <div class="intro__blockquote-wrapper">
             <blockquote class="intro__review review">
-              <p class="review__text text text--light">
+              <p class="review__text">
                 "Лучшее приложение,<br> что я видел в жизни!"
               </p>
-              <cite class="review__author text text--bold">
+              <cite class="review__author">
                 Мурат Эльтазин<br> главный редактор<br> газеты "гаджетлайф"
               </cite>
             </blockquote>
@@ -129,11 +129,11 @@
             <div class="about-service__wrapper-all">
               <div class="about-service__wrapper">
                 <h2 class="about-service__title section-title">О сервисе</h2>
-                <p class="about-service__paragraph text text--light">
+                <p class="about-service__paragraph">
                     Любое путешествие веселее
                     с попутчиками, которые на одной волне с тобой! Делитесь своими идеями путешествий и черпайте вдохновение в чужих.
                 </p>
-                <p class="about-service__paragraph text text--bold">
+                <p class="about-service__paragraph">
                     А если найдете кого-то близкого по духу - скорее зовите в совместный трип!
                 </p>
                 <a class="about-service__more button" href="#">
@@ -153,7 +153,7 @@
           <div class="destinations__wrapper-content container">
             <div class="destinations__wrapper">
               <h2 class="destinations__title section-title">Направления</h2>
-              <p class="destinations__about text text--light">Мы не продаем туры и ничего не рекламируем. Люди сами пишут о странах, куда хотели бы отправиться и чем можно там заняться.</p>
+              <p class="destinations__about">Мы не продаем туры и ничего не рекламируем. Люди сами пишут о странах, куда хотели бы отправиться и чем можно там заняться.</p>
             </div>
             <ul class="destinations__list country-list">
               <li class="country-list__item country-card">
@@ -202,12 +202,16 @@
           <div class="companions__wrapper-content container">
             <div class="companions__wrapper">
               <h2 class="companions__title section-title">Попутчики</h2>
-              <p class="companions__about text text--light">Все мы индивидуальны и у каждого свой взгляд на идеальный отдых. Одному нужен пляж и коктейль, а другому маршрут для хайкинга.</p>
-              <p class="companions__about text text--bold">Теперь можно легко найти единомышленников!</p>
+              <p class="companions__about">Все мы индивидуальны и у каждого свой взгляд на идеальный отдых. Одному нужен пляж и коктейль, а другому маршрут для хайкинга.</p>
+              <p class="companions__about">Теперь можно легко найти единомышленников!</p>
             </div>
             <ul class="companions__list people-list">
               <li class="people-list__item people-card">
                 <img class="people-card__image" src="./img/firsova-mobile@1x.jpg" alt="Таня Фирсова" width="270" height="270">
+                <span class="people-card__level level-indicator">
+                  <span class="level-indicator__number">99</span>
+                  <span class="level-indicator__title">level</span>
+                </span>
                 <ul class="people-card__flags-list flags-list">
                   <li class="flags-list__item">
                     <span></span>
@@ -241,6 +245,10 @@
               </li>
               <li class="people-list__item people-card">
                 <img class="people-card__image" src="./img/firsova-mobile@1x.jpg" alt="Таня Фирсова" width="270" height="270">
+                <span class="people-card__level level-indicator">
+                  <span class="level-indicator__number">99</span>
+                  <span class="level-indicator__title">level</span>
+                </span>
                 <ul class="people-card__flags-list flags-list">
                   <li class="flags-list__item">
                     <span></span>
@@ -299,14 +307,14 @@
               <li class="our-services__item">
                 <p class="our-services__paragraph">
                   <span>Вывод на первых позициях</span>
-                  <span>99 руб./месяц</span>
+                  <span>99 руб./мес</span>
                 </p>
                 <span class="our-services__number our-services__number--second"><span>2</span></span>
               </li>
               <li class="our-services__item">
-                <p class="our-services__paragraph">
+                <p class="our-services__paragraph our-services__paragraph--last">
                   <span>Кастомный цвет карточки</span>
-                  <span>59 руб./месяц</span>
+                  <span>59 руб./мес</span>
                 </p>
                 <span class="our-services__number our-services__number--third"><span>3</span></span>
               </li>
@@ -382,7 +390,7 @@
             </li>
           </ul>
           <div class="page-footer__copyright copyright">
-            <b class="copyright__text">Разработано:</b>
+            <b class="copyright__text">Разработано</b>
             <a class="copyright__logo" href="htmlacademy.ru">
               <img class="copyright-logo-image" src="./img/htmlacademy.svg" alt="HTML Academy" width="27" height="34">
             </a>

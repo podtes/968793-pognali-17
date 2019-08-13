@@ -12,6 +12,10 @@
     margin-bottom: 10px;
     background-color: #ffffff;
     border-radius: 20px;
+
+    &:last-child {
+      margin-bottom: 25px;
+    }
   }
 
   &__top-wrapper {
@@ -144,6 +148,12 @@
     width: 200px;
     font-size: 15px;
     line-height: 18px;
+    color: #444444;
+  }
+
+  &__flags {
+    margin: 0;
+    padding: 0;
   }
 }
 
@@ -154,7 +164,7 @@
     &__item {
     padding-top: 35px;
     padding-right: 25px;
-    padding-bottom: 26px;
+    padding-bottom: 10px;
     padding-left: 35px;
 
       &:last-child {
@@ -285,15 +295,15 @@
 
       &--offline {
         &::after {
-          left: 200px;
-          top: 28px;
+          left: 220px;
+          top: 46px;
         }
       }
 
       &--online {
         &::after {
-          left: 200px;
-          top: 28px;
+          left: 220px;
+          top: 46px;
         }
       }
     }
