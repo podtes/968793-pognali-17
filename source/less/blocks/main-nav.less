@@ -1,4 +1,5 @@
 .main-nav {
+  padding-top: 75px;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -28,11 +29,21 @@
     align-content: flex-end;
     margin-bottom: 25px;
   }
+
+  &--close {
+    display: none;
+  }
+
+  &--open {
+    display: flex;
+  }
 }
 
 @media (min-width: @tab-width) {
   .main-nav {
-    padding: 0 60px;
+    padding-right: 60px;
+    padding-left: 60px;
+    padding-top: 100px;
     align-items: flex-start;
 
     &__site-list {
@@ -41,9 +52,10 @@
     }
 
     &__user-list {
+      margin-bottom: 0;
       display: block;
       position: absolute;
-      top: -115px;
+      top: -45px;
       right: 0;
       width: 190px;
     }
