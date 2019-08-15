@@ -5,10 +5,10 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    box-sizing: border-box;
   }
 
   &__paragraph {
-    padding: 10px 0;
     margin: 0;
     margin-right: 10px;
 
@@ -23,6 +23,14 @@
 
     &--last {
       border-bottom: 1px solid #e1e3e9;
+    }
+
+    & span:first-child {
+      padding-top: 11px;
+    }
+
+    & span:last-child {
+      padding-bottom: 10px;
     }
   }
 
