@@ -18,7 +18,7 @@
   }
 
   &__button {
-    padding: 13px 0;
+    padding: 15px 0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -42,7 +42,7 @@
 
   &__icon {
     display: block;
-    width: 10px;
+    width: 11px;
     height: 20px;
 
     &--prev {
@@ -58,7 +58,10 @@
 @media (min-width: @tab-width) {
   .companions-nav {
     justify-content: space-between;
-    padding: 25px 28px;
+    padding-top: 25px;
+    padding-right: 22px;
+    padding-bottom: 25px;
+    padding-left: 25px;
 
     &__pagination-list {
       display: flex;
@@ -97,5 +100,11 @@
         display: block;
       }
     }
+  }
+}
+
+@media (min-width: @tab-width) {
+  .companions-nav {
+    padding-right: 30px;
   }
 }

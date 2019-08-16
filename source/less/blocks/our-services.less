@@ -61,21 +61,30 @@
 
 @media (min-width: @tab-width) {
   .our-services {
-    margin-bottom: 30px;
+    &__item {
+      justify-content: flex-start;
+    }
 
     &__paragraph {
-      margin-right: 35px;
       flex-direction: row;
       justify-content: space-between;
       align-items: center;
-      min-width: 515px;
+      min-width: 563px;
       font-size: 28px;
       line-height: 33px;
+
+      & span:first-child {
+        padding-top: 0;
+      }
+
+      & span:last-child {
+        padding-bottom: 0;
+      }
     }
 
     &__number {
       margin-top: 0;
-      margin-right: 25px;
+      margin-right: 22px;
       width: 68px;
       height: 68px;
       order: -1;
@@ -91,10 +100,6 @@
 
     &__paragraph {
       min-width: 815px;
-    }
-
-    &__number {
-      margin-right: 25px;
     }
   }
 }

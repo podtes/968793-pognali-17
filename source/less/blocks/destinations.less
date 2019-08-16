@@ -46,21 +46,53 @@
 
 @media (min-width: @tab-width) {
   .destinations {
-    margin-top: 0;
-    padding-top: 80px;
+    margin-top: -50px;
+    padding-top: 123px;
 
     &__wrapper {
+      padding-left: 33px;
       padding-right: 310px;
+    }
+
+    &__wrapper-background {
+      padding-bottom: 79px;
+      border-radius: 0 0 60px 60px;
+    }
+
+    &__list {
+      margin-left: 35px;
+      margin-right: 35px;
+      margin-bottom: 35px;
+    }
+
+    &__title {
+      margin-bottom: 58px;
+    }
+
+    &__about {
+      padding-right: 0;
+      margin-bottom: 104px;
+      color: #444444;
+    }
+
+    &__to-all {
+      margin-left: 35px;
+      margin-right: 35px;
     }
   }
 }
 
 @media (min-width: @desk-width) {
   .destinations {
-    padding-top: 160px;
+    margin-top: -55px;
+    padding-top: 216px;
 
     &__wrapper-content {
       flex-direction: row;
+    }
+
+    &__wrapper-background {
+      padding-bottom: 55px;
     }
 
     &__wrapper {
@@ -70,7 +102,7 @@
     }
 
     &__title {
-      margin-bottom: 70px;
+      margin-bottom: 63px;
     }
 
     &__list {
@@ -81,11 +113,12 @@
     }
 
     &__to-all {
-      width: 275px;
+      margin: 0;
+      width: 214px;
       align-self: baseline;
       position: relative;
-      top: -100px;
-      right: -860px;
+      top: -82px;
+      left: 804px;
     }
   }
 }

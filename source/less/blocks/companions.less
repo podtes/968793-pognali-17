@@ -13,7 +13,7 @@
   &__wrapper-background {
     position: relative;
     padding-bottom: 30px;
-    border-radius: 30px;
+    border-radius: 0 0 30px 30px;
     background-color: #192144;
   }
 
@@ -57,19 +57,29 @@
 
 @media (min-width: @tab-width) {
   .companions {
+    margin-top: -60px;
+    padding-top: 201px;
+
     &__wrapper {
       padding-right: 220px;
+      padding-left: 35px;
     }
 
     &__wrapper-content {
-      padding: 0 35px;
+      padding: 0 40px;
+    }
+
+    &__wrapper-background {
+      padding-bottom: 25px;
+      border-radius: 0 0 60px 60px;
     }
 
     &__title {
-      margin-bottom: 65px;
+      margin-bottom: 57px;
     }
 
     &__about:first-of-type {
+      font-weight: lighter;
       margin-bottom: 40px;
     }
 
@@ -80,6 +90,7 @@
     }
 
     &__list {
+      margin-bottom: 70px;
       padding: 0 35px;
     }
 
@@ -92,6 +103,8 @@
 
 @media (min-width: @desk-width) {
   .companions {
+    padding-top: 163px;
+
     &__wrapper-content {
       padding-top: 30px;
       padding-bottom: 30px;
@@ -103,11 +116,15 @@
       width: 470px;
       padding: 0;
       margin: 0;
-      margin-left: 70px;
+      margin-left: 90px;
+    }
+
+    &__wrapper-background {
+      padding-bottom: 104px;
     }
 
     &__about:first-of-type {
-      margin-bottom: 50px;
+      margin-bottom: 39px;
     }
 
     &__about:last-of-type {
@@ -120,12 +137,17 @@
       order: 10;
     }
 
+    &__title {
+      margin-bottom: 53px;
+    }
+
     &__to-all {
-      width: 275px;
+      margin: 0;
+      width: 220px;
       position: absolute;
       align-self: baseline;
       top: 430px;
-      left: 60px;
+      left: 131px;
     }
   }
 }
