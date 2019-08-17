@@ -16,7 +16,7 @@
             </a>
             <button class="wrapper-menu__toggle wrapper-menu__toggle--open" type="button"></button>
           </div>
-          <nav class="main-nav">
+          <nav class="main-nav main-nav--open">
             <ul class="main-nav__site-list site-list">
               <li><a class="site-list__item" href="#">О сервисе</a></li>
               <li><a class="site-list__item" href="#">Направления</a></li>
@@ -27,28 +27,32 @@
             </ul>
             <ul class="main-nav__contacts-list contacts-list">
               <li class="contacts-list__item">
-                <button class="contacts-list__button"></button>
-                <span class="contacts-list__text">8 800 555-26-28</span>
+                <button class="contacts-list__button contacts-list__button--phone">
+                  <span class="contacts-list__icon-phone"></span>
+                </button>
+                <span class="contacts-list__text contacts-list__text--tel">8 800 555-86-28</span>
               </li>
               <li class="contacts-list__item">
-                <button class="contacts-list__button"></button>
+                <button class="contacts-list__button contacts-list__button--email">
+                  <span class="contacts-list__icon-email"></span>
+                </button>
                 <span class="contacts-list__text">mail@htmlacademy.ru</span>
               </li>
             </ul>
             <ul class="main-nav__social-list social-list">
               <li>
                 <a class="social-list__item social-list__item--header social-list__item--fb" href="#">
-                  <span class="visually-hidden">Погнали Фейсбук</span>
+                  <span aria-label="Погнали в Фейсбук"></span>
                 </a>
               </li>
               <li>
                 <a class="social-list__item social-list__item--header social-list__item--vk" href="#">
-                  <span class="visually-hidden">Погнали Вконтакте</span>
+                  <span aria-label="Погнали Вконтакте"></span>
                 </a>
               </li>
               <li>
                 <a class="social-list__item social-list__item--header social-list__item--insta" href="#">
-                  <span class="visually-hidden">Погнали Инстаграм</span>
+                  <span aria-label="Погнали в Инстаграмме"></span>
                 </a>
               </li>
             </ul>
@@ -71,10 +75,14 @@
         <div class="container">
           <ul class="intro__list intro-list">
             <li class="intro-list__item">
-              <button class="intro-list__button intro-list__button--phone" type="button"></button>
+              <button class="intro-list__button intro-list__button--phone" type="button">
+                <span aria-label="Позвонить нам"></span>
+              </button>
             </li>
             <li class="intro-list__item">
-              <button class="intro-list__button intro-list__button--email" type="button"></button>
+              <button class="intro-list__button intro-list__button--email" type="button">
+                <span aria-label="Написать нам"></span>
+              </button>
             </li>
             <li class="intro-list__item login-button">
               <a class="login-button__link" href="#">Авторизация</a>
@@ -82,11 +90,11 @@
           </ul>
           <div class="intro__blockquote-wrapper">
             <blockquote class="intro__review review">
-              <p class="review__text text text--light">
+              <p class="review__text">
                 "Лучшее приложение,<br> что я видел в жизни!"
               </p>
-              <cite class="review__author text text--bold">
-                Мурат Эльтазин<br> главный редактор<br> газеты "гаджетлайф"
+              <cite class="review__author">
+                Мурат Эльтазин<br> главный редактор газеты "гаджетлайф"
               </cite>
             </blockquote>
           </div>
@@ -121,16 +129,19 @@
             <div class="about-service__wrapper-all">
               <div class="about-service__wrapper">
                 <h2 class="about-service__title section-title">О сервисе</h2>
-                <p class="about-service__paragraph text text--light">
+                <p class="about-service__paragraph">
                     Любое путешествие веселее
                     с попутчиками, которые на одной волне с тобой! Делитесь своими идеями путешествий и черпайте вдохновение в чужих.
                 </p>
-                <p class="about-service__paragraph text text--bold">
-                    А если найдете кого-то близкого по духу - скорее зовите в совместный трип!
+                <p class="about-service__paragraph">
+                    А если найдете кого-то близкого по духу - скорее зовите его в совместный трип!
                 </p>
-                <a class="about-service__more button" href="#">Подробнее</a>
+                <a class="about-service__more button" href="#">
+                  <span class="button__title">Подробнее</span>
+                  <span class="button__icon"></span>
+                </a>
               </div>
-              <div class="about-service__image">
+              <div class="about-service__image-wrapper">
                 <img class="about-service__image" src="img/about-tablet@1x.png" alt="Про наши сервисы" width="376" height="548">
               </div>
             </div>
@@ -142,7 +153,7 @@
           <div class="destinations__wrapper-content container">
             <div class="destinations__wrapper">
               <h2 class="destinations__title section-title">Направления</h2>
-              <p class="destinations__about text text--light">Мы не продаем туры и ничего не рекламируем. Люди сами пишут о странах, куда хотели бы отправиться и чем можно там заняться.</p>
+              <p class="destinations__about">Мы не продаем туры и ничего не рекламируем. Люди сами пишут о странах, куда хотели бы отправиться и чем можно там заняться.</p>
             </div>
             <ul class="destinations__list country-list">
               <li class="country-list__item country-card">
@@ -179,7 +190,10 @@
                 </div>
               </li>
             </ul>
-            <a class="destinations__to-all button" href="#">Показать все</a>
+            <a class="destinations__to-all button" href="#">
+              <span class="button__title">Показать все</span>
+              <span class="button__icon"></span>
+            </a>
           </div>
         </div>
       </section>
@@ -188,12 +202,16 @@
           <div class="companions__wrapper-content container">
             <div class="companions__wrapper">
               <h2 class="companions__title section-title">Попутчики</h2>
-              <p class="companions__about text text--light">Все мы индивидуальны и у каждого свой взгляд на идеальный отдых. Одному нужен пляж и коктейль, а другому маршрут для хайкинга.</p>
-              <p class="companions__about text text--bold">Теперь можно легко найти единомышленников!</p>
+              <p class="companions__about">Все мы индивидуальны и у каждого свой взгляд на идеальный отдых. Одному нужен пляж и коктейль, а другому маршрут для хайкинга.</p>
+              <p class="companions__about">Теперь можно легко найти единомышленников!</p>
             </div>
             <ul class="companions__list people-list">
               <li class="people-list__item people-card">
                 <img class="people-card__image" src="./img/firsova-mobile@1x.jpg" alt="Таня Фирсова" width="270" height="270">
+                <span class="people-card__level level-indicator">
+                  <span class="level-indicator__number">99</span>
+                  <span class="level-indicator__title">level</span>
+                </span>
                 <ul class="people-card__flags-list flags-list">
                   <li class="flags-list__item">
                     <span></span>
@@ -210,24 +228,31 @@
                   <p class="people-card__hashtags">#ЗОЖ #ПП #Фитнес #пляж #авокадо #смузи</p>
                   <ul class="people-card__vehicle-list vehicle-list">
                     <li class="vehicle-list__item vehicle-list__item--active">
-                      <span class="vehicle-list__plane"></span>
+                      <span class="vehicle-list__icon vehicle-list__icon--plane"></span>
                     </li>
                     <li class="vehicle-list__item">
-                      <span class="vehicle-list__bus"></span>
+                      <span class="vehicle-list__icon vehicle-list__icon--bus"></span>
                     </li>
                     <li class="vehicle-list__item">
-                      <span class="vehicle-list__velo"></span>
+                      <span class="vehicle-list__icon vehicle-list__icon--velo"></span>
                     </li>
                     <li class="vehicle-list__item ">
-                      <span class="vehicle-list__foot"></span>
+                      <span class="vehicle-list__icon vehicle-list__icon--foot"></span>
                     </li>
                   </ul>
                   <span class="people-card__level"></span>
                 </div>
               </li>
               <li class="people-list__item people-card">
-                <img class="people-card__image" src="./img/demin-mobile@1x.jpg" alt="Петя Дёмин"  width="270" height="270">
+                <img class="people-card__image" src="./img/firsova-mobile@1x.jpg" alt="Таня Фирсова" width="270" height="270">
+                <span class="people-card__level level-indicator">
+                  <span class="level-indicator__number">99</span>
+                  <span class="level-indicator__title">level</span>
+                </span>
                 <ul class="people-card__flags-list flags-list">
+                  <li class="flags-list__item">
+                    <span></span>
+                  </li>
                   <li class="flags-list__item">
                     <span></span>
                   </li>
@@ -236,27 +261,30 @@
                   </li>
                 </ul>
                 <div class="people-card__wrapper">
-                  <h3 class="people-card__title people-card__title--online">Петя Дёмин</h3>
-                  <p class="people-card__hashtags">#бургер #бар #футбол #концерт #крафт</p>
+                  <h3 class="people-card__title people-card__title--offline">Таня Фирсова</h3>
+                  <p class="people-card__hashtags">#ЗОЖ #ПП #Фитнес #пляж #авокадо #смузи</p>
                   <ul class="people-card__vehicle-list vehicle-list">
                     <li class="vehicle-list__item vehicle-list__item--active">
-                      <span class="vehicle-list__plane"></span>
-                    </li>
-                    <li class="vehicle-list__item vehicle-list__item--active">
-                      <span class="vehicle-list__bus"></span>
+                      <span class="vehicle-list__icon vehicle-list__icon--plane"></span>
                     </li>
                     <li class="vehicle-list__item">
-                      <span class="vehicle-list__velo"></span>
+                      <span class="vehicle-list__icon vehicle-list__icon--bus"></span>
                     </li>
-                    <li class="vehicle-list__item vehicle-list__item--active">
-                      <span class="vehicle-list__foot"></span>
+                    <li class="vehicle-list__item">
+                      <span class="vehicle-list__icon vehicle-list__icon--velo"></span>
+                    </li>
+                    <li class="vehicle-list__item ">
+                      <span class="vehicle-list__icon vehicle-list__icon--foot"></span>
                     </li>
                   </ul>
                   <span class="people-card__level"></span>
                 </div>
               </li>
             </ul>
-            <a class="companions__to-all button" href="#">Показать все</a>
+            <a class="companions__to-all button" href="#">
+              <span class="button__title">Показать всеx</span>
+              <span class="button__icon"></span>
+            </a>
           </div>
         </div>
       </section>
@@ -265,7 +293,7 @@
           <h2 class="visually-hidden">Цены на наши услуги</h2>
           <div class="tariffs__wrapper-left">
             <div class="tariffs__wrapper">
-              <p class="tariffs__paragraph section-title">Добавьте свой профиль</p>
+              <p class="tariffs__paragraph section-title">Добавьте свой профиль!</p>
               <img class="tariffs__image" src="./img/rates@1x.png" alt="Платные услуги" width="100" height="100">
             </div>
             <ul class="tariffs__list our-services">
@@ -274,24 +302,29 @@
                   <span>Базовое размещение</span>
                   <span>Бесплатно</span>
                 </p>
-                <span class="our-services__number"><span></span></span>
+                <span class="our-services__number our-services__number--first"><span>1</span></span>
               </li>
               <li class="our-services__item">
                 <p class="our-services__paragraph">
                   <span>Вывод на первых позициях</span>
-                  <span>99 руб./месяц</span>
+                  <span>99 руб./мес</span>
                 </p>
-                <span class="our-services__number"><span></span></span>
+                <span class="our-services__number our-services__number--second"><span>2</span></span>
               </li>
               <li class="our-services__item">
-                <p class="our-services__paragraph">
+                <p class="our-services__paragraph our-services__paragraph--last">
                   <span>Кастомный цвет карточки</span>
-                  <span>59 руб./месяц</span>
+                  <span>59 руб./мес</span>
                 </p>
-                <span class="our-services__number"><span></span></span>
+                <span class="our-services__number our-services__number--third"><span>3</span></span>
               </li>
             </ul>
-            <a class="tariffs__business-tariffs" href="#">Показать тарифы для бизнеса</a>
+            <div class="tariffs__business-wrapper">
+              <span class="tariffs__business-image">
+                <span></span>
+              </span>
+              <a class="tariffs__business-tariffs" href="#">Показать тарифы для бизнеса</a>
+            </div>
             </div>
         </div>
       </section>
@@ -306,22 +339,58 @@
           <ul class="page-footer__social-list social-list social-list--footer">
             <li>
               <a class="social-list__item social-list__item--footer social-list__item--fb" href="#">
-                <span class="visually-hidden">Погнали Фейсбук</span>
+                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                viewBox="0 0 11 21" style="enable-background:new 0 0 11 21;" xml:space="preserve" width="11" height="21" fill="#cdcdcd">
+                  <g>
+                  <path d="M7.8,21H2.2v-9.8H0V6.4h2.1C2,4.2,2.4,2.6,3.4,1.5C4.2,0.6,5.5,0.1,7.1,0L11,0v4.7H7.9C7.8,4.9,7.7,5.5,7.7,6.4H11v4.8H7.8
+                  V21z M3.4,19.9h3.1v-9.8h3.2V7.5H6.5l0-0.6c0-1.5,0-2.9,0.8-3.4l0.2-0.1h2.3V1.1H7.1C5.9,1.2,4.9,1.6,4.3,2.3
+                    C3.5,3.2,3.2,4.8,3.4,6.9l0.1,0.6H1.2v2.6h2.2V19.9z"/>
+                  </g>
+                </svg>
               </a>
             </li>
             <li>
               <a class="social-list__item social-list__item--footer social-list__item--vk" href="#">
-                <span class="visually-hidden">Погнали Вконтакте</span>
+                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                viewBox="0 0 30 15.8" style="enable-background:new 0 0 30 15.8;" xml:space="preserve" width="23" height="12" fill="#cdcdcd">
+                  <g>
+                  <path d="M23.9,15.8c-0.4,0-1.2-0.1-2.1-0.6c-0.6-0.4-1.2-1-1.8-1.5c-0.4-0.4-1.2-1.2-1.4-1.2c-0.3,0.1-0.5,0.9-0.5,1.6
+                  c0,0.1,0,0.8-0.5,1.2c-0.4,0.4-1.1,0.5-1.2,0.5l-1.9,0c-1,0-4.4-0.2-7.4-3c-3.7-3.4-6.8-9.8-7-10.1C0,2.2-0.1,1.5,0.3,1.1
+                  c0.4-0.4,1.1-0.5,1.4-0.5l4.1,0l0.1,0c0.1,0,0.6,0.1,1,0.3c0.4,0.2,0.6,0.7,0.6,0.7c0,0,0.6,1.4,1.5,2.7c1.3,2,1.9,2.5,2.1,2.6
+                  c0.2-0.4,0.3-1.7,0.2-2.9c0-0.5-0.1-1.1-0.3-1.3c-0.1-0.1-0.4-0.3-0.8-0.3L9.5,1.8c-0.1-0.7,0.6-1.2,1.1-1.4
+                  C11.3,0.1,12.4,0,13.7,0l0.7,0c1.2,0,1.6,0.1,2.1,0.2c1.7,0.4,1.6,1.7,1.6,3.3c0,0.5,0,1,0,1.6c0,0.2,0,0.3,0,0.5
+                  c0,0.4,0,1,0.1,1.3c0.2-0.1,0.9-0.7,2.1-2.5c0.8-1.2,1.4-2.5,1.5-2.8l0,0c0.2-0.4,0.6-0.9,1.6-0.9l4.3,0c0,0,0.2,0,0.4,0
+                  c1,0,1.6,0.3,1.8,0.9c0.3,0.6,0.2,1.7-2.4,4.6c-0.4,0.4-0.7,0.8-1,1.1c-0.6,0.7-1.2,1.4-1.2,1.6C25.4,9,26,9.5,26.6,10
+                  c1.5,1.2,2.5,2.3,3,3.1c0.5,0.8,0.4,1.3,0.3,1.7c-0.4,0.9-1.6,1-1.9,1l-3.8,0C24.1,15.8,24.1,15.8,23.9,15.8z M18.6,10.9
+                  c0.9,0,1.7,0.8,2.5,1.6c0.5,0.5,1,1,1.5,1.3c0.7,0.4,1.3,0.4,1.4,0.4l0.1,0l3.8,0c0.2,0,0.4-0.1,0.5-0.1c0,0,0-0.1-0.1-0.2
+                  c-0.4-0.7-1.4-1.7-2.7-2.7c-1.2-1-1.8-1.5-1.9-2.2c-0.1-0.8,0.5-1.4,1.6-2.7c0.3-0.3,0.6-0.7,1-1.1c1.6-1.8,2-2.6,2.1-3
+                  c-0.2,0-0.6,0-0.7,0l-4.4,0c-0.2,0-0.2,0-0.2,0c-0.2,0.4-0.8,1.8-1.6,3c-1.9,2.8-2.8,3.2-3.4,3.2c-0.2,0-0.4,0-0.6-0.1
+                  c-1-0.6-1-1.8-0.9-2.8c0-0.1,0-0.3,0-0.4c0-0.6,0-1.2,0-1.7c0.1-1.7,0-1.7-0.4-1.8c-0.4-0.1-0.7-0.1-1.9-0.2l-0.7,0
+                  c-0.6,0-1.3,0-1.9,0.1c0.1,0.1,0.2,0.2,0.3,0.3c0.6,0.7,0.6,2,0.6,2.2c0.1,1.6,0.1,3.8-1,4.3c-0.2,0.1-0.4,0.1-0.6,0.1
+                  c-0.9,0-1.9-0.9-3.4-3.3C6.8,3.9,6.1,2.4,6.1,2.3c0,0-0.1-0.1-0.1-0.1C5.9,2.2,5.8,2.1,5.7,2.1l-4,0c0,0,0,0-0.1,0
+                  C2.2,3.3,5,8.7,8.1,11.6c2.7,2.5,5.8,2.6,6.4,2.6l1.9,0c0,0,0.2-0.1,0.3-0.1c0,0,0-0.1,0-0.1c0-0.3,0-2.6,1.6-3
+                  C18.4,10.9,18.5,10.9,18.6,10.9z"/>
+                  </g>
+                </svg>
               </a>
             </li>
             <li>
               <a class="social-list__item social-list__item--footer social-list__item--insta" href="#">
-                <span class="visually-hidden">Погнали Инстаграм</span>
+                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 23 23" style="enable-background:new 0 0 23 23;" xml:space="preserve" width="18" height="18" fill:#cdcdcd;>
+                  <style type="text/css">
+                  .st0{}
+                  </style>
+                  <path class="st0" d="M17,1.5c2.5,0,4.5,2,4.5,4.5v11c0,2.5-2,4.5-4.5,4.5H6c-2.5,0-4.5-2-4.5-4.5V6c0-2.5,2-4.5,4.5-4.5L17,1.5
+                    M17,0H6C2.7,0,0,2.7,0,6v11c0,3.3,2.7,6,6,6h11c3.3,0,6-2.7,6-6V6C23,2.7,20.3,0,17,0L17,0z"/>
+                  <path class="st0" d="M11.5,7.1c2.4,0,4.4,2,4.4,4.4c0,2.4-2,4.4-4.4,4.4c-2.4,0-4.4-2-4.4-4.4C7.1,9.1,9.1,7.1,11.5,7.1 M11.5,5.6
+                  c-3.3,0-5.9,2.7-5.9,5.9s2.7,5.9,5.9,5.9s5.9-2.7,5.9-5.9S14.8,5.6,11.5,5.6L11.5,5.6z"/>
+                  <circle class="st0" cx="17.6" cy="5.4" r="1.3"/>
+                </svg>
               </a>
             </li>
           </ul>
           <div class="page-footer__copyright copyright">
-            <b class="copyright__text">Разработано:</b>
+            <b class="copyright__text">Разработано</b>
             <a class="copyright__logo" href="htmlacademy.ru">
               <img class="copyright-logo-image" src="./img/htmlacademy.svg" alt="HTML Academy" width="27" height="34">
             </a>
@@ -360,7 +429,9 @@
           </li>
         </ul>
       </div>
-      <button class="modal-business-tariffs__button">Закрыть окно</button>
+      <button class="modal-business-tariffs__button">
+        <span>Закрыть окно</span>
+      </button>
     </section>
   </body>
 </html>

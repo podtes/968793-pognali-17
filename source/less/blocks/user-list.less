@@ -1,9 +1,18 @@
 .user-list {
   &__login-button {
-    text-align: center;
-    vertical-align: middle;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: #ffd74b;
     border-radius: 25px;
+
+    &:hover {
+      background-color: #ffbd30;
+    }
+
+    &:active {
+      background-color: #ffbd30;
+    }
   }
 
   &__link {
@@ -14,5 +23,27 @@
     line-height: 30px;
     font-weight: bold;
     text-transform: uppercase;
+
+    &:active {
+      opacity: 0.3;
+    }
+  }
+}
+
+
+@media (min-width: @tab-width) {
+  .user-list {
+    &__link {
+      font-size: 20px;
+      line-height: 30px;
+    }
+  }
+}
+
+@media (min-width: @desk-width) {
+  .user-list {
+    &__link {
+      padding-top: 11px;
+    }
   }
 }

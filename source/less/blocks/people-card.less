@@ -1,7 +1,7 @@
 .people-card {
   position: relative;
   text-align: center;
-  border-radius: 20px;
+  border-radius: 10px;
   overflow: hidden;
 
   &__image {
@@ -9,14 +9,16 @@
   }
 
   &__flags-list {
+    margin: 0;
+    padding: 0;
     position: absolute;
-    top: 258px;
+    top: 260px;
     left: 0;
   }
 
   &__wrapper {
     padding-top: 27px;
-    padding-bottom: 22px;
+    padding-bottom: 14px;
     padding-left: 40px;
     padding-right: 40px;
     background-color: #ffffff;
@@ -25,20 +27,20 @@
   &__title {
     position: relative;
     margin: 0;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
     padding: 0;
 
     font-size: 21px;
     line-height: 21px;
     font-weight: bold;
-    color: #161c35;
+    color: #1d2e5b;
 
     &--online {
       &::before {
         position: absolute;
         content: "";
-        top: 8px;
-        left: 0;
+        top: 7px;
+        left: 13px;
         width: 5px;
         height: 5px;
         border-radius: 50%;
@@ -50,22 +52,37 @@
       &::before {
         position: absolute;
         content: "";
-        top: 8px;
-        left: 0;
+        top: 7px;
+        left: 13px;
         width: 5px;
         height: 5px;
         border-radius: 50%;
         background-color: darkred;
       }
     }
+
+    &:hover {
+      opacity: 0.7;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
   }
+
+  &__level {
+    position: absolute;
+    top: 17px;
+    left: 17px;
+  }
+
 
   &__hashtags {
     margin: 0;
-    margin-bottom: 20px;
+    margin-bottom: 8px;
     padding: 0;
 
-    color: #000000;
+    color: #444444;
     font-size: 16px;
     line-height: 18px;
   }
@@ -73,6 +90,57 @@
 
 @media (min-width: @tab-width) {
   .people-card {
-    width: 270px;
+    width: 285px;
+    border-radius: 20px;
+
+    &__wrapper {
+      padding: 30px;
+      padding-bottom: 21px;
+    }
+
+    &__image {
+      width: 100%;
+    }
+
+    &__level {
+      top: 22px;
+      left: 20px;
+    }
+
+    &__flags-list {
+      top: 273px;
+    }
+
+    &__title {
+      margin-bottom: 22px;
+      font-size: 24px;
+      line-height: 24px;
+      font-weight: bold;
+
+      &--online {
+        &::before {
+          top: 9px;
+          left: 16px;
+          width: 7px;
+          height: 7px;
+        }
+      }
+
+      &--offline {
+        &::before {
+          top: 9px;
+          left: 16px;
+          width: 7px;
+          height: 7px;
+        }
+      }
+    }
+
+    &__hashtags {
+      margin-bottom: 16px;
+      font-size: 20px;
+      line-height: 24px;
+      font-weight: normal;
+    }
   }
 }

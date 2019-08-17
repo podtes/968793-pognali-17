@@ -1,5 +1,5 @@
 .tariffs {
-  padding-top: 65px;
+  padding-top: 68px;
   padding-bottom: 30px;
   margin-top: -30px;
   background-color: #edeff6;
@@ -7,9 +7,10 @@
 
   &__wrapper {
     position: relative;
-    margin-bottom: 32px;
+    margin-bottom: 29px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
   }
 
   &__wrapper-left {
@@ -19,8 +20,18 @@
 
   &__list {
     margin: 0;
-    margin-bottom: 30px;
+    margin-bottom: 28px;
     padding: 0;
+  }
+
+  &__business-wrapper {
+    &:hover {
+      opacity: 0.7;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
   }
 
   &__business-tariffs {
@@ -29,25 +40,81 @@
     font-weight: bold;
     color: #192144;
   }
+
+  &__business-image {
+    display: none;
+  }
 }
 
 
 @media (min-width: @tab-width) {
   .tariffs {
+    margin-top: -55px;
+    padding-top: 130px;
+
     &__wrapper {
+      margin-bottom: 71px;
       justify-content: center;
+    }
+
+    &__wrapper-left {
+      padding-left: 0;
+      padding-bottom: 130px;
+    }
+
+    &__list {
+      margin-bottom: 30px;
     }
 
     &__image {
       position: absolute;
-      top: 280px;
-      right: 0;
+      top: 334px;
+      right: 45px;
     }
 
+    &__business-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+    }
 
     &__business-tariffs {
       font-size: 20px;
       line-height: 20px;
+      font-weight: bold;
+
+      &:hover {
+        opacity: 0.7;
+      }
+
+      &:active {
+        opacity: 0.3;
+      }
+    }
+
+    &__business-image {
+      margin-right: 21px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 68px;
+      height: 68px;
+      background-color: #e2e5f2;
+      border-radius: 50%;
+
+      &:hover {
+        opacity: 0.7;
+      }
+
+      &:active {
+        opacity: 0.3;
+      }
+    }
+
+    &__business-image span {
+      background: url("../../img/business.svg") no-repeat 50% 50%;
+      width: 18px;
+      height: 22px;
     }
   }
 }
@@ -55,14 +122,27 @@
 
 @media (min-width: @desk-width) {
   .tariffs {
+    padding-top: 162px;
+    margin-bottom: 133px;
+
     &__wrapper {
-      justify-content: flex-start;
+      justify-content: center;
+      margin-bottom: 130px;
+    }
+
+    &__business-wrapper {
+      margin-left: 71px;
+    }
+
+    &__list {
+      margin-left: 71px;
     }
 
     &__image {
-      width: 205px;
-      height: 205px;
-      top: 85px;
+      width: 200px;
+      height: 200px;
+      top: 178px;
+      right: 73px;
     }
   }
 }

@@ -1,5 +1,5 @@
 .companions {
-  padding-top: 50px;
+  padding-top: 102px;
   margin-top: -30px;
 
   background-color: #192144;
@@ -12,19 +12,24 @@
 
   &__wrapper-background {
     position: relative;
-    padding-bottom: 35px;
-    border-radius: 30px;
+    padding-bottom: 30px;
+    border-radius: 0 0 30px 30px;
     background-color: #192144;
   }
 
   &__wrapper-content {
+    position: relative;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
   }
 
+  &__image-wrapper {
+    margin-bottom: 15px;
+  }
+
   &__title {
-    margin-bottom: 25px;
+    margin-bottom: 19px;
   }
 
   &__about {
@@ -32,26 +37,74 @@
     padding: 0;
     margin-bottom: 20px;
 
+    &:first-child {
+      font-weight: lighter;
+    }
+
     &:last-child {
-      margin-bottom: 70px;
+      margin-bottom: 57px;
+      font-weight: bold;
     }
   }
 
   &__list {
-    margin-bottom: 20px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    margin-bottom: 9px;
   }
 }
 
 @media (min-width: @tab-width) {
   .companions {
+    margin-top: -60px;
+    padding-top: 201px;
+
     &__wrapper {
       padding-right: 220px;
+      padding-left: 35px;
+    }
+
+    &__wrapper-content {
+      padding: 0 40px;
+    }
+
+    &__wrapper-background {
+      padding-bottom: 25px;
+      border-radius: 0 0 60px 60px;
+    }
+
+    &__title {
+      margin-bottom: 57px;
+    }
+
+    &__about:first-of-type {
+      font-weight: lighter;
+      margin-bottom: 40px;
+    }
+
+    &__about:last-of-type {
+      font-size: 21px;
+      line-height: 25px;
+      font-weight: bold;
+    }
+
+    &__list {
+      margin-bottom: 70px;
+      padding: 0 35px;
+    }
+
+    &__to-all {
+      margin: 0 35px;
+      margin-bottom: 60px;
     }
   }
 }
 
 @media (min-width: @desk-width) {
   .companions {
+    padding-top: 163px;
+
     &__wrapper-content {
       padding-top: 30px;
       padding-bottom: 30px;
@@ -63,6 +116,19 @@
       width: 470px;
       padding: 0;
       margin: 0;
+      margin-left: 90px;
+    }
+
+    &__wrapper-background {
+      padding-bottom: 104px;
+    }
+
+    &__about:first-of-type {
+      margin-bottom: 39px;
+    }
+
+    &__about:last-of-type {
+      width: 280px;
     }
 
     &__list {
@@ -71,11 +137,17 @@
       order: 10;
     }
 
+    &__title {
+      margin-bottom: 53px;
+    }
+
     &__to-all {
-      position: relative;
+      margin: 0;
+      width: 220px;
+      position: absolute;
       align-self: baseline;
-      top: 350px;
-      left: -500px;
+      top: 430px;
+      left: 131px;
     }
   }
 }

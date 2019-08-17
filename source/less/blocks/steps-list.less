@@ -6,16 +6,16 @@
 
   &__item {
     margin-top: -25px;
-    padding: 35px;
+    padding-top: 22px;
+    padding-left: 25px;
+    padding-bottom: 47px;
+    padding-right: 20px;
+
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    border-radius: 15px;
+    border-radius: 10px;
     box-sizing: border-box;
-
-    &:last-child {
-      padding: 25px;
-    }
 
     &--first {
       background-color: #ff8d30;
@@ -31,6 +31,7 @@
 
     &--fourth {
       background-color: #ffd74b;
+      padding-bottom: 21px;
     }
   }
 
@@ -48,18 +49,50 @@
   .steps-list {
     font-size: 24px;
     line-height: 24px;
+    font-weight: bold;
     display: flex;
     flex-wrap: wrap;
 
     &__item {
+      padding-top: 32px;
+      padding-left: 33px;
+      padding-bottom: 20px;
+      padding-right: 0;
+      margin: 0;
       display: block;
-      padding: 45px;
-      width: 344px;
       box-sizing: border-box;
+
+      &--first {
+        width: 359px;
+        border-radius: 20px 0 0 0;
+      }
+
+      &--second {
+        margin-left: -15px;
+        width: 344px;
+        border-radius: 20px 20px 0 0;
+      }
+
+      &--third {
+        width: 359px;
+        border-radius: 0 0 0 20px;
+      }
+
+      &--fourth {
+        margin-left: -15px;
+        width: 344px;
+        border-radius: 0 0 20px 20px;
+      }
     }
 
     p {
       width: 230px;
+      margin-bottom: 10px;
+    }
+
+    span {
+      font-size: 30px;
+      line-height: 30px;
     }
   }
 }
@@ -71,12 +104,44 @@
 
     &__item {
       display: flex;
-      padding: 30px;
-      width: 330px;
+      padding-top: 30px;
+      padding-left: 32px;
+      padding-bottom: 30px;
+      padding-right: 64px;
+
+      &--first {
+        width: 345px;
+        border-radius: 20px 0 0 20px;
+      }
+
+      &--second {
+        width: 375px;
+        margin-left: -30px;
+        border-radius: 20px 0 0 20px;
+      }
+
+      &--third {
+        width: 375px;
+        margin-left: -30px;
+        border-radius: 20px 0 0 20px;
+      }
+
+      &--fourth {
+        padding-right: 33px;
+        width: 315px;
+        margin-left: -30px;
+        border-radius: 20px;
+      }
     }
 
     p {
       width: 200px;
+      margin-bottom: 0;
+    }
+
+    span {
+      font-size: 24px;
+      line-height: 24px;
     }
   }
 }

@@ -1,6 +1,6 @@
 .destinations {
-  margin-top: -30px;
-  padding-top: 100px;
+  margin-top: -45px;
+  padding-top: 102px;
   background-color: #edeff6;
 
   &__wrapper {
@@ -10,7 +10,7 @@
 
   &__wrapper-background {
     position: relative;
-    padding-bottom: 35px;
+    padding-bottom: 29px;
     border-radius: 30px;
     background-color: #edeff6;
   }
@@ -24,17 +24,19 @@
   &__list {
     margin: 0;
     padding: 0;
-    margin-bottom: 20px;
+    margin-bottom: 17px;
   }
 
   &__title {
-    margin-bottom: 25px;
+    margin-bottom: 19px;
   }
 
   &__about {
     margin: 0;
     padding: 0;
-    margin-bottom: 70px;
+    padding-right: 10px;
+    margin-bottom: 60px;
+    font-weight: lighter;
   }
 
   &__to-all {
@@ -44,36 +46,79 @@
 
 @media (min-width: @tab-width) {
   .destinations {
-    margin-top: 0;
-    padding-top: 80px;
+    margin-top: -50px;
+    padding-top: 123px;
 
     &__wrapper {
+      padding-left: 33px;
       padding-right: 310px;
+    }
+
+    &__wrapper-background {
+      padding-bottom: 79px;
+      border-radius: 0 0 60px 60px;
+    }
+
+    &__list {
+      margin-left: 35px;
+      margin-right: 35px;
+      margin-bottom: 35px;
+    }
+
+    &__title {
+      margin-bottom: 58px;
+    }
+
+    &__about {
+      padding-right: 0;
+      margin-bottom: 104px;
+      color: #444444;
+    }
+
+    &__to-all {
+      margin-left: 35px;
+      margin-right: 35px;
     }
   }
 }
 
 @media (min-width: @desk-width) {
   .destinations {
+    margin-top: -55px;
+    padding-top: 216px;
+
     &__wrapper-content {
       flex-direction: row;
     }
 
+    &__wrapper-background {
+      padding-bottom: 55px;
+    }
+
     &__wrapper {
       padding-right: 0;
+      padding-left: 0;
       width: 350px;
     }
 
+    &__title {
+      margin-bottom: 63px;
+    }
+
     &__list {
+      margin-left: 70px;
       margin-right: 170px;
+      margin-bottom: 0;
       order: -1;
     }
 
     &__to-all {
+      margin: 0;
+      width: 214px;
       align-self: baseline;
       position: relative;
-      top: 350px;
-      right: 350px;
+      top: -82px;
+      left: 804px;
     }
   }
 }

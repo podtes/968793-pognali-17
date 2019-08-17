@@ -1,6 +1,7 @@
 .page-header {
-  padding-top: 25px;
-  padding-bottom: 170px;
+  position: relative;
+  padding-top: 27px;
+  padding-bottom: 150px;
 
   &--open {
     background-color: #ffffff;
@@ -17,7 +18,6 @@
   }
 
   &__wrapper-menu {
-    margin-bottom: 75px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -26,24 +26,30 @@
 
 @media (min-width: @tab-width) {
   .page-header {
+    padding-top: 52px;
     padding-bottom: 70px;
   }
 }
 
 @media (min-width: @desk-width) {
   .page-header {
-    padding-top: 50px;
-    padding-bottom: 0;
+    margin: 0;
+    padding: 0;
+    padding-top: 49px;
     background-color: #161c34;
 
     &__wrapper {
+      margin: 0;
+      padding: 0;
       flex-direction: row;
     }
 
     &__wrapper-menu {
+      margin: 0;
+      padding: 0;
       margin-bottom: 0;
       width: 285px;
-      margin-right: 60px;
+      margin-right: 40px;
     }
   }
 }

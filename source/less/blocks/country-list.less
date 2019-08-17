@@ -14,8 +14,15 @@
     &--catalog {
       font-size: 15px;
       line-height: 18px;
-      padding-left: 40px;
     }
+  }
+
+  &__title {
+    padding-left: 48px;
+    font-size: 15px;
+    line-height: 18px;
+    text-transform: uppercase;
+    color: #1d2e5b;
   }
 }
 
@@ -25,9 +32,10 @@
       flex-direction: row;
     }
 
-    &__item {
+    &__title {
       font-size: 20px;
       line-height: 30px;
+      margin-right: 30px;
     }
   }
 }
@@ -37,6 +45,19 @@
     &--catalog {
       flex-direction: column;
       margin-bottom: 23px;
+    }
+
+    &__title {
+      margin-right: 0;
+    }
+
+    &__item {
+      margin-left: 26px;
+      margin-bottom: 7px;
+
+      &:last-child {
+        margin-bottom: 26px;
+      }
     }
   }
 }

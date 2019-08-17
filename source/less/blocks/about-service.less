@@ -5,7 +5,7 @@
 
   &__wrapper-background {
     position: relative;
-
+    top: -15px;
     background: url("../img/about-mobile@1x.png") no-repeat 50% 50%;
     background-color: #192144;
     width: 100%;
@@ -19,17 +19,26 @@
   }
 
   &__wrapper {
-    padding-top: 30px;
-    padding-left: 15px;
+    padding-top: 33px;
+    padding-left: 25px;
+    padding-right: 35px;
   }
 
   &__title {
-    margin-bottom: 21px;
+    margin-bottom: 20px;
   }
 
   &__paragraph {
     margin: 0;
     padding: 0;
+
+    &:first-of-type {
+      font-weight: lighter;
+    }
+
+    &:last-of-type {
+      font-weight: bold;
+    }
   }
 
   &__more {
@@ -41,37 +50,68 @@
   }
 
   p:first-of-type {
-    margin-bottom: 25px;
+    margin-bottom: 18px;
   }
 }
 
 @media (min-width: @tab-width) {
   .about-service {
-    padding-bottom: 250px;
+    position: relative;
+    padding-bottom: 290px;
+    padding-top: 58px;
+    border-radius: 0 0 60px 60px;
 
     &__wrapper {
-      width: 382px;
+      width: 300px;
       padding-top: 0;
+      padding-left: 35px;
+      padding-right: 0;
       box-sizing: border-box;
     }
 
+    &__wrapper-all {
+      position: relative;
+    }
+
     &__wrapper-background {
+      top: 0;
       background: none;
     }
 
+    &__title {
+      margin-bottom: 40px;
+    }
+
     &__more {
-      display: block;
+      display: flex;
+      width: 214px;
     }
 
     &__image {
+      position: absolute;
+      top: 6px;
+      left: 344px;
       display: block;
+    }
+
+    &__paragraph:last-of-type {
+      width: 300px;
+      margin-bottom: 50px;
+      font-size: 21px;
+      line-height: 25px;
+    }
+
+    p:first-of-type {
+      width: 300px;
+      margin-bottom: 32px;
     }
   }
 }
 
 @media (min-width: @desk-width) {
   .about-service {
-    padding-top: 150px;
+    padding-top: 133px;
+    padding-bottom: 265px;
 
     &__wrapper-all {
       display: flex;
@@ -82,7 +122,25 @@
     &__wrapper {
       margin-left: 70px;
       padding-left: 0;
-      min-width: 610px;
+      min-width: 620px;
+    }
+
+    &__image {
+      left: 800px;
+    }
+
+    &__title {
+      margin-bottom: 58px;
+    }
+
+    p:first-of-type {
+      width: 645px;
+      margin-bottom: 37px;
+    }
+
+    &__paragraph:last-of-type {
+      width: 420px;
+      margin-bottom: 83px;
     }
   }
 }

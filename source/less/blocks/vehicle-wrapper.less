@@ -1,13 +1,39 @@
 .vehicle-wrapper {
   &__title {
+    position: relative;
+    display: block;
+    margin-bottom: 15px;
     font-size: 15px;
     line-height: 18px;
     color: #444444;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 8px;
+      left: -26px;
+      width: 22px;
+      height: 1px;
+      background-color: #edeff6;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 8px;
+      left: 72px;
+      width: 100px;
+      height: 1px;
+      background-color: #edeff6;
+    }
   }
 }
 
 @media (min-width: @tab-width) {
   .vehicle-wrapper {
+    padding: 0;
+    min-width: 61px;
+
     &__title {
       display: none;
     }

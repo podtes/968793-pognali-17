@@ -1,12 +1,46 @@
 .review {
+  font-size: 16px;
+  line-height: 22px;
+
   &__text {
     margin: 0;
-    margin-bottom: 25px;
+    margin-bottom: 18px;
     padding: 0;
+    font-weight: lighter;
   }
 
   &__author {
     font-weight: bold;
     font-style: normal;
+  }
+}
+
+@media (min-width: @tab-width) {
+  .review {
+    max-width: 300px;
+
+    &__text {
+      margin-bottom: 43px;
+      font-size: 28px;
+      line-height: 33px;
+    }
+
+    &__author {
+      font-size: 21px;
+      line-height: 25px;
+    }
+  }
+}
+
+@media (min-width: @desk-width) {
+  .review {
+    &__author {
+      font-size: 21px;
+      line-height: 25px;
+    }
+
+    &__text {
+      margin-bottom: 46px;
+    }
   }
 }

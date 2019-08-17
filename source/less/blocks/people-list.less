@@ -1,10 +1,8 @@
 .people-list {
-  margin: 0;
-  padding: 0;
-
   list-style: none;
 
   &__item {
+    position: relative;
     margin-bottom: 10px;
   }
 }
@@ -18,6 +16,11 @@
 
 @media (min-width: @desk-width) {
   .people-list {
-    min-width: 635px;
+    margin-right: 20px;
+    min-width: 630px;
+
+    &__item {
+      margin-bottom: 0;
+    }
   }
 }

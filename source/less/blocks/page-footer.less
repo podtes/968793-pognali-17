@@ -1,7 +1,7 @@
 .page-footer {
   margin-top: -30px;
   padding-top: 38px;
-  padding-bottom: 14px;
+  padding-bottom: 7px;
 
   background-color: #ffffff;
   text-align: center;
@@ -15,7 +15,7 @@
 
   &__logo {
     display: block;
-    margin-bottom: 40px;
+    margin-bottom: 31px;
   }
 
   &__social-list {
@@ -28,6 +28,10 @@
 
 @media (min-width: @tab-width) {
   .page-footer {
+    margin-top: -55px;
+    padding: 48px 0;
+    border-radius: 60px 60px 0 0;
+
     &__wrapper {
       flex-direction: row;
       align-items: center;
@@ -36,10 +40,16 @@
 
     &__logo {
       margin-right: 0;
+      margin-bottom: 0;
     }
 
     &__social-list {
-      margin-right: 0;
+      margin: 0;
+    }
+
+    &__copyright {
+      padding: 0;
+      margin: 0;
     }
   }
 }

@@ -1,12 +1,12 @@
 .intro-companions {
-  padding-top: 30px;
+  padding-top: 38px;
   background-color: #161c35;
   color: #ffffff;
 
   &__wrapper {
     position: relative;
     border-radius: 0 0 20px 20px;
-    padding-bottom: 17px;
+    padding-bottom: 9px;
     background-color: #161c35;
   }
 
@@ -27,7 +27,7 @@
     &::after {
       position: absolute;
       content: "";
-      bottom: -19px;
+      bottom: -11px;
       left: 0;
 
       width: 172px;
@@ -41,16 +41,51 @@
 
 @media (min-width: @tab-width) {
   .intro-companions {
+    &__wrapper {
+      padding-bottom: 63px;
+      border-radius: 0 0 60px 60px;
+    }
+
     &__wrapper-link {
-      padding: 0 40px;
+      padding: 0 35px;
       display: flex;
       flex-wrap: wrap;
       align-items: center;
       justify-content: space-between;
     }
 
+    &__title {
+      font-size: 60px;
+      line-height: 70px;
+
+      &::after {
+        bottom: -65px;
+        left: 2px;
+        width: 285px;
+        height: 8px;
+        border-radius: 5px;
+        background-color: #ff8d30;
+      }
+    }
+
     &__link-back {
       display: block;
+    }
+  }
+}
+
+@media (min-width: @desk-width) {
+  .intro-companions {
+    padding-top: 119px;
+
+    &__wrapper-link {
+      padding: 0 65px;
+    }
+
+    &__title {
+      &::after {
+        bottom: -66px;
+      }
     }
   }
 }

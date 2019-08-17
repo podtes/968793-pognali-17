@@ -3,19 +3,23 @@
 
   &__wrapper {
     position: relative;
-    padding: 30px;
-    margin-top: -15px;
+    padding-top: 27px;
+    padding-bottom: 21px;
+    padding-left: 25px;
+    padding-right: 25px;
+    margin-top: -11px;
     background-color: #ffffff;
     border-radius: 10px;
   }
 
   &__img-wrapper {
-    border-radius: 15px;
+    border-radius: 10px;
     overflow: hidden;
   }
 
   &__title {
     margin: 0;
+    margin-bottom: 3px;
     padding: 0;
     font-size: 21px;
     line-height: 21px;
@@ -37,7 +41,7 @@
     position: absolute;
     background-color: #cccccc;
     top: -12px;
-    left: 30px;
+    left: 25px;
     width: 36px;
     height: 23px;
     border-radius: 3px;
@@ -45,13 +49,23 @@
 
   &__views {
     position: absolute;
-    bottom: 12px;
-    right: 30px;
+    bottom: 35px;
+    right: 25px;
 
     font-size: 16px;
     line-height: 30px;
     color: #444444;
     opacity: 0.3;
+
+    &::before {
+      content: "";
+      position: absolute;
+      background: url("../../img/user.svg") no-repeat 50% 50%;
+      width: 10px;
+      height: 10px;
+      top: 9px;
+      right: 50px;
+    }
   }
 
   &__image {
@@ -61,10 +75,9 @@
 
 @media (min-width: @tab-width) {
   .country-card {
-    margin-bottom: 40px;
     display: flex;
     width: 100%;
-    border-radius: 15px;
+    border-radius: 20px;
     overflow: hidden;
 
     &__img-wrapper {
@@ -72,20 +85,104 @@
       border-radius: 0;
     }
 
+    &__image {
+      height: 100%;
+    }
+
     &__wrapper {
+      width: 545px;
+      padding-left: 31px;
+      padding-top: 31px;
+      padding-bottom: 64px;
       flex-grow: 1;
       margin-top: 0;
       border-radius: 0;
     }
 
+    &__title {
+      font-size: 24px;
+      line-height: 24px;
+    }
+
+    &__description {
+      font-size: 20px;
+      line-height: 18px;
+    }
+
     &__views {
-      bottom: 12px;
+      padding-left: 30px;
+      font-size: 20px;
+      line-height: 30px;
+      bottom: 16px;
       left: 30px;
+
+      &::before {
+        top: 3px;
+        left: 0;
+        width: 20px;
+        height: 20px;
+      }
     }
 
     &__flag {
-      top: 30px;
-      left: 400px;
+      width: 70px;
+      height: 47px;
+      top: 16px;
+      left: 398px;
+      border-radius: 7px;
+    }
+  }
+}
+
+
+@media (min-width: @desk-width) {
+  .country-card {
+    min-width: 560px;
+
+    &__wrapper {
+      width: 255px;
+      padding-top: 24px;
+      padding-bottom: 71px;
+    }
+
+    &__img-wrapper {
+      width: 186px;
+    }
+
+    &__image {
+      height: 100%;
+    }
+
+    &__title {
+      font-size: 24px;
+      line-height: 24px;
+      font-weight: bold;
+    }
+
+    &__description {
+      font-size: 20px;
+      line-height: 18px;
+    }
+
+    &__views {
+      padding-left: 30px;
+      font-size: 20px;
+      line-height: 30px;
+
+      &::before {
+        top: 3px;
+        left: 0;
+        width: 20px;
+        height: 20px;
+      }
+    }
+
+    &__flag {
+      width: 70px;
+      height: 47px;
+      border-radius: 6px;
+      top: 23px;
+      left: 339px;
     }
   }
 }
