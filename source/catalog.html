@@ -12,11 +12,15 @@
         <div class="page-header__wrapper">
           <div class="page-header__wrapper-menu wrapper-menu">
             <a class="wrapper-menu__logo" href="#">
-              <img class="wrapper-menu__logo-image--open" src="./img/logo-mobile-blue@1x.png" width="100" height="19" alt="Логотип сервиса для поиска попутчиков поехали">
+              <picture>
+                <source media="(min-width: 1440px)" srcset="./img/logo-desktop-blue@1x.png 1x, ./img/logo-desktop-blue@2x.png 2x">
+                <source media="(min-width: 768px)" srcset="./img/logo-tablet-blue@1x.png 1x, ./img/logo-tablet-blue@2x.png 2x">
+                <img class="wrapper-menu__logo-image--open" src="./img/logo-mobile-blue@1x.png" width="100" height="19" srcset="./img/logo-mobile-blue@2x.png 2x" alt="Логотип сервиса для поиска попутчиков поехали">
+              </picture>
             </a>
             <button class="wrapper-menu__toggle wrapper-menu__toggle--open" type="button"></button>
           </div>
-          <nav class="main-nav">
+          <nav class="main-nav main-nav--open">
             <ul class="main-nav__site-list site-list">
               <li><a class="site-list__item" href="#">О сервисе</a></li>
               <li><a class="site-list__item" href="#">Направления</a></li>
@@ -30,7 +34,7 @@
                 <button class="contacts-list__button contacts-list__button--phone">
                   <span class="contacts-list__icon-phone"></span>
                 </button>
-                <span class="contacts-list__text">8 800 555-26-28</span>
+                <span class="contacts-list__text contacts-list__text--tel">8 800 555-86-28</span>
               </li>
               <li class="contacts-list__item">
                 <button class="contacts-list__button contacts-list__button--email">
@@ -81,7 +85,11 @@
           <li class="companions-list__item">
             <div class="companions-list__top-wrapper">
               <div class="companions-list__image-wrapper">
-                <img class="companions-list__image" src="./img/firsova-mobile@1x.jpg" alt="Таня Фирсова" width="70px" heigth="70">
+                <picture>
+                  <source media="(min-width: 1440px)" srcset="./img/firsova-desktop@1x.jpg 1x, ./img/firsova-desktop@2x.jpg 2x">
+                  <source media="(min-width: 768px)" srcset="./img/firsova-tablet@1x.jpg 1x, ./img/firsova-tablet@2x.jpg 2x">
+                  <img class="companions-list__image" src="./img/firsova-mobile@1x.jpg" alt="Таня Фирсова" width="70px" heigth="70" srcset="./img/firsova-mobile@2x.jpg 2x">
+                </picture>
               </div>
               <div class="companions-list__wrapper-tablet">
                 <h3 class="companions-list__title companions-list__title--offline">Таня Фирсова</h3>
@@ -144,17 +152,21 @@
           <li class="companions-list__item">
             <div class="companions-list__top-wrapper">
               <div class="companions-list__image-wrapper">
-                <img class="companions-list__image" src="./img/firsova-mobile@1x.jpg" alt="Таня Фирсова" width="70px" heigth="70">
+                <picture>
+                  <source media="(min-width: 1440px)" srcset="./img/demin-desktop@1x.jpg 1x, ./img/demin-desktop@2x.jpg 2x">
+                  <source media="(min-width: 768px)" srcset="./img/demin-tablet@1x.jpg 1x, ./img/demin-tablet@2x.jpg 2x">
+                  <img class="companions-list__image" src="./img/demin-mobile@1x.jpg" alt="Таня Фирсова" width="70px" heigth="70" srcset="./img/demin-mobile@2x.jpg 2x">
+                </picture>
               </div>
               <div class="companions-list__wrapper-tablet">
-                <h3 class="companions-list__title companions-list__title--offline">Таня Фирсова</h3>
+                <h3 class="companions-list__title companions-list__title--offline">Петя Демин</h3>
                 <div class="companions-list__likes-value-wrapper">
-                  <span class="companions-list__like companions-list__like--active">
-                    <span class="companions-list__like-icon companions-list__like-icon--active"></span>
+                  <span class="companions-list__like companions-list__like">
+                    <span class="companions-list__like-icon"></span>
                   </span>
-                  <span class="companions-list__likes-value">1,5 M</span>
+                  <span class="companions-list__likes-value">150</span>
                 </div>
-                <p class="companions-list__hashtags">#ЗОЖ #ПП #Фитнес #пляж #авокадо #смузи</p>
+                <p class="companions-list__hashtags">#бургер #бар #футбол #концерт #крафт</p>
               </div>
             </div>
             <div class="companions-list__desktop-wrapper">
@@ -163,15 +175,11 @@
               <ul class="companions-list__flags country-list country-list--catalog">
                 <li class="country-list__item country-list__item--catalog">
                   <span></span>
-                  <span class="country-list__title">Шри-Ланка</span>
+                  <span class="country-list__title">Бельгия</span>
                 </li>
                 <li class="country-list__item country-list__item--catalog">
                   <span></span>
-                  <span class="country-list__title">Тайланд</span>
-                </li>
-                <li class="country-list__item country-list__item--catalog">
-                  <span></span>
-                  <span class="country-list__title">Сейшелы</span>
+                  <span class="country-list__title">Чехия</span>
                 </li>
               </ul>
             </div>
@@ -182,13 +190,13 @@
                   <li class="vehicle-list__item vehicle-list__item--background vehicle-list__item--active">
                     <span class="vehicle-list__icon vehicle-list__icon--plane"></span>
                   </li>
-                  <li class="vehicle-list__item vehicle-list__item--background">
+                  <li class="vehicle-list__item vehicle-list__item--background vehicle-list__item--active">
                     <span class="vehicle-list__icon vehicle-list__icon--bus"></span>
                   </li>
                   <li class="vehicle-list__item vehicle-list__item--background">
                     <span class="vehicle-list__icon vehicle-list__icon--velo"></span>
                   </li>
-                  <li class="vehicle-list__item vehicle-list__item--background">
+                  <li class="vehicle-list__item vehicle-list__item--background vehicle-list__item--active">
                     <span class="vehicle-list__icon vehicle-list__icon--foot"></span>
                   </li>
                 </ul>
@@ -196,7 +204,7 @@
               <div class="companions-list__level-wrapper level-wrapper">
                 <span class="level-wrapper__title">левел:</span>
                 <span class="companions-list__level level-indicator level-indicator--catalog">
-                  <span class="level-indicator__number level-indicator__number--catalog">99</span>
+                  <span class="level-indicator__number level-indicator__number--catalog">80</span>
                   <span class="level-indicator__title level-indicator__title--catalog">level</span>
                 </span>
               </div>
@@ -207,17 +215,21 @@
           <li class="companions-list__item">
             <div class="companions-list__top-wrapper">
               <div class="companions-list__image-wrapper">
-                <img class="companions-list__image" src="./img/firsova-mobile@1x.jpg" alt="Таня Фирсова" width="70px" heigth="70">
+                <picture>
+                  <source media="(min-width: 1440px)" srcset="./img/smolov-desktop@1x.jpg 1x, ./img/smolov-desktop@2x.jpg 2x">
+                  <source media="(min-width: 768px)" srcset="./img/smolov-tablet@1x.jpg 1x, ./img/smolov-tablet@2x.jpg 2x">
+                  <img class="companions-list__image" src="./img/smolov-mobile@1x.jpg" alt="Таня Фирсова" width="70px" heigth="70" srcset="./img/smolov-mobile@2x.jpg 2x">
+                </picture>
               </div>
               <div class="companions-list__wrapper-tablet">
-                <h3 class="companions-list__title companions-list__title--offline">Таня Фирсова</h3>
+                <h3 class="companions-list__title companions-list__title--offline">Марк Смолов</h3>
                 <div class="companions-list__likes-value-wrapper">
-                  <span class="companions-list__like companions-list__like--active">
-                    <span class="companions-list__like-icon companions-list__like-icon--active"></span>
+                  <span class="companions-list__like">
+                    <span class="companions-list__like-icon"></span>
                   </span>
-                  <span class="companions-list__likes-value">1,5 M</span>
+                  <span class="companions-list__likes-value">1700</span>
                 </div>
-                <p class="companions-list__hashtags">#ЗОЖ #ПП #Фитнес #пляж #авокадо #смузи</p>
+                <p class="companions-list__hashtags">#рэп #тату #хайпбист #кроссовки #суприм</p>
               </div>
             </div>
             <div class="companions-list__desktop-wrapper">
@@ -226,15 +238,15 @@
               <ul class="companions-list__flags country-list country-list--catalog">
                 <li class="country-list__item country-list__item--catalog">
                   <span></span>
-                  <span class="country-list__title">Шри-Ланка</span>
+                  <span class="country-list__title">США</span>
                 </li>
                 <li class="country-list__item country-list__item--catalog">
                   <span></span>
-                  <span class="country-list__title">Тайланд</span>
+                  <span class="country-list__title">Австралия</span>
                 </li>
                 <li class="country-list__item country-list__item--catalog">
                   <span></span>
-                  <span class="country-list__title">Сейшелы</span>
+                  <span class="country-list__title">Доминикана</span>
                 </li>
               </ul>
             </div>
@@ -248,7 +260,7 @@
                   <li class="vehicle-list__item vehicle-list__item--background">
                     <span class="vehicle-list__icon vehicle-list__icon--bus"></span>
                   </li>
-                  <li class="vehicle-list__item vehicle-list__item--background">
+                  <li class="vehicle-list__item vehicle-list__item--background vehicle-list__item--active">
                     <span class="vehicle-list__icon vehicle-list__icon--velo"></span>
                   </li>
                   <li class="vehicle-list__item vehicle-list__item--background">
@@ -259,7 +271,7 @@
               <div class="companions-list__level-wrapper level-wrapper">
                 <span class="level-wrapper__title">левел:</span>
                 <span class="companions-list__level level-indicator level-indicator--catalog">
-                  <span class="level-indicator__number level-indicator__number--catalog">99</span>
+                  <span class="level-indicator__number level-indicator__number--catalog">25</span>
                   <span class="level-indicator__title level-indicator__title--catalog">level</span>
                 </span>
               </div>
@@ -270,17 +282,21 @@
           <li class="companions-list__item">
             <div class="companions-list__top-wrapper">
               <div class="companions-list__image-wrapper">
-                <img class="companions-list__image" src="./img/firsova-mobile@1x.jpg" alt="Таня Фирсова" width="70px" heigth="70">
+                <picture>
+                  <source media="(min-width: 1440px)" srcset="./img/rogovaya-desktop@1x.jpg 1x, ./img/rogovaya-desktop@2x.jpg 2x">
+                  <source media="(min-width: 768px)" srcset="./img/rogovaya-tablet@1x.jpg 1x, ./img/rogovaya-tablet@2x.jpg 2x">
+                  <img class="companions-list__image" src="./img/rogovaya-mobile@1x.jpg" alt="Таня Фирсова" width="70px" heigth="70" srcset="./img/rogovaya-mobile@2x.jpg 2x">
+                </picture>
               </div>
               <div class="companions-list__wrapper-tablet">
-                <h3 class="companions-list__title companions-list__title--offline">Таня Фирсова</h3>
+                <h3 class="companions-list__title companions-list__title--online">Лариса Роговая</h3>
                 <div class="companions-list__likes-value-wrapper">
-                  <span class="companions-list__like companions-list__like--active">
-                    <span class="companions-list__like-icon companions-list__like-icon--active"></span>
+                  <span class="companions-list__like">
+                    <span class="companions-list__like-icon"></span>
                   </span>
-                  <span class="companions-list__likes-value">1,5 M</span>
+                  <span class="companions-list__likes-value">23</span>
                 </div>
-                <p class="companions-list__hashtags">#ЗОЖ #ПП #Фитнес #пляж #авокадо #смузи</p>
+                <p class="companions-list__hashtags">#образование #карьера #учеба #линкедин</p>
               </div>
             </div>
             <div class="companions-list__desktop-wrapper">
@@ -289,15 +305,11 @@
               <ul class="companions-list__flags country-list country-list--catalog">
                 <li class="country-list__item country-list__item--catalog">
                   <span></span>
-                  <span class="country-list__title">Шри-Ланка</span>
+                  <span class="country-list__title">Великобритания</span>
                 </li>
                 <li class="country-list__item country-list__item--catalog">
                   <span></span>
-                  <span class="country-list__title">Тайланд</span>
-                </li>
-                <li class="country-list__item country-list__item--catalog">
-                  <span></span>
-                  <span class="country-list__title">Сейшелы</span>
+                  <span class="country-list__title">Германия</span>
                 </li>
               </ul>
             </div>
@@ -308,7 +320,7 @@
                   <li class="vehicle-list__item vehicle-list__item--background vehicle-list__item--active">
                     <span class="vehicle-list__icon vehicle-list__icon--plane"></span>
                   </li>
-                  <li class="vehicle-list__item vehicle-list__item--background">
+                  <li class="vehicle-list__item vehicle-list__item--background vehicle-list__item--active">
                     <span class="vehicle-list__icon vehicle-list__icon--bus"></span>
                   </li>
                   <li class="vehicle-list__item vehicle-list__item--background">
@@ -322,7 +334,7 @@
               <div class="companions-list__level-wrapper level-wrapper">
                 <span class="level-wrapper__title">левел:</span>
                 <span class="companions-list__level level-indicator level-indicator--catalog">
-                  <span class="level-indicator__number level-indicator__number--catalog">99</span>
+                  <span class="level-indicator__number level-indicator__number--catalog">50</span>
                   <span class="level-indicator__title level-indicator__title--catalog">level</span>
                 </span>
               </div>
@@ -352,7 +364,11 @@
       <div class="container">
         <div class="page-footer__wrapper">
           <a class="page-footer__logo" href="#">
-            <img class="page-footer__logo-image" src="./img/logo-mobile-blue@1x.png" alt="Логотип сервиса для поиска попутчиков поехали" width="97" height="15">
+            <picture>
+              <source media="(min-width: 1440px)" srcset="./img/logo-desktop-blue@1x.png 1x, ./img/logo-desktop-blue@2x.png 2x">
+              <source media="(min-width: 768px)" srcset="./img/logo-tablet-blue@1x.png 1x, ./img/logo-tablet-blue@2x.png 2x">
+              <img class="page-footer__logo-image" src="./img/logo-mobile-blue@1x.png" alt="Логотип сервиса для поиска попутчиков поехали" width="97" height="15" srcset="./img/logo-mobile-blue@2x.png 2x">
+            </picture>
           </a>
           <ul class="page-footer__social-list social-list social-list--footer">
             <li>

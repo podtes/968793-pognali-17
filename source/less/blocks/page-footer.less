@@ -41,6 +41,11 @@
     &__logo {
       margin-right: 0;
       margin-bottom: 0;
+
+      & img {
+        width: 164px;
+        height: 42px;
+      }
     }
 
     &__social-list {
@@ -50,6 +55,17 @@
     &__copyright {
       padding: 0;
       margin: 0;
+    }
+  }
+}
+
+@media (min-width: @desk-width) {
+  .page-footer {
+    &__logo {
+      & img {
+        width: 200px;
+        height: 50px;
+      }
     }
   }
 }
