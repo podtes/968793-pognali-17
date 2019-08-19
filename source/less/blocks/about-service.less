@@ -6,12 +6,18 @@
   &__wrapper-background {
     position: relative;
     top: -15px;
-    background: url("../img/about-mobile@1x.png") no-repeat 50% 50%;
+    background-image: url("../../img/about-mobile@1x.png");
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
     background-color: #192144;
     width: 100%;
-    background-size: cover;
     height: 352px;
+    background-size: cover;
     border-radius: 0 0 30px 30px;
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../../img/about-mobile@2x.png");
+    }
   }
 
   &__wrapper-all {
@@ -125,8 +131,14 @@
       min-width: 620px;
     }
 
+    &__image-wrapper img {
+      width: 630px;
+      height: 667px;
+    }
+
     &__image {
-      left: 800px;
+      top: -49px;
+      left: 700px;
     }
 
     &__title {

@@ -8,20 +8,31 @@
   &__wrapper {
     margin-top: -140px;
     padding-top: 30px;
-    background: url("../img/globe-back-mobile@1x.jpg") no-repeat 50% 50%;
+    background-image: url("../../img/globe-back-mobile@1x.jpg");
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
     width: 100%;
     height: 384px;
     background-size: cover;
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../../img/globe-back-mobile@2x.jpg");
+    }
   }
 
   &__wrapper-man {
     position: absolute;
-    background: url("../img/traveller-illustration-mobile@1x.png");
+    background-image: url("../../img/traveller-illustration-mobile@1x.png");
     left: 50%;
+    background-repeat: no-repeat;
     transform: translate(-81px, 9px);
     width: 192px;
     height: 255px;
-    background-repeat: no-repeat;
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../../img/traveller-illustration-mobile@2x.png");
+      background-size: contain;
+    }
   }
 
   &__list {
@@ -64,20 +75,31 @@
 
     &__wrapper {
       margin: 0;
-      background: url("../img/globe-back-tablet@1x.jpg") no-repeat 50% 50%;
+      background-image: url("../../img/globe-back-tablet@1x.jpg");
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
       width: 100%;
       height: 580px;
       background-size: cover;
+
+      @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+        background-image: url("../../img/globe-back-tablet@2x.jpg");
+      }
     }
 
     &__wrapper-man {
       position: absolute;
-      background: url("../img/traveller-illustration-tablet@1x.png");
+      background-image: url("../../img/traveller-illustration-tablet@1x.png");
       left: 50%;
       transform: translate(-100px, 31px);
       width: 375px;
       height: 455px;
       background-repeat: no-repeat;
+
+      @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+        background-image: url("../../img/traveller-illustration-tablet@2x.png");
+        background-size: contain;
+      }
     }
 
     &__blockquote-wrapper {
@@ -117,21 +139,31 @@
 
     &__wrapper {
       padding-top: 0;
-      background: url("../img/globe-back-desktop@1x.jpg") no-repeat 50% 100%;
+      background: url("../../img/globe-back-desktop@1x.jpg") no-repeat 50% 100%;
       transform: translate(0, -83px);
       width: 100%;
       height: 580px;
       background-size: auto;
+
+      @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+        background-image: url("../../img/globe-back-desktop@2x.jpg");
+        background-size: 118% auto;
+      }
     }
 
     &__wrapper-man {
       position: absolute;
-      background: url("../img/traveller-illustration-desktop@1x.png") no-repeat;
+      background: url("../../img/traveller-illustration-desktop@1x.png") no-repeat;
       left: 50%;
       transform: translate(-116px, -310px);
       width: 430px;
       height: 640px;
       background-repeat: no-repeat;
+
+      @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+        background-image: url("../../img/traveller-illustration-desktop@2x.png");
+        background-size: 100% auto;
+      }
     }
 
     &__header {
