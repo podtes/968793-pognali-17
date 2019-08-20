@@ -39,7 +39,7 @@
 @media (min-width: @tab-width) {
   .all-companions {
     margin-top: -60px;
-    padding-top: 100px;
+    padding-top: 99px;
     padding-bottom: 117px;
 
     &__show-more {
@@ -61,7 +61,14 @@
 @media (min-width: @desk-width) {
   .all-companions {
     &__show-more {
+      padding-left: 63px;
+      margin-bottom: 65px;
       width: 800px;
+
+      &::before {
+        top: -1px;
+        left: 345px;
+      }
     }
 
     &__companions-nav {
