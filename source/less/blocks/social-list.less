@@ -15,45 +15,29 @@
     &--footer {
       background-color: #ffd74b;
 
-      svg {
-        fill: #192144;
-      }
-
       &:hover {
         background-color: #192144;
 
-        svg {
+        .social-list__icon {
           fill: #ffffff;
         }
       }
 
-      &:active {
-        svg {
-          opacity: 0.3;
-        }
+      &:active .social-list__icon {
+        opacity: 0.3;
       }
     }
 
     &--header {
       background-color: #ffffff;
     }
+  }
 
-    &--fb span {
-      background: url("../../img/facebook.svg") no-repeat 50% 50%;
-      width: 11px;
-      height: 22px;
-    }
+  &__icon {
+    fill: #cccccc;
 
-    &--vk span {
-      background: url("../../img/vk.svg") no-repeat 50% 50%;
-      width: 23px;
-      height: 13px;
-    }
-
-    &--insta span {
-      background: url("../../img/instagram.svg") no-repeat 50% 50%;
-      width: 18px;
-      height: 18px;
+    &--footer {
+      fill: #1d2e5b;
     }
   }
 }
@@ -65,36 +49,21 @@
     &__item {
       width: 60px;
       height: 60px;
+    }
 
-      &--fb span {
-        width: 15px;
-        height: 30px;
-      }
+    &__icon--fb {
+      width: 15px;
+      height: 30px;
+    }
 
-      &--vk span {
-        width: 32px;
-        height: 16px;
-      }
+    &__icon--vk {
+      width: 32px;
+      height: 16px;
+    }
 
-      &--insta span {
-        width: 24px;
-        height: 24px;
-      }
-
-      &--fb svg {
-        width: 15px;
-        height: 30px;
-      }
-
-      &--vk svg {
-        width: 32px;
-        height: 16px;
-      }
-
-      &--insta svg {
-        width: 24px;
-        height: 24px;
-      }
+    &__icon--insta {
+      width: 24px;
+      height: 24px;
     }
 
     &--non-index {
@@ -109,26 +78,6 @@
 
     &--footer {
       display: flex;
-    }
-
-    &__item {
-      width: 60px;
-      height: 60px;
-
-      &--fb svg {
-        width: 15px;
-        height: 30px;
-      }
-
-      &--vk svg {
-        width: 32px;
-        height: 16px;
-      }
-
-      &--insta svg {
-        width: 24px;
-        height: 24px;
-      }
     }
   }
 }

@@ -156,7 +156,20 @@
 
   &__flags {
     margin: 0;
+    margin-bottom: 11px;
     padding: 0;
+
+    &--petya {
+      margin-bottom: 17px;
+    }
+
+    &--mark {
+      margin-bottom: 14px;
+    }
+
+    &--larisa {
+      margin-bottom: 17px;
+    }
   }
 }
 
@@ -166,7 +179,7 @@
     &__item {
       padding-top: 35px;
       padding-right: 25px;
-      padding-bottom: 10px;
+      padding-bottom: 20px;
       padding-left: 35px;
       margin-bottom: 40px;
 
@@ -202,7 +215,7 @@
 
     &__image {
       width: 100%;
-      border-radius: 20px;
+      border-radius: 18px;
     }
 
     &__likes-value-wrapper {
@@ -250,7 +263,7 @@
 
     &__hashtags {
       padding: 0;
-      margin-bottom: 46px;
+      margin-bottom: 44px;
       min-width: 230px;
       font-size: 20px;
       line-height: 24px;
@@ -264,6 +277,10 @@
 
     &__flags-wrapper {
       order: 10;
+    }
+
+    &__flags {
+      margin: 0;
     }
   }
 }
@@ -296,8 +313,14 @@
 
     &__desktop-wrapper {
       padding-top: 49px;
-      width: 250px;
+      padding-bottom: 46px;
+      display: flex;
       flex-direction: column;
+      justify-content: space-between;
+    }
+
+    &__vehicle-wrapper {
+      margin-right: 46px;
     }
 
     &__vehicle-list {
@@ -307,6 +330,10 @@
     &__item {
       padding: 0;
       margin-bottom: 30px;
+
+      &:last-child {
+        margin-bottom: 67px;
+      }
     }
 
     &__image-wrapper {
@@ -317,8 +344,7 @@
     }
 
     &__image {
-      width: 285px;
-      height: 100%;
+      display: block;
       border-radius: 20px 0 0 20px;
     }
 
