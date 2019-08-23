@@ -35,8 +35,21 @@
 
 @media (min-width: @desk-width) {
   .wrapper-menu {
+    position: relative;
     width: 305px;
     padding: 0;
+
+    &__logo {
+      &::after {
+        position: absolute;
+        content: "";
+        top: 26px;
+        right: 5px;
+        width: 60px;
+        height: 2px;
+        background-color: #ffffff;
+      }
+    }
 
     &__logo img {
       width: 200px;

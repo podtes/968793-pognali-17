@@ -1,0 +1,21 @@
+.map {
+  margin-top: -20px;
+}
+
+@media (min-width: @tab-width) {
+  .map {
+    margin-top: -60px;
+
+    &__google-iframe {
+      height: 567px;
+    }
+  }
+}
+
+@media (min-width: @desk-width) {
+  .map {
+    &__google-iframe {
+      height: 500px;
+    }
+  }
+}

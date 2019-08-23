@@ -1,0 +1,105 @@
+.callback-form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  &__email-field {
+    padding-left: 23px;
+    padding-top: 15px;
+    padding-bottom: 17px;
+    box-sizing: border-box;
+    width: 227px;
+    border: none;
+    border-radius: 10px;
+    font-size: 18px;
+    line-height: 18px;
+    font-weight: bold;
+    background-color: #ffffff;
+    color: #ffffff;
+
+    &:hover {
+      background-color: #edeff6;
+
+      &::placeholder {
+        opacity: 0.5;
+      }
+    }
+
+    &:focus {
+      background-color: #192144;
+      box-shadow: 0 0 0 5px #ffffff inset;
+
+      &::placeholder {
+        color: #ffffff;
+        opacity: 1;
+      }
+    }
+
+    &::placeholder {
+      font-size: 18px;
+      line-height: 18px;
+      font-weight: bold;
+      color: #444444;
+      opacity: 0.3;
+    }
+  }
+
+  &__button {
+    margin-left: -17px;
+    padding-right: 23px;
+    border: none;
+    border-radius: 10px;
+    flex-grow: 1;
+    font-size: 0;
+
+    &:active .callback-form__button-title {
+      opacity: 0.3;
+    }
+  }
+}
+
+@media (min-width: @tab-width) {
+  .callback-form {
+    margin-bottom: 55px;
+
+    &__email-field {
+      padding-left: 35px;
+      padding-top: 20px;
+      padding-bottom: 25px;
+      width: 535px;
+      border-radius: 20px 0 0 20px;
+      font-size: 24px;
+      line-height: 24px;
+
+      &::placeholder {
+        font-size: 24px;
+        line-height: 24px;
+      }
+    }
+
+    &__button {
+      margin-left: 0;
+      border-radius: 0 20px 20px 0;
+      padding-right: 35px;
+    }
+  }
+}
+
+@media (min-width: @desk-width) {
+  .callback-form {
+    margin-bottom: 67px;
+
+    &__email-field {
+      width: 850px;
+    }
+
+    &__button {
+      padding-left: 36px;
+      font-family: "BloggerSans", "Arial", sans-serif;
+      font-size: 24px;
+      line-height: 24px;
+      font-weight: bold;
+      color: #1d2e5b;
+    }
+  }
+}

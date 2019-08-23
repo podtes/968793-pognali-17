@@ -1,0 +1,95 @@
+.callback-list {
+  &__item {
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    color: #ffd74b;
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: bold;
+    text-transform: uppercase;
+
+    &:hover {
+      color: #ffbd30;
+    }
+
+    &:hover .callback-list__icon-email,
+    &:hover .callback-list__icon-phone {
+      fill: #ffbd30;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
+  }
+
+  &__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 16px;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background: #161c35;
+    border: none;
+  }
+}
+
+
+@media (min-width: @tab-width) {
+  .callback-list {
+    &__item {
+      font-size: 28px;
+      line-height: 28px;
+      margin-bottom: 0;
+    }
+
+    &__button {
+      margin-right: 21px;
+      width: 70px;
+      height: 70px;
+    }
+
+    &__icon-phone {
+      width: 28px;
+      height: 28px;
+    }
+
+    &__icon-email {
+      width: 28px;
+      height: 20px;
+    }
+
+    &__text {
+      &--tel {
+        padding-top: 7px;
+      }
+    }
+  }
+}
+
+@media (min-width: @desk-width) {
+  .callback-list {
+    display: flex;
+    justify-content: space-between;
+
+    &__button {
+      margin-right: 34px;
+      width: 90px;
+      height: 90px;
+    }
+
+     &__icon-phone {
+      width: 36px;
+      height: 36px;
+    }
+
+    &__icon-email {
+      width: 36px;
+      height: 26px;
+    }
+  }
+}
+

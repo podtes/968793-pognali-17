@@ -12,12 +12,57 @@
   justify-content: center;
 
   &__item {
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
     width: 35px;
     height: 35px;
     border-radius: 50%;
+
+    &:hover::before {
+      display: none;
+      position: absolute;
+      content: "";
+      width: 18px;
+      height: 9px;
+      top: 33px;
+      left: 7px;
+      background: url("../../img/triangle-arrow-right.svg") no-repeat 50% 50%;
+      transform: rotate(-90deg);
+      z-index: 10;
+    }
+
+    &:hover::after {
+      display: none;
+      position: absolute;
+      content: "";
+      padding: 10px;
+      font-size: 20px;
+      line-height: 24px;
+      color: #ffffff;
+      top: 40px;
+      left: -45px;
+      background-color: #101d41;
+      border-radius: 5px;
+      z-index: 10;
+    }
+
+    &--plane:hover::after {
+      content: "Авиаперелёт";
+    }
+
+    &--bus:hover::after {
+      content: "Автотранспорт";
+    }
+
+    &--velo:hover::after {
+      content: "Велосипед";
+    }
+
+    &--foot:hover::after {
+      content: "Пешком";
+    }
 
     &--active .vehicle-list__icon {
       opacity: 1;
@@ -114,6 +159,13 @@
   .vehicle-list {
     &--vertical {
       flex-direction: row;
+    }
+
+    &__item {
+      &:hover::before,
+      &:hover::after {
+        display: block;
+      }
     }
   }
 }

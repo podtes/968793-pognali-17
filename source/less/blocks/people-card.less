@@ -1,8 +1,21 @@
 .people-card {
   position: relative;
   text-align: center;
-  border-radius: 10px;
-  overflow: hidden;
+  z-index: 10;
+
+  &:hover {
+    box-shadow: 0px 6px 21px 0px rgba(0, 0, 0, 0.08);
+  }
+
+  &:hover .people-card__image {
+    transform: scale(1.08);
+    transition: 350ms;
+  }
+
+  &__image-wrapper {
+    border-radius: 10px 10px 0 0;
+    overflow: hidden;
+  }
 
   &__image {
     display: block;
@@ -22,6 +35,7 @@
     padding-left: 40px;
     padding-right: 40px;
     background-color: #ffffff;
+    border-radius: 0 0 10px 10px;
   }
 
   &__title {
@@ -34,6 +48,14 @@
     line-height: 21px;
     font-weight: bold;
     color: #1d2e5b;
+
+    &:hover {
+      opacity: 0.7;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
 
     &--online {
       &::before {
@@ -91,11 +113,15 @@
 @media (min-width: @tab-width) {
   .people-card {
     width: 285px;
-    border-radius: 20px;
 
     &__wrapper {
       padding: 30px;
       padding-bottom: 21px;
+      border-radius: 0 0 20px 20px;
+    }
+
+    &__image-wrapper {
+      border-radius: 20px 20px 0 0;
     }
 
     &__image {

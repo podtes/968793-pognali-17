@@ -8,13 +8,13 @@
   </head>
   <body>
     <div style="display: none">
-      <include src="build/img/sprite.svg"></include>
+      <svg src="build/img/sprite.svg"></svg>
     </div>
     <header class="page-header page-header--open">
       <div class="container">
         <div class="page-header__wrapper">
           <div class="page-header__wrapper-menu wrapper-menu">
-            <a class="wrapper-menu__logo" href="#">
+            <a class="wrapper-menu__logo" href="index.html">
               <picture>
                 <source media="(min-width: 1440px)" srcset="./img/logo-desktop-blue@1x.png 1x, ./img/logo-desktop-blue@2x.png 2x">
                 <source media="(min-width: 768px)" srcset="./img/logo-tablet-blue@1x.png 1x, ./img/logo-tablet-blue@2x.png 2x">
@@ -26,8 +26,8 @@
           <nav class="main-nav main-nav--open">
             <ul class="main-nav__site-list site-list">
               <li><a class="site-list__item" href="#">О сервисе</a></li>
-              <li><a class="site-list__item" href="#">Направления</a></li>
-              <li><a class="site-list__item" href="#">Попутчики</a></li>
+              <li><a class="site-list__item" href="form.html">Направления</a></li>
+              <li><a class="site-list__item" href="catalog.html">Попутчики</a></li>
             </ul>
             <ul class="main-nav__user-list user-list">
               <li class="user-list__login-button"><a class="user-list__link" href="#">Авторизация</a></li>
@@ -49,17 +49,23 @@
             <ul class="main-nav__social-list social-list">
               <li>
                 <a class="social-list__item social-list__item--header" href="#">
-                  <svg class="social-list__icon social-list__icon--fb" width="11" height="22"><use xlink:href="#icon-facebook"></use></svg>
+                  <svg class="social-list__icon social-list__icon--fb" width="11" height="22">
+                    <use xlink:href="./img/sprite.svg#icon-facebook"></use>
+                  </svg>
                 </a>
               </li>
               <li>
                 <a class="social-list__item social-list__item--header" href="#">
-                  <svg class="social-list__icon social-list__icon--vk" width="23" height="12"><use xlink:href="#icon-vk"></use></svg>
+                  <svg class="social-list__icon social-list__icon--vk" width="23" height="12">
+                    <use xlink:href="./img/sprite.svg#icon-vk"></use>
+                  </svg>
                 </a>
               </li>
               <li>
                 <a class="social-list__item social-list__item--header" href="#">
-                  <svg class="social-list__icon social-list__icon--insta" width="18" height="18"><use xlink:href="#icon-instagram"></use></svg>
+                  <svg class="social-list__icon social-list__icon--insta" width="18" height="18">
+                    <use xlink:href="./img/sprite.svg#icon-instagram"></use>
+                  </svg>
                 </a>
               </li>
             </ul>
@@ -67,7 +73,6 @@
         </div>
       </div>
     </header>
-
     <main class="page-main">
       <section class="intro-companions">
         <div class="intro-companions__wrapper">
@@ -374,7 +379,6 @@
       </div>
       </section>
     </main>
-
     <footer class="page-footer">
       <div class="container">
         <div class="page-footer__wrapper">
@@ -388,23 +392,29 @@
           <ul class="page-footer__social-list social-list social-list--footer">
             <li>
               <a class="social-list__item social-list__item--footer" href="#">
-                <svg class="social-list__icon social-list__icon--footer social-list__icon--fb" width="11" height="22"><use xlink:href="#icon-facebook"></use></svg>
+                <svg class="social-list__icon social-list__icon--footer social-list__icon--fb" width="11" height="22">
+                  <use xlink:href="./img/sprite.svg#icon-facebook"></use>
+                </svg>
               </a>
             </li>
             <li>
               <a class="social-list__item social-list__item--footer" href="#">
-                <svg class="social-list__icon social-list__icon--footer social-list__icon--vk" width="23" height="12"><use xlink:href="#icon-vk"></use></svg>
+                <svg class="social-list__icon social-list__icon--footer social-list__icon--vk" width="23" height="12">
+                  <use xlink:href="./img/sprite.svg#icon-vk"></use>
+                </svg>
               </a>
             </li>
             <li>
               <a class="social-list__item social-list__item--footer" href="#">
-                <svg class="social-list__icon social-list__icon--footer social-list__icon--insta" width="18" height="18"><use xlink:href="#icon-instagram"></use></svg>
+                <svg class="social-list__icon social-list__icon--footer social-list__icon--insta" width="18" height="18">
+                  <use xlink:href="./img/sprite.svg#icon-instagram"></use>
+                </svg>
               </a>
             </li>
           </ul>
           <div class="page-footer__copyright copyright">
             <b class="copyright__text">Разработано:</b>
-            <a class="copyright__logo" href="htmlacademy.ru">
+            <a class="copyright__logo" href="https://htmlacademy.ru/intensive/adaptive">
               <img class="copyright-logo-image" src="./img/htmlacademy.svg" alt="HTML Academy" width="27" height="34">
             </a>
           </div>

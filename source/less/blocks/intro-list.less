@@ -19,17 +19,13 @@
       &:hover {
         background-color: #f26926;
       }
+    }
 
       span {
         background: url("../../img/topmenu-phone.svg") no-repeat 50% 50%;
         width: 18px;
         height: 18px;
-
-        &:active {
-          opacity: 0.3;
-        }
       }
-    }
 
     &--email {
       background-color: #ffbd30;
@@ -42,11 +38,11 @@
         background: url("../../img/topmenu-mail.svg") no-repeat 50% 50%;
         width: 18px;
         height: 14px;
-
-        &:active {
-          opacity: 0.3;
-        }
       }
+    }
+
+    &:active span {
+      opacity: 0.3;
     }
   }
 }
