@@ -74,6 +74,16 @@
       </div>
     </header>
     <main class="page-main">
+<!--
+      <section class="country-filter">
+        <h2 class="visually-hidden">Фильтр выбора интересующей страны</h2>
+        <header class="country-filter__header">
+          <span class="coutry-filter__title">Фильтрация по странам</span>
+          <span class="country-filter__close-button country-filter__close-button--top">Свернуть</span>
+        </header>
+        <table class="country-filter__table"></table>
+      </section>
+-->
       <section class="intro-companions">
         <div class="intro-companions__wrapper">
           <div class="container">
@@ -87,23 +97,133 @@
           </div>
         </div>
       </section>
+      <section class="find-companions">
+        <h2 class="visually-hidden">Форма с критериями для поиска вашего идеального попутчика</h2>
+        <div class="container">
+          <form action="https://echo.htmlacademy.ru" method="post" class="find-companions__form form-search">
+            <p class="form-search__title">Подберите идеального попутчика</p>
+            <div class="form-search__category-wrapper">
+              <fieldset class="form-search__category form-search__category--hobby">
+                <div class="form-search__tablet-wrapper">
+                  <div class="form-search__title-wrapper">
+                    <legend class="form-search__category-title">Хобби<span>:</span></legend>
+                    <span class="form-search__indicator-icon form-search__indicator-icon--open"></span>
+                  </div>
+                  <div class="form-search__field form-search__field--open">
+                    <input class="form-search__input-checkbox" type="checkbox" name="hobby" value="sport" id="hobby-sport-field">
+                    <label for="hobby-sport-field">Спортзал</label><br>
+                    <input class="form-search__input-checkbox" type="checkbox" name="hobby" value="hookah" id="hobby-hookah-field">
+                    <label for="hobby-hookah-field">Кальян</label><br>
+                    <input class="form-search__input-checkbox" type="checkbox" name="hobby" value="home" id="hobby-home-field">
+                    <label for="hobby-home-field">Диван</label><br>
+                  </div>
+                </div>
+              </fieldset>
+            </div>
+            <div class="form-search__category-wrapper">
+              <fieldset class="form-search__category form-search__category--music">
+                <div class="form-search__tablet-wrapper">
+                  <div class="form-search__title-wrapper">
+                    <legend class="form-search__category-title">Музыка<span>:</span></legend>
+                    <span class="form-search__indicator-icon form-search__indicator-icon--open"></span>
+                  </div>
+                  <div class="form-search__field form-search__field--open">
+                    <input class="form-search__input-checkbox" type="checkbox" name="music" value="hardrock" id="music-hardrock-field">
+                    <label for="music-hardrock-field">Тяжелый рок</label><br>
+                    <input class="form-search__input-checkbox" type="checkbox" name="music" value="rurap" id="music-rurap-field">
+                    <label for="music-rurap-field">Русский рэп</label><br>
+                    <input class="form-search__input-checkbox" type="checkbox" name="music" value="eurodance" id="music-eurodance-field">
+                    <label for="music-eurodance-field">Евродэнс</label><br>
+                  </div>
+                </div>
+              </fieldset>
+            </div>
+            <div class="form-search__category-wrapper">
+              <fieldset class="form-search__category form-search__category--food">
+                <div class="form-search__tablet-wrapper">
+                  <div class="form-search__title-wrapper">
+                    <legend class="form-search__category-title">Eда<span>:</span></legend>
+                    <span class="form-search__indicator-icon form-search__indicator-icon--open"></span>
+                  </div>
+                  <div class="form-search__field form-search__field--open">
+                    <input class="form-search__input-checkbox" type="checkbox" name="food" value="meat" id="food-meat-field">
+                    <label for="food-meat-field">Мясоед</label><br>
+                    <input class="form-search__input-checkbox" type="checkbox" name="food" value="healthy-food" id="healthy-food-field">
+                    <label for="healthy-food-field">Сидит на ПП</label><br>
+                    <input class="form-search__input-checkbox" type="checkbox" name="food" value="vegan" id="food-vegan-field">
+                    <label for="food-vegan-field">Веган-сыроед</label><br>
+                  </div>
+                </div>
+              </fieldset>
+            </div>
+            <div class="form-search__category-wrapper">
+              <fieldset class="form-search__category form-search__category--vehicle">
+                <div class="form-search__tablet-wrapper">
+                  <div class="form-search__title-wrapper">
+                    <legend class="form-search__category-title">Транспорт<span>:</span></legend>
+                    <span class="form-search__indicator-icon form-search__indicator-icon--open"></span>
+                  </div>
+                  <div class="form-search__field form-search__field--open">
+                      <input class="form-search__vehicle-checkbox form-search__vehicle-checkbox-plane" type="checkbox" name="vehicle" value="plane" id="plane-field" checked>
+                      <label class="form-search__vehicle-label" for="plane-field"></label>
+                      <input class="form-search__vehicle-checkbox form-search__vehicle-checkbox-bus" type="checkbox" name="vehicle" value="bus" id="bus-field" checked>
+                      <label class="form-search__vehicle-label" for="bus-field"></label>
+                      <input class="form-search__vehicle-checkbox form-search__vehicle-checkbox-velo" type="checkbox" name="vehicle" value="velo" id="velo-field">
+                      <label class="form-search__vehicle-label" for="velo-field"></label>
+                      <input class="form-search__vehicle-checkbox form-search__vehicle-checkbox-foot" type="checkbox" name="vehicle" value="foot" id="foot-field" checked>
+                      <label class="form-search__vehicle-label" for="foot-field"></label>
+                  </div>
+                </div>
+              </fieldset>
+            </div>
+             <div class="form-search__category-wrapper">
+              <fieldset class="form-search__category form-search__category--level">
+                <div class="form-search__tablet-wrapper">
+                  <div class="form-search__title-wrapper">
+                    <legend class="form-search__category-title">Левел<span>:</span></legend>
+                    <span class="form-search__indicator-icon form-search__indicator-icon--open"></span>
+                  </div>
+                  <div class="form-search__field form-search__field--open">
+                      <div class="form-search__range-wrapper">
+                        <input class="form-search__range-input" name="level" type="text" value="30">
+                        <span class="form-search__some-square"></span>
+                        <input class="form-search__range-input" name="level" type="text" value="100">
+                      </div>
+                      <div class="form-search__range-indicator-wrapper">
+                        <span class="form-search__range-indicator"></span>
+                        <span class="form-search__range-indicator"></span>
+                      </div>
+                  </div>
+                </div>
+              </fieldset>
+            </div>
+            <button class="form-search__button" type="submit">
+              <span>Показать</span>
+            </button>
+          </form>
+        </div>
+      </section>
       <section class="all-companions">
       <div class="container">
         <ul class="all-companions-list companions-list">
           <li class="companions-list__item">
             <div class="companions-list__top-wrapper">
               <div class="companions-list__image-wrapper">
-                <picture>
-                  <source media="(min-width: 1440px)" srcset="./img/firsova-desktop@1x.webp, ./img/firsova-desktop@2x.webp 2x">
-                  <source media="(min-width: 768px)" srcset="./img/firsova-tablet@1x.webp, ./img/firsova-tablet@2x.webp 2x">
-                  <source type="image/webp" srcset="./img/firsova-mobile@1x.webp 1x, ./img/firsova-mobile@2x.webp 2x">
-                  <source media="(min-width: 1440px)" srcset="./img/firsova-desktop@1x.jpg 1x, ./img/firsova-desktop@2x.jpg 2x">
-                  <source media="(min-width: 768px)" srcset="./img/firsova-tablet@1x.jpg 1x, ./img/firsova-tablet@2x.jpg 2x">
-                  <img class="companions-list__image" src="./img/firsova-mobile@1x.jpg" alt="Таня Фирсова" width="70px" heigth="70" srcset="./img/firsova-mobile@2x.jpg 2x">
-                </picture>
+                <a href="">
+                  <picture>
+                    <source media="(min-width: 1440px)" srcset="./img/firsova-desktop@1x.webp, ./img/firsova-desktop@2x.webp 2x">
+                    <source media="(min-width: 768px)" srcset="./img/firsova-tablet@1x.webp, ./img/firsova-tablet@2x.webp 2x">
+                    <source type="image/webp" srcset="./img/firsova-mobile@1x.webp 1x, ./img/firsova-mobile@2x.webp 2x">
+                    <source media="(min-width: 1440px)" srcset="./img/firsova-desktop@1x.jpg 1x, ./img/firsova-desktop@2x.jpg 2x">
+                    <source media="(min-width: 768px)" srcset="./img/firsova-tablet@1x.jpg 1x, ./img/firsova-tablet@2x.jpg 2x">
+                    <img class="companions-list__image" src="./img/firsova-mobile@1x.jpg" alt="Таня Фирсова" width="70px" heigth="70" srcset="./img/firsova-mobile@2x.jpg 2x">
+                  </picture>
+                </a>
               </div>
               <div class="companions-list__wrapper-tablet">
-                <h3 class="companions-list__title companions-list__title--offline">Таня Фирсова</h3>
+                <a href="#">
+                  <h3 class="companions-list__title companions-list__title--offline">Таня Фирсова</h3>
+                </a>
                 <div class="companions-list__likes-value-wrapper">
                   <span class="companions-list__like companions-list__like--active">
                     <span class="companions-list__like-icon companions-list__like-icon--active"></span>
@@ -118,16 +238,16 @@
               <span class="flags-wrapper__title">хочет посетить:</span>
               <ul class="companions-list__flags country-list country-list--catalog">
                 <li class="country-list__item country-list__item--catalog">
-                  <span></span>
-                  <span class="country-list__title">Шри-Ланка</span>
+                  <span class="country-list__flag-icon country-list__flag-icon--sri-lanka"></span>
+                  <span class="country-list__title country-list__title--catalog">Шри-Ланка</span>
                 </li>
                 <li class="country-list__item country-list__item--catalog">
-                  <span></span>
-                  <span class="country-list__title">Тайланд</span>
+                  <span class="country-list__flag-icon country-list__flag-icon--thailand"></span>
+                  <span class="country-list__title country-list__title--catalog">Тайланд</span>
                 </li>
                 <li class="country-list__item country-list__item--catalog">
-                  <span></span>
-                  <span class="country-list__title">Сейшелы</span>
+                  <span class="country-list__flag-icon country-list__flag-icon--seychelles"></span>
+                  <span class="country-list__title country-list__title--catalog">Сейшелы</span>
                 </li>
               </ul>
             </div>
@@ -175,7 +295,7 @@
               <div class="companions-list__wrapper-tablet">
                 <h3 class="companions-list__title companions-list__title--offline">Петя Демин</h3>
                 <div class="companions-list__likes-value-wrapper">
-                  <span class="companions-list__like companions-list__like">
+                  <span class="companions-list__like">
                     <span class="companions-list__like-icon"></span>
                   </span>
                   <span class="companions-list__likes-value">150</span>
@@ -186,14 +306,14 @@
             <div class="companions-list__desktop-wrapper">
             <div class="companions-list__flags-wrapper">
               <span class="flags-wrapper__title">хочет посетить:</span>
-              <ul class="companions-list__flags companions-list__flags--petya country-list country-list--catalog">
+             <ul class="companions-list__flags country-list country-list--catalog">
                 <li class="country-list__item country-list__item--catalog">
-                  <span></span>
-                  <span class="country-list__title">Бельгия</span>
+                  <span class="country-list__flag-icon country-list__flag-icon--belgium"></span>
+                  <span class="country-list__title country-list__title--catalog">Бельгия</span>
                 </li>
                 <li class="country-list__item country-list__item--catalog">
-                  <span></span>
-                  <span class="country-list__title">Чехия</span>
+                  <span class="country-list__flag-icon country-list__flag-icon--czech"></span>
+                  <span class="country-list__title country-list__title--catalog">Чехия</span>
                 </li>
               </ul>
             </div>
@@ -252,18 +372,18 @@
             <div class="companions-list__desktop-wrapper">
             <div class="companions-list__flags-wrapper">
               <span class="flags-wrapper__title">хочет посетить:</span>
-              <ul class="companions-list__flags companions-list__flags--mark country-list country-list--catalog">
+              <ul class="companions-list__flags country-list country-list--catalog">
                 <li class="country-list__item country-list__item--catalog">
-                  <span></span>
-                  <span class="country-list__title">США</span>
+                  <span class="country-list__flag-icon country-list__flag-icon--usa"></span>
+                  <span class="country-list__title country-list__title--catalog">CША</span>
                 </li>
                 <li class="country-list__item country-list__item--catalog">
-                  <span></span>
-                  <span class="country-list__title">Австралия</span>
+                  <span class="country-list__flag-icon country-list__flag-icon--australia"></span>
+                  <span class="country-list__title country-list__title--catalog">Австралия</span>
                 </li>
                 <li class="country-list__item country-list__item--catalog">
-                  <span></span>
-                  <span class="country-list__title">Доминикана</span>
+                  <span class="country-list__flag-icon country-list__flag-icon--dominica"></span>
+                  <span class="country-list__title country-list__title--catalog">Доминикана</span>
                 </li>
               </ul>
             </div>
@@ -322,14 +442,14 @@
             <div class="companions-list__desktop-wrapper">
             <div class="companions-list__flags-wrapper">
               <span class="flags-wrapper__title">хочет посетить:</span>
-              <ul class="companions-list__flags companions-list__flags--larisa country-list country-list--catalog">
+              <ul class="companions-list__flags country-list country-list--catalog">
                 <li class="country-list__item country-list__item--catalog">
-                  <span></span>
-                  <span class="country-list__title">Великобритания</span>
+                  <span class="country-list__flag-icon country-list__flag-icon--united-kingdom"></span>
+                  <span class="country-list__title country-list__title--catalog">Великобритания</span>
                 </li>
                 <li class="country-list__item country-list__item--catalog">
-                  <span></span>
-                  <span class="country-list__title">Германия</span>
+                  <span class="country-list__flag-icon country-list__flag-icon--bosnia"></span>
+                  <span class="country-list__title country-list__title--catalog">Германия</span>
                 </li>
               </ul>
             </div>
