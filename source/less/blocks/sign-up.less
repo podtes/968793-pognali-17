@@ -1,0 +1,29 @@
+.sign-up {
+  &__item {
+    padding: 10px 0;
+    width: 189px;
+
+    &:hover {
+      background-color: #ffbd30;
+    }
+
+     &:active a {
+      opacity: 0.3;
+    }
+  }
+}
+
+
+@media (min-width: @tab-width) {
+  .sign-up {
+    &__item {
+      padding-top: 28px;
+      padding-bottom: 23px;
+
+      & a {
+        font-size: 20px;
+        line-height: 30px;
+      }
+    }
+  }
+}

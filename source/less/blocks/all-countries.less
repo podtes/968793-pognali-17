@@ -1,0 +1,160 @@
+.all-countries {
+  position: relative;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #e2e5f2;
+  color: #192144;
+  font-size: 16px;
+  line-height: 22px;
+
+  &__item {
+    display: flex;
+    width: 46px;
+    height: 43px;
+    justify-content: center;
+    align-items: center;
+    margin-left: -1px;
+    margin-top: -1px;
+    margin-bottom: -1px;
+    margin-right: -1px;
+    background-color: #ffffff;
+    border: 1px solid #cbced9;
+    box-sizing: border-box;
+    font-size: 14px;
+    line-height: 18px;
+
+    &--active {
+      background-color: #1d2e5b;
+      color: #ffffff;
+      border: #1d2e5b;
+    }
+  }
+
+  &__title {
+    margin: 0;
+    padding: 0;
+  }
+
+  &__list {
+    display: none;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    &--active {
+      position: absolute;
+      display: block;
+      bottom: -23px;
+      left: 0;
+    }
+  }
+
+  &__country-name {
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: normal;
+
+    & a {
+      color: #444444;
+
+      &:hover {
+        color: #1d2e5b;
+      }
+
+      &:active {
+        opacity: 0.3;
+      }
+    }
+  }
+}
+
+@media (min-width: @tab-width) {
+  .all-countries {
+    width: 400px;
+
+    &__item {
+      margin-bottom: 59px;
+      margin-left: 0;
+      margin-top: 0;
+      background-color: transparent;
+      border: none;
+      width: auto;
+      height: auto;
+      font-size: 60px;
+      line-height: 24px;
+      color: #192144;
+      font-weight: bold;
+      opacity: 0.2;
+
+      &--none {
+        display: none;
+      }
+
+      &--active {
+        opacity: 1;
+      }
+    }
+
+    &__title {
+      width: 78px;
+    }
+
+    &__list {
+      &--active {
+        bottom: 131px;
+        left: 443px
+      }
+    }
+
+    &__country-name {
+      width: 170px;
+      font-size: 20px;
+      line-height: 30px;
+    }
+  }
+}
+
+@media (min-width: @desk-width) {
+  .all-countries {
+    width: 100%;
+
+    &__item {
+      margin: 0;
+      margin-bottom: 53px;
+      padding: 0;
+      width: 209px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      align-items: flex-start;
+      flex-direction: column;
+      opacity: 1;
+
+      &--none {
+        display: none;
+      }
+
+      &--none-desk {
+        display: none;
+      }
+    }
+
+    &__list {
+      display: block;
+
+      &--active {
+        position: static;
+      }
+    }
+
+    &__title {
+      width: auto;
+      margin-bottom: 33px;
+    }
+
+    &__country-name {
+      margin-top: 0;
+    }
+  }
+}

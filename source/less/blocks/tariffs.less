@@ -60,8 +60,10 @@
     }
 
     &__wrapper-left {
+      position: relative;
       padding-left: 0;
       padding-bottom: 33px;
+      z-index: 10;
     }
 
     &__list {
@@ -118,6 +120,17 @@
       width: 18px;
       height: 22px;
     }
+
+    &__back-square {
+      position: absolute;
+      width: 198px;
+      height: 285px;
+      top: 81px;
+      right: 90px;
+      background-color: #e2e5f2;
+      border-radius: 20px;
+      z-index: 5;
+    }
   }
 }
 
@@ -145,6 +158,13 @@
       height: 200px;
       top: 178px;
       right: 73px;
+    }
+
+    &__back-square {
+      width: 444px;
+      height: 300px;
+      top: 126px;
+      right: 243px;
     }
   }
 }

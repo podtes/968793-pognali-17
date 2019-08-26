@@ -1,8 +1,10 @@
 .modal-business-tariffs {
+  position: absolute;
+  top: 3694px;
+  left: 25px;
   width: 270px;
-  padding-top: 20px;
-  margin: 20px auto;
-
+  padding-top: 35px;
+  box-shadow: 0px 20px 50px 0px rgba(29, 46, 91, 0.1);
   background-color: #ffffff;
   border-radius: 20px;
 
@@ -27,21 +29,38 @@
     vertical-align: center;
     border-radius: 0 0 20px 20px;
     border: none;
-
+    font-family: "Blogger Sans", Arial, sans-serif;
     font-size: 16px;
     line-height: 24px;
     text-transform: uppercase;
     font-weight: bold;
     color: #1d2e5b;
+
+    &:hover {
+      background-color: #edeff6;
+    }
+
+    &:active span {
+      opacity: 0.3;
+    }
   }
 }
 
 @media (min-width: @tab-width) {
   .modal-business-tariffs {
+    padding-top: 50px;
+    top: 4880px;
+    left: 40px;
     width: 688px;
+    z-index: 20;
 
     &__wrapper {
       padding: 0 90px;
+      margin-bottom: 60px;
+    }
+
+    &__title {
+      margin-bottom: 45px;
     }
 
     &__button {
@@ -58,5 +77,13 @@
         opacity: 0.3;
       }
     }
+  }
+}
+
+@media (min-width: @desk-width) {
+  .modal-business-tariffs {
+    top: 3095px;
+    left: 345px;
+    width: 750px;
   }
 }

@@ -1,6 +1,11 @@
-.user-list {
+.auto-list {
+    list-style: none;
+    display: none;
+
   &__login-button {
-    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
     justify-content: center;
     align-items: center;
     background-color: #ffd74b;
@@ -10,7 +15,7 @@
       background-color: #ffbd30;
     }
 
-    &:active .user-list__link {
+    &:active .auto-list__link {
       opacity: 0.3;
     }
   }
@@ -27,28 +32,25 @@
   }
 }
 
-
 @media (min-width: @tab-width) {
-  .user-list {
+  .auto-list {
+    display: block;
+    position: absolute;
+    width: 189px;
+
+    &__login-button {
+      display: flex;
+    }
+
     &__link {
       font-size: 20px;
       line-height: 30px;
-    }
-
-    &__login-button {
-      display: none;
     }
   }
 }
 
 @media (min-width: @desk-width) {
-  .user-list {
-    &__link {
-      padding-top: 11px;
-    }
-
-    &__login-button {
-      display: flex;
-    }
+  .auto-list {
+    display: none;
   }
 }

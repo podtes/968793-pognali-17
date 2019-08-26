@@ -1,15 +1,26 @@
 .wrapper-menu {
+  &__logo {
+    &--open {
+      display: block;
+    }
+
+    &--close {
+      display: none;
+    }
+  }
+
   &__toggle {
     border: none;
 
     &--open {
-      background: url("../img/menu-close.svg") no-repeat 50% 50%;
+      background: url("../../img/menu-close.svg") no-repeat 50% 50%;
       width: 20px;
       height: 20px;
     }
 
     &--close {
-      background: url("../img/menu.svg") no-repeat 50% 50%;
+      padding-top: 16px;
+      background: url("../../img/menu.svg") no-repeat 50% 50%;
       width: 25px;
       height: 12px;
     }
@@ -18,11 +29,15 @@
 
 @media (min-width: @tab-width) {
   .wrapper-menu {
-    width: 354px;
+    width: 358px;
 
     &__toggle {
       &--open {
         height: 37px;
+      }
+
+      &--close {
+        padding-top: 40px;
       }
     }
 

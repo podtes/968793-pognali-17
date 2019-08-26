@@ -1,7 +1,12 @@
 .all-companions {
+  margin-top: -30px;
   padding-top: 40px;
   padding-bottom: 76px;
   background-color: #edeff6;
+
+  &__form {
+    margin-bottom: 20px;
+  }
 
   &__show-more {
     position: relative;
@@ -37,6 +42,7 @@
 
 @media (min-width: @tab-width) {
   .all-companions {
+    margin-top: -55px;
     padding-top: 99px;
     padding-bottom: 117px;
 
@@ -72,6 +78,16 @@
     &__companions-nav {
       width: 950px;
       box-sizing: border-box;
+    }
+
+    &__form-wrapper {
+      position: relative;
+    }
+
+    &__form {
+      position: absolute;
+      top: 0;
+      right: 0;
     }
   }
 }

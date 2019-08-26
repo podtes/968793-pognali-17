@@ -10,20 +10,27 @@
     <div style="display: none">
       <svg src="build/img/sprite.svg"></svg>
     </div>
-    <header class="page-header page-header--open">
+    <header class="page-header page-header--close">
       <div class="container">
         <div class="page-header__wrapper">
           <div class="page-header__wrapper-menu wrapper-menu">
-            <a class="wrapper-menu__logo" href="#">
+            <a class="wrapper-menu__logo wrapper-menu__logo--blue wrapper-menu__logo--close" href="#">
               <picture>
                 <source media="(min-width: 1440px)" srcset="./img/logo-desktop-blue@1x.png 1x, ./img/logo-desktop-blue@2x.png 2x">
                 <source media="(min-width: 768px)" srcset="./img/logo-tablet-blue@1x.png 1x, ./img/logo-tablet-blue@2x.png 2x">
-                <img class="wrapper-menu__logo-image--open" src="./img/logo-mobile-blue@1x.png" width="100" height="19" srcset="./img/logo-mobile-blue@2x.png 2x" alt="Логотип сервиса для поиска попутчиков поехали">
+                <img class="wrapper-menu__logo-image" src="./img/logo-mobile-blue@1x.png" width="100" height="19" srcset="./img/logo-mobile-blue@2x.png 2x" alt="Логотип сервиса для поиска попутчиков поехали">
               </picture>
             </a>
-            <button class="wrapper-menu__toggle wrapper-menu__toggle--open" type="button"></button>
+            <a class="wrapper-menu__logo  wrapper-menu__logo--white wrapper-menu__logo--open" href="#">
+              <picture>
+                <source media="(min-width: 1440px)" srcset="./img/logo-desktop-white@1x.png 1x, ./img/logo-desktop-white@2x.png 2x">
+                <source media="(min-width: 768px)" srcset="./img/logo-tablet-white@1x.png 1x, ./img/logo-tablet-white@2x.png 2x">
+                <img class="wrapper-menu__logo-image" src="./img/logo-mobile-white@1x.png" width="100" height="19" srcset="./img/logo-mobile-white@2x.png 2x" alt="Логотип сервиса для поиска попутчиков поехали">
+              </picture>
+            </a>
+            <button class="wrapper-menu__toggle wrapper-menu__toggle--close" type="button"></button>
           </div>
-          <nav class="main-nav main-nav--open">
+          <nav class="main-nav main-nav--close">
             <ul class="main-nav__site-list site-list">
               <li><a class="site-list__item" href="#">О сервисе</a></li>
               <li><a class="site-list__item" href="form.html">Направления</a></li>
@@ -97,9 +104,11 @@
                 <span aria-label="Написать нам"></span>
               </button>
             </li>
-            <li class="intro-list__item login-button">
-              <a class="login-button__link" href="#">Авторизация</a>
-            </li>
+            </ul>
+            <ul class="intro__sign-up intro__sign-up--close sign-up">
+              <li class="sign-up__item login-button">
+                <a class="login-button__link" href="#">Авторизация</a>
+              </li>
           </ul>
           <div class="intro__blockquote-wrapper">
             <blockquote class="intro__review review">
@@ -137,36 +146,34 @@
         </div>
       </section>
       <section class="about-service">
-        <div class="about-service__wrapper-for-square">
+        <div class="about-service__wrapper-background">
+          <div class="container">
           <span class="about-service__back-square"></span>
-            <div class="about-service__wrapper-background">
-              <div class="container">
-                <div class="about-service__wrapper-all">
-                  <div class="about-service__wrapper">
-                    <h2 class="about-service__title section-title">О сервисе</h2>
-                    <p class="about-service__paragraph">
-                        Любое путешествие веселее
-                        с попутчиками, которые на одной волне с тобой! Делитесь своими идеями путешествий и черпайте вдохновение в чужих.
-                    </p>
-                    <p class="about-service__paragraph">
-                      А если найдете кого-то близкого по духу - скорее зовите в совместный трип!
-                    </p>
-                    <a class="about-service__more button" href="#">
-                      <span class="button__title">Подробнее</span>
-                      <span class="button__icon"></span>
-                    </a>
-                  </div>
-                  <div class="about-service__image-wrapper">
-                    <picture>
-                      <source media="(min-width: 1440px)" srcset="./img/about-desktop@1x.webp 1x, ./img/about-desktop@2x.webp 2x">
-                      <source type="image/webp" srcset="./img/about-tablet@1x.webp 1x, ./img/about-tablet@2x.webp 2x">
-                      <source media="(min-width: 1440px)" srcset="./img/about-desktop@1x.png 1x, ./img/about-desktop@2x.png 2x">
-                      <img class="about-service__image" src="./img/about-tablet@1x.png" alt="Про наши сервисы" width="376" height="548" srcset="./img/about-tablet@2x.png 2x">
-                    </picture>
-                  </div>
-                </div>
+            <div class="about-service__wrapper-all">
+              <div class="about-service__wrapper">
+                <h2 class="about-service__title section-title">О сервисе</h2>
+                <p class="about-service__paragraph">
+                    Любое путешествие веселее
+                    с попутчиками, которые на одной волне с тобой! Делитесь своими идеями путешествий и черпайте вдохновение в чужих.
+                </p>
+                <p class="about-service__paragraph">
+                    А если найдете кого-то близкого по духу - скорее зовите в совместный трип!
+                </p>
+                <a class="about-service__more button" href="#">
+                  <span class="button__title">Подробнее</span>
+                  <span class="button__icon"></span>
+                </a>
+              </div>
+              <div class="about-service__image-wrapper">
+                <picture>
+                  <source media="(min-width: 1440px)" srcset="./img/about-desktop@1x.webp 1x, ./img/about-desktop@2x.webp 2x">
+                  <source type="image/webp" srcset="./img/about-tablet@1x.webp 1x, ./img/about-tablet@2x.webp 2x">
+                  <source media="(min-width: 1440px)" srcset="./img/about-desktop@1x.png 1x, ./img/about-desktop@2x.png 2x">
+                  <img class="about-service__image" src="./img/about-tablet@1x.png" alt="Про наши сервисы" width="376" height="548" srcset="./img/about-tablet@2x.png 2x">
+                </picture>
               </div>
             </div>
+          </div>
         </div>
       </section>
       <section class="destinations">
@@ -336,6 +343,7 @@
       </section>
       <section class="tariffs">
         <div class="container">
+          <span class="tariffs__back-square"></span>
           <h2 class="visually-hidden">Цены на наши услуги</h2>
           <div class="tariffs__wrapper-left">
             <div class="tariffs__wrapper">
@@ -427,7 +435,10 @@
         </div>
       </section>
       <section class="map">
-        <iframe class="map__google-iframe" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7994.415024106482!2d30.323046999999995!3d59.938717000000004!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1566514806850!5m2!1sru!2sru" width="100%" height="315" frameborder="0" style="border:0" allowfullscreen></iframe>
+        <div class="map__background">
+          <span class="map__marker"></span>
+        </div>
+<!--        <iframe class="map__google-iframe" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7994.415024106482!2d30.323046999999995!3d59.938717000000004!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1566514806850!5m2!1sru!2sru" width="100%" height="332" frameborder="0" style="border:0" allowfullscreen></iframe>-->
       </section>
     </main>
     <footer class="page-footer">
@@ -505,5 +516,43 @@
         <span>Закрыть окно</span>
       </button>
     </section>
+
+    <script>
+      var toggleHeader = document.querySelector(".wrapper-menu__toggle");
+      var header = document.querySelector(".page-header");
+      var mainNav = document.querySelector(".main-nav");
+      var logoBlue = document.querySelector(".wrapper-menu__logo--blue");
+      var logoWhite = document.querySelector(".wrapper-menu__logo--white");
+      var signUpButton = document.querySelector(".intro__sign-up");
+      var businessTariffs = document.querySelector(".modal-business-tariffs");
+      var businessOpen = document.querySelector(".tariffs__business-tariffs");
+      var businessClose = document.querySelector(".modal-business-tariffs__button");
+
+      toggleHeader.addEventListener("click", function(evt) {
+        evt.preventDefault();
+        header.classList.remove("page-header--close");
+        header.classList.add("page-header--open");
+        toggleHeader.classList.remove("wrapper-menu__toggle--close");
+        toggleHeader.classList.add("wrapper-menu__toggle--open");
+        mainNav.classList.remove("main-nav--close");
+        mainNav.classList.add("main-nav--open");
+        logoWhite.classList.remove("main-nav--open");
+        logoWhite.classList.add("main-nav--close");
+        logoBlue.classList.remove("main-nav--close");
+        logoBlue.classList.add("main-nav--open");
+        signUpButton.classList.remove("intro__sign-up--close");
+        signUpButton.classList.add("intro__sign-up--open");
+      });
+
+      businessOpen.addEventListener("click", function(evt) {
+        evt.preventDefault();
+        businessTariffs.classList.add("modal--show");
+      });
+
+      businessClose.addEventListener("click", function(evt) {
+        evt.preventDefault();
+        businessTariffs.classList.remove("modal--show");
+      });
+    </script>
   </body>
 </html>

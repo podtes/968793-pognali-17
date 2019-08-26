@@ -1,13 +1,13 @@
 .intro-companions {
+  position: relative;
   padding-top: 38px;
   background-color: #161c35;
   color: #ffffff;
+  z-index: 10;
+  border-radius: 0 0 20px 20px;
 
   &__wrapper {
-    position: relative;
-    border-radius: 0 0 20px 20px;
     padding-bottom: 9px;
-    background-color: #161c35;
   }
 
   &__link-back {
@@ -36,14 +36,21 @@
       background-color: #ff8d30;
     }
   }
+
+  &__auto {
+    margin: 0;
+    padding: 0;
+  }
 }
 
 
 @media (min-width: @tab-width) {
   .intro-companions {
+    padding-top: 83px;
+    border-radius: 0 0 60px 60px;
+
     &__wrapper {
       padding-bottom: 63px;
-      border-radius: 0 0 60px 60px;
     }
 
     &__wrapper-link {
@@ -59,7 +66,7 @@
       line-height: 70px;
 
       &::after {
-        bottom: -65px;
+        bottom: -67px;
         left: 2px;
         width: 285px;
         height: 8px;
@@ -70,6 +77,18 @@
 
     &__link-back {
       display: block;
+    }
+
+    &__auto {
+      &--open {
+        top: -915px;
+        right: 39px;
+      }
+
+      &--close {
+        top: -178px;
+        right: 39px;
+      }
     }
   }
 }
