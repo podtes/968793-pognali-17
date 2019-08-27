@@ -63,6 +63,7 @@
 
   &__indicator-icon {
     display: block;
+
     &--open {
       background: url("../../img/dropdown.svg") no-repeat 50% 50%;
       transform: rotate(180deg);
@@ -253,14 +254,14 @@
     top: 0;
     width: 12px;
     height: 12px;
-    background: url(../../img/tick.svg) no-repeat 50% 50%;
+    background: url("../../img/tick.svg") no-repeat 50% 50%;
   }
 
-  &__input-checkbox:not(:checked) + label:after {
+  &__input-checkbox:not(:checked) + label::after {
     opacity: 0;
   }
 
-  &__input-checkbox:checked + label:after {
+  &__input-checkbox:checked + label::after {
     opacity: 1;
   }
 
@@ -289,6 +290,22 @@
     background-color: #ffffff;
   }
 
+  &__vehicle-checkbox:checked + .form-search__vehicle-label--form::before,
+  &__vehicle-checkbox:not(:checked) + .form-search__vehicle-label--form::before {
+    content: "";
+    position: absolute;
+    left: -1px;
+    top: -11px;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: #ffffff;
+
+    &:hover {
+      background-color: #e2e5f1;
+    }
+  }
+
   &__vehicle-checkbox:checked + label::after,
   &__vehicle-checkbox:not(:checked) + label::after {
     content: "";
@@ -305,7 +322,7 @@
     left: 10px;
     width: 14px;
     height: 16px;
-    background: url(../../img/plane.svg) no-repeat;
+    background: url("../../img/plane.svg") no-repeat;
   }
 
   &__vehicle-checkbox-bus:checked + label::after,
@@ -314,7 +331,7 @@
     left: 12px;
     width: 13px;
     height: 16px;
-    background: url(../../img/bus.svg) no-repeat;
+    background: url("../../img/bus.svg") no-repeat;
   }
 
   &__vehicle-checkbox-velo:checked + label::after,
@@ -323,7 +340,7 @@
     left: 10px;
     width: 19px;
     height: 17px;
-    background: url(../../img/bike.svg) no-repeat;
+    background: url("../../img/bike.svg") no-repeat;
   }
 
   &__vehicle-checkbox-foot:checked + label::after,
@@ -332,19 +349,71 @@
     left: 10px;
     width: 15px;
     height: 17px;
-    background: url(../../img/run.svg) no-repeat;
+    background: url("../../img/run.svg") no-repeat;
   }
 
-  &__vehicle-checkbox:not(:checked) + label:after {
+  &__vehicle-checkbox-plane:checked + .form-search__vehicle-label--form::after,
+  &__vehicle-checkbox-plane:not(:checked) + .form-search__vehicle-label--form::after {
+    top: -2px;
+    left: 6px;
+    width: 14px;
+    height: 16px;
+    background: url("../../img/plane.svg") no-repeat;
+  }
+
+  &__vehicle-checkbox-bus:checked + .form-search__vehicle-label--form::after,
+  &__vehicle-checkbox-bus:not(:checked) + .form-search__vehicle-label--form::after {
+    top: -2px;
+    left: 9px;
+    width: 13px;
+    height: 16px;
+    background: url("../../img/bus.svg") no-repeat;
+  }
+
+  &__vehicle-checkbox-velo:checked + .form-search__vehicle-label--form::after,
+  &__vehicle-checkbox-velo:not(:checked) + .form-search__vehicle-label--form::after {
+    top: -4px;
+    left: 6px;
+    width: 19px;
+    height: 17px;
+    background: url("../../img/bike.svg") no-repeat;
+  }
+
+  &__vehicle-checkbox-foot:checked + .form-search__vehicle-label--form::after,
+  &__vehicle-checkbox-foot:not(:checked) + .form-search__vehicle-label--form::after {
+    top: -3px;
+    left: 7px;
+    width: 15px;
+    height: 17px;
+    background: url("../../img/run.svg") no-repeat;
+  }
+
+  &__vehicle-checkbox:not(:checked) + label::after {
     opacity: 0.3;
   }
 
-  &__vehicle-checkbox:checked + label:after {
+  &__vehicle-checkbox:checked + label::after {
     opacity: 1;
   }
 
   &__vehicle-checkbox + label:hover::before {
-    box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.1);
+  }
+
+  &__vehicle-checkbox:not(:checked) + .form-search__vehicle-label--form::after {
+    opacity: 0.15;
+  }
+
+  &__vehicle-checkbox + .form-search__vehicle-label--form:active::before {
+    background-color: #e2e5f1;
+  }
+
+  &__vehicle-checkbox:not(:checked) + .form-search__vehicle-label--form:hover::after {
+    opacity: 0.3;
+  }
+
+  &__vehicle-checkbox:checked + .form-search__vehicle-label--form:active::after {
+    opacity: 0.3;
   }
 
   &__button {
@@ -482,17 +551,25 @@
 
     &__input-checkbox:checked + label::after,
     &__input-checkbox:not(:checked) + label::after {
-    left: 6px;
-    top: 3px;
-  }
+      left: 6px;
+      top: 3px;
+    }
 
     &__vehicle-checkbox:checked + label::before,
     &__vehicle-checkbox:not(:checked) + label::before {
-    left: 0;
-    top: -13px;
-    width: 43px;
-    height: 43px;
-  }
+      left: 0;
+      top: -13px;
+      width: 43px;
+      height: 43px;
+    }
+
+    &__vehicle-checkbox:checked + .form-search__vehicle-label--form::before,
+    &__vehicle-checkbox:not(:checked) + .form-search__vehicle-label--form::before {
+      left: 0;
+      top: -13px;
+      width: 43px;
+      height: 43px;
+    }
 
     &__vehicle-checkbox-plane:checked + label::after,
     &__vehicle-checkbox-plane:not(:checked) + label::after {
@@ -500,37 +577,74 @@
       height: 21px;
       top: -2px;
       left: 10px;
-      background-image: url(../../img/plane.svg);
+      background-image: url("../../img/plane.svg");
     }
 
-  &__vehicle-checkbox-bus:checked + label::after,
-  &__vehicle-checkbox-bus:not(:checked) + label::after {
-    width: 17px;
-    height: 21px;
-    top: -2px;
-    left: 13px;
-    background: url(../../img/bus.svg);
-  }
+    &__vehicle-checkbox-bus:checked + label::after,
+    &__vehicle-checkbox-bus:not(:checked) + label::after {
+      width: 17px;
+      height: 21px;
+      top: -2px;
+      left: 13px;
+      background: url("../../img/bus.svg");
+    }
 
-  &__vehicle-checkbox-velo:checked + label::after,
-  &__vehicle-checkbox-velo:not(:checked) + label::after {
-    width: 24px;
-    height: 21px;
-    top: -2px;
-    left: 8px;
-    background: url(../../img/bike.svg);
-  }
+    &__vehicle-checkbox-velo:checked + label::after,
+    &__vehicle-checkbox-velo:not(:checked) + label::after {
+      width: 24px;
+      height: 21px;
+      top: -2px;
+      left: 8px;
+      background: url("../../img/bike.svg");
+    }
 
-  &__vehicle-checkbox-foot:checked + label::after,
-  &__vehicle-checkbox-foot:not(:checked) + label::after {
-    width: 20px;
-    height: 21px;
-    top: -2px;
-    left: 10px;
-    background: url(../../img/run.svg);
-  }
+    &__vehicle-checkbox-foot:checked + label::after,
+    &__vehicle-checkbox-foot:not(:checked) + label::after {
+      width: 20px;
+      height: 21px;
+      top: -2px;
+      left: 10px;
+      background: url("../../img/run.svg");
+    }
+
+    &__vehicle-checkbox-plane:checked + .form-search__vehicle-label--form::after,
+    &__vehicle-checkbox-plane:not(:checked) + .form-search__vehicle-label--form::after {
+      width: 19px;
+      height: 21px;
+      top: -2px;
+      left: 10px;
+      background-image: url("../../img/plane.svg");
+    }
+
+    &__vehicle-checkbox-bus:checked + .form-search__vehicle-label--form::after,
+    &__vehicle-checkbox-bus:not(:checked) + .form-search__vehicle-label--form::after {
+      width: 17px;
+      height: 21px;
+      top: -2px;
+      left: 13px;
+      background: url("../../img/bus.svg");
+    }
+
+    &__vehicle-checkbox-velo:checked + .form-search__vehicle-label--form::after,
+    &__vehicle-checkbox-velo:not(:checked) + .form-search__vehicle-label--form::after {
+      width: 24px;
+      height: 21px;
+      top: -2px;
+      left: 8px;
+      background: url("../../img/bike.svg");
+    }
+
+    &__vehicle-checkbox-foot:checked + .form-search__vehicle-label--form::after,
+    &__vehicle-checkbox-foot:not(:checked) + .form-search__vehicle-label--form::after {
+      width: 20px;
+      height: 21px;
+      top: -2px;
+      left: 10px;
+      background: url("../../img/run.svg");
+    }
 
     &__range-wrapper {
+      margin-top: -17px;
       margin-bottom: 0;
       width: 150px;
       order: 10;
@@ -555,10 +669,6 @@
       height: 3px;
       top: 5px;
       left: 5px;
-    }
-
-    &__range-wrapper {
-      margin-top: -17px;
     }
 
     &__range-input {
@@ -611,6 +721,7 @@
 
     &__category {
       margin-bottom: 13px;
+
       &--level {
         padding: 0;
         margin: 0;
@@ -677,7 +788,7 @@
       margin-top: 0;
       margin-bottom: 30px;
       width: 100%;
-  }
+    }
 
     &__range-input {
       width: 50%;

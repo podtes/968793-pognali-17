@@ -10,7 +10,7 @@
     <div style="display: none">
       <svg src="build/img/sprite.svg"></svg>
     </div>
-    <header class="page-header page-header--close">
+    <header class="page-header page-header--non-index page-header--close">
       <div class="container">
         <div class="page-header__wrapper">
           <div class="page-header__wrapper-menu wrapper-menu">
@@ -86,79 +86,69 @@
           <div class="container">
             <h1 class="visually-hidden">Выбор подходящего попутчика</h1>
             <div class="intro-destination__wrapper-link">
-              <h2 class="intro-destination__title">Попутчики</h2>
-              <a class="intro-destination__link-back link-back" href="#">На главную
+              <h2 class="intro-destination__title">Направления</h2>
+              <a class="intro-destination__link-back link-back link-back--form" href="#">На главную
                 <span class="link-back__icon"></span>
               </a>
             </div>
           </div>
         </div>
       </section>
-<!--
-      <section class="my-card">
-        <h2 class="visually-hidden">Моя анкета</h2>
-        <img class="my-card__level" src="http://placehold.it/150x100" alt="Мой уровень">
-        <img class="my-card__avatar" src="http://placehold.it/150x100" alt="Мой аватар">
-        <a class="my-card__button" href="#">Сменить фото</a>
-        <div class="my-card__hashtags hashtags">
-          <h3 class="hashtags__title">Теги</h3>
-          <p class="hashtags__hashtags-massive">#бургер #бар #футбол #концерт #крафт</p>
-        </div>
-        <div class="my-card__vehicle vehicle">
-          <h3 class="vehicle__title">Транспорт</h3>
-          <ul class="vehicle__vehicle-list vehicle-type">
-              <li class="vehicle-type__item vehicle-type__item--plane vehicle-icon">
-                <span class="vehicle-icon vehicle-icon--active">Самолет</span>
-              </li>
-              <li class="vehicle-type__item vehicle-type__item--bus vehicle-icon">
-                <span class="vehicle-icon vehicle-icon--active">Автобус</span>
-              </li>
-              <li class="vehicle-type__item vehicle-type__item--velo vehicle-icon">
-                <span class="vehicle-icon">Велосипед</span>
-              </li>
-              <li class="vehicle-type__item vehicle-type__item--foots vehicle-icon">
-                <span class="vehicle-icon vehicle-icon--active">Пешком</span>
-              </li>
-            </ul>
-        </div>
-      </section>
-      <section class="my-plans">
-        <h2 class="my-plans__title">Мои планы</h2>
-        <ol class="my-plans__list plans-list">
-          <li class="plans-list__item">
-            <h3 class="plans-list__title">Франция, Италия</h3>
-            <div class="plans-list__wrapper">
-              <p class="plans-list__companions">3 попутчика</p>
-              <p class="plans-list__dates">26 мар - 29 мар</p>
+      <section class="my-form">
+        <form class="my-form__form" action="echo.htmlacademy.ru" method="post">
+          <div class="my-form__my-profile my-profile">
+            <div class="container">
+              <div class="my-profile__wrapper">
+                <div class="my-profile__image-wrapper">
+                  <div class="my-profile__level-indicator level-indicator level-indicator--form">
+                    <span class="level-indicator__number level-indicator__number--form">80</span>
+                    <span class="level-indicator__title level-indicator__title--form">level</span>
+                  </div>
+                  <picture>
+                    <source media="(min-width: 1440px)" type="image/webp" srcset="./img/demin-desktop@1x.webp 1x, ./img/demin-desktop@2x.webp 2x">
+                    <source media="(min-width: 1440px)" srcset="./img/demin-desktop@1x.jpg 1x, ./img/demin-desktop@2x.jpg 2x">
+                    <source media="(min-width: 768px)" type="image/webp" srcset="./img/demin-tablet@1x.webp 1x, ./img/demin-tablet@2x.webp 2x">
+                    <source media="(min-width: 768px)" srcset="./img/demin-tablet@1x.jpg 1x, ./img/demin-tablet@2x.jpg 2x">
+                    <source type="image/webp" srcset="./img/demin-mobile@1x.webp 1x, ./img/demin-mobile@2x.webp 2x">
+                    <img class="my-profile__image" src="./img/demin-mobile@1x.jpg" alt="Аватар профиля" width="98" height="98" srcset="./img/demin-mobile@2x.jpg 2x">
+                  </picture>
+                </div>
+                <button class="my-profile__change-button" type="button">
+                  <span>Cменить фото</span>
+                  <span>Фото</span>
+                </button>
+                <div class="my-profile__desktop-wrapper">
+                  <div class="my-profile__hashtags-wrapper">
+                    <label class="my-profile__label my-profile__label--hashtags" for="hashtags-field">Тэги</label>
+                    <textarea class="my-profile__hashtags" name="hashtags" id="hashtags-field" placeholder="Коротко о себе в виде 5-8 хештэгов">#бургер #бар #футбол #концерт #крафт</textarea>
+                  </div>
+                  <div class="my-profile__vehicle-wrapper">
+                    <span class="my-profile__label my-profile__label--vehicle">Транспорт</span>
+                    <ul class="my-profile__vehicle-list">
+                      <li>
+                        <input class="form-search__vehicle-checkbox form-search__vehicle-checkbox-plane" type="checkbox" name="vehicle" value="plane" id="plane-field" checked>
+                        <label class="form-search__vehicle-label form-search__vehicle-label--form" for="plane-field"></label>
+                      </li>
+                      <li>
+                        <input class="form-search__vehicle-checkbox form-search__vehicle-checkbox-bus" type="checkbox" name="vehicle" value="bus" id="bus-field" checked>
+                        <label class="form-search__vehicle-label form-search__vehicle-label--form" for="bus-field"></label>
+                      </li>
+                      <li>
+                        <input class="form-search__vehicle-checkbox form-search__vehicle-checkbox-velo" type="checkbox" name="vehicle" value="velo" id="velo-field">
+                        <label class="form-search__vehicle-label form-search__vehicle-label--form" for="velo-field"></label>
+                      </li>
+                      <li>
+                        <input class="form-search__vehicle-checkbox form-search__vehicle-checkbox-foot" type="checkbox" name="vehicle" value="foot" id="foot-field" checked>
+                        <label class="form-search__vehicle-label form-search__vehicle-label--form" for="foot-field"></label>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
             </div>
-            <a class="plans-list__link-change" href="#">Изменить</a>
-          </li>
-          <li class="plans-list__item">
-            <h3 class="plans-list__title">Тайланд, Индонезия</h3>
-            <div class="plans-list__wrapper">
-              <p class="plans-list__companions">1 попутчик</p>
-              <p class="plans-list__dates">1 июл - 15 июл</p>
-            </div>
-            <a class="plans-list__link-change" href="#">Изменить</a>
-          </li>
-        </ol>
+          </div>
+        </form>
       </section>
-      <section class="add-plan">
-        <h2 class="add-plan__title">Добавить план:</h2>
-        <div class="add-plan__steps steps steps-1">
-          <h3 class="steps__title">Шаг 1.<br>Даты пребывания</h3>
-          <p class="steps__about">Укажите предпочтительное количество попутчиков, которых  вы хотели бы позвать в поездку и ее предполагаемую длительность.</p>
-          <input class="steps-1__childs-checkbox" type="checkbox" id="childs" name="childs" checked>
-          <label for="childs">Можно с детьми</label>
-          <a class="steps__button button" href="#">Следующий шаг</a>
-        </div>
-        <div class="add-plan__steps steps steps-2">
-          <h3 class="steps__title">Шаг 2.<br>Маршрут</h3>
-          <p class="steps__about">Укажите страны, которые вы хотели по посетить. Это может быть одна или сразу несколько.</p>
-          <a class="steps__button button" href="#">Следующий шаг</a>
-        </div>
-      </section>
--->
     </main>
     <footer class="page-footer">
       <div class="container">

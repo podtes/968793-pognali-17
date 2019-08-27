@@ -1,12 +1,12 @@
 .intro-destination {
-  padding-top: 30px;
+  padding-top: 38px;
   background-color: #161c35;
   color: #ffffff;
 
   &__wrapper {
     position: relative;
+    padding-bottom: 9px;
     border-radius: 0 0 20px 20px;
-    padding-bottom: 17px;
     background-color: #161c35;
   }
 
@@ -25,10 +25,9 @@
     &::after {
       position: absolute;
       content: "";
-      bottom: -19px;
+      bottom: -11px;
       left: 0;
-
-      width: 172px;
+      width: 214px;
       height: 5px;
       border-radius: 2px;
       background-color: #ff8d30;
@@ -39,8 +38,28 @@
 
 @media (min-width: @tab-width) {
   .intro-destination {
+    padding-top: 83px;
+
+    &__wrapper {
+      padding-bottom: 63px;
+      border-radius: 0 0 60px 60px;
+    }
+
+    &__title {
+      font-size: 60px;
+      line-height: 70px;
+
+      &::after {
+        bottom: -67px;
+        left: 0;
+        width: 355px;
+        height: 8px;
+        border-radius: 3px;
+      }
+    }
+
     &__wrapper-link {
-      padding: 0 40px;
+      padding: 0 35px;
       display: flex;
       flex-wrap: wrap;
       align-items: center;
@@ -49,6 +68,16 @@
 
     &__link-back {
       display: block;
+    }
+  }
+}
+
+@media (min-width: @desk-width) {
+  .intro-destination {
+    padding-top: 108px;
+
+    &__wrapper-link {
+      padding: 0 65px;
     }
   }
 }

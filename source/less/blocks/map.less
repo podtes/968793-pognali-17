@@ -5,7 +5,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url(../../img/map-mobile@1x.jpg);
+    background-image: url("../../img/map-mobile@1x.jpg");
     background-repeat: no-repeat;
     background-position: 0 2%;
     width: 320px;
@@ -26,7 +26,7 @@
     background-color: #ffffff;
     border-radius: 50%;
 
-    &:before {
+    &::before {
       position: absolute;
       content: "";
       background-color: #182044;
@@ -44,7 +44,7 @@
     margin-top: -60px;
 
     &__background {
-      background-image: url(../../img/map-tablet@1x.jpg);
+      background-image: url("../../img/map-tablet@1x.jpg");
       width: 768px;
       height: 576px;
       background-position: 0 20%;
@@ -60,7 +60,7 @@
       width: 54px;
       height: 54px;
 
-      &:before {
+      &::before {
         width: 24px;
         height: 24px;
         top: 14px;
@@ -77,7 +77,7 @@
 @media (min-width: @desk-width) {
   .map {
     &__background {
-      background-image: url(../../img/map-desktop@1x.jpg);
+      background-image: url("../../img/map-desktop@1x.jpg");
       width: 1440px;
       height: 510px;
       background-position: 0 58%;
@@ -91,7 +91,7 @@
     &__marker {
       top: -22px;
 
-      &:before {
+      &::before {
         top: 14px;
         left: 15px;
       }
