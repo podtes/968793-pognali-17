@@ -95,8 +95,10 @@
         </div>
       </section>
       <section class="my-form">
+        <h2 class="visually-hidden">Форма с подробными шагами для выбора подходящего попутчика</h2>
         <form class="my-form__form" action="echo.htmlacademy.ru" method="post">
           <div class="my-form__my-profile my-profile">
+            <h3 class="visually-hidden">Настройки моих предпочтений и аватара</h3>
             <div class="container">
               <div class="my-profile__wrapper">
                 <div class="my-profile__image-wrapper">
@@ -145,6 +147,154 @@
                   </div>
                 </div>
               </div>
+            </div>
+          </div>
+          <div class="my-form__my-plans my-plans">
+            <div class="container">
+              <h3 class="my-plans__title">Мои планы:</h3>
+              <ol class="my-plans__list">
+                <li class="my-plans__item">
+                  <div class="my-plans__title-wrapper">
+                    <span>1.</span>
+                    <span>Франция, Италия</span>
+                  </div>
+                  <div class="my-plans__content-wrapper">
+                    <span class="my-plans__companions-value">3 попутчика</span>
+                    <span class="my-plans__dates">26 мар - 29 мар</span>
+                    <a class="my-plans__button" href="#"><span>Изменить</span></a>
+                  </div>
+                </li>
+                <li class="my-plans__item">
+                  <div class="my-plans__title-wrapper">
+                    <span>2.</span>
+                    <span>Тайланд, Индонезия</span>
+                  </div>
+                  <div class="my-plans__content-wrapper">
+                    <span class="my-plans__companions-value">1 попутчик</span>
+                    <span class="my-plans__dates">1 июл - 15 июл</span>
+                    <a class="my-plans__button" href="#"><span>Изменить</span></a>
+                  </div>
+                </li>
+              </ol>
+            </div>
+          </div>
+          <div class="my-form__add-plan add-plan">
+            <div class="container">
+              <div class="add-plan__title-wrapper">
+                <h3 class="add-plan__title">Добавить план:</h3>
+                <div class="add-plan__markers-wrapper">
+                  <span class="add-plan__marker add-plan__marker--active"></span>
+                  <span class="add-plan__marker"></span>
+                  <span class="add-plan__marker"></span>
+                </div>
+              </div>
+              <ol class="add-plan__list">
+                <li class="add-plan__item">
+                  <div class="add-plan__item-title-wrapper">
+                    <span>Шаг 1.</span>
+                    <span>Даты пребывания</span>
+                  </div>
+                  <p class="add-plan__about-text">
+                    Укажите предпочтительное количество попутчиков, которых вы хотели бы позвать в поездку и ее предполагаемую длительность.
+                  </p>
+                  <div class="add-plan__value-input value-input">
+                    <label class="value-input__label" for="companions-value-field">Ищу попутчиков:<span>чел.</span></label>
+                    <input class="value-input__number-input" name="companions-value" id="companions-value-field" type="text" value="2">
+                    <button class="value-input__button value-input__button--minus" type="button"></button>
+                    <button class="value-input__button value-input__button--plus" type="button"></button>
+                  </div>
+                  <div class="add-plan__value-input value-input">
+                    <label class="value-input__label" for="days-value-field">Длительность:<span>дн.</span></label>
+                    <input class="value-input__number-input" name="companions-value" id="days-value-field" type="text" value="2">
+                    <button class="value-input__button value-input__button--minus" type="button"></button>
+                    <button class="value-input__button value-input__button--plus" type="button"></button>
+                  </div>
+                  <label class="add-plan__checkbox-label">
+                    <input class="add-plan__checkbox-input" type="checkbox" name="childs" checked>
+                    <span class="add-plan__checkbox-mark"></span>
+                    Можно с детьми
+                  </label>
+                  <div class="add-plan__calendar calendar">
+                    <div class="calendar__title-wrapper">
+                      <button class="calendar__prev-month"></button>
+                      <p class="calendar__month">Март 2019</p>
+                      <button class="calendar__next-month"></button>
+                    </div>
+                    <table class="calendar__table">
+                      <thead>
+                        <tr>
+                          <th class="calendar__day-title">П</th>
+                          <th class="calendar__day-title">В</th>
+                          <th class="calendar__day-title">С</th>
+                          <th class="calendar__day-title">Ч</th>
+                          <th class="calendar__day-title">П</th>
+                          <th class="calendar__day-title">С</th>
+                          <th class="calendar__day-title">В</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td class="calendar__day">24</td>
+                          <td class="calendar__day">25</td>
+                          <td class="calendar__day">26</td>
+                          <td class="calendar__day">27</td>
+                          <td class="calendar__day">28</td>
+                          <td class="calendar__day">1</td>
+                          <td class="calendar__day">2</td>
+                        </tr>
+                        <tr>
+                          <td class="calendar__day">3</td>
+                          <td class="calendar__day">4</td>
+                          <td class="calendar__day">5</td>
+                          <td class="calendar__day">6</td>
+                          <td class="calendar__day">7</td>
+                          <td class="calendar__day">8</td>
+                          <td class="calendar__day">9</td>
+                        </tr>
+                        <tr>
+                          <td class="calendar__day">9</td>
+                          <td class="calendar__day">10</td>
+                          <td class="calendar__day">11</td>
+                          <td class="calendar__day">12</td>
+                          <td class="calendar__day">13</td>
+                          <td class="calendar__day">14</td>
+                          <td class="calendar__day">15</td>
+                        </tr>
+                        <tr>
+                          <td class="calendar__day">16</td>
+                          <td class="calendar__day">17</td>
+                          <td class="calendar__day">18</td>
+                          <td class="calendar__day">19</td>
+                          <td class="calendar__day">20</td>
+                          <td class="calendar__day">21</td>
+                          <td class="calendar__day">22</td>
+                        </tr>
+                        <tr>
+                          <td class="calendar__day">23</td>
+                          <td class="calendar__day">24</td>
+                          <td class="calendar__day">25</td>
+                          <td class="calendar__day calendar__day--select calendar__day--current">26</td>
+                          <td class="calendar__day calendar__day--select">27</td>
+                          <td class="calendar__day calendar__day--select">28</td>
+                          <td class="calendar__day calendar__day--future">29</td>
+                        </tr>
+                        <tr>
+                          <td class="calendar__day calendar__day--future">30</td>
+                          <td class="calendar__day calendar__day--future">31</td>
+                          <td class="calendar__day calendar__day--future">1</td>
+                          <td class="calendar__day calendar__day--future">2</td>
+                          <td class="calendar__day calendar__day--future">3</td>
+                          <td class="calendar__day calendar__day--future">4</td>
+                          <td class="calendar__day calendar__day--future">5</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <a href="#" class="add-plan__next-button next-button"><span>Следующий шаг</span><span class="next-button__icon"></span></a>
+                </li>
+                <li class="add-plan__item"></li>
+                <li class="add-plan__item"></li>
+              </ol>
             </div>
           </div>
         </form>

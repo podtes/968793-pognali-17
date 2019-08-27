@@ -1,0 +1,69 @@
+.value-input {
+  position: relative;
+
+  &__label {
+    margin-bottom: 8px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    font-size: 16px;
+    line-height: 16px;
+    color: #1d2e5b;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+
+    & span {
+      opacity: 0.3;
+    }
+  }
+
+  &__number-input {
+    width: 100%;
+    text-align: center;
+    font-family: "blogger Sans", "Arial", sans-serif;
+    font-size: 15px;
+    line-height: 13px;
+    color: #1d2e5b;
+    padding-top: 15px;
+    padding-bottom: 10px;
+    border: 1px solid #cbced9;
+    border-radius: 4px;
+    box-sizing: border-box;
+
+    &:hover {
+      border-color: #959bb2;
+    }
+
+    &:active {
+      border-color: #161c35;
+    }
+  }
+
+  &__button {
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    border: none;
+    opacity: 0.3;
+
+    &:hover {
+      opacity: 0.7;
+    }
+
+    &:active {
+      opacity: 0.2;
+    }
+
+    &--minus {
+      top: 39px;
+      left: 15px;
+      background: url("../../img/qty-minus-mobile.svg")no-repeat 50% 50%;
+    }
+
+    &--plus {
+      top: 39px;
+      right: 15px;
+      background: url("../../img/qty-plus-mobile.svg")no-repeat 50% 50%;
+    }
+  }
+}

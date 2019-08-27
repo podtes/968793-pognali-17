@@ -1,0 +1,145 @@
+.add-plan {
+  margin-top: -30px;
+  padding-top: 30px;
+  padding-bottom: 80px;
+  background-color: #d4d9eb;
+  color: #1d2e5b;
+  border-radius: 30px 30px 0 0;
+
+  &__title-wrapper {
+    margin-bottom: 29px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  &__title {
+    margin: 0;
+    margin-right: 35px;
+    padding: 0;
+    font-size: 24px;
+    line-height: 24px;
+    font-weight: bold;
+    color: #1d2e5b;
+  }
+
+  &__markers-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 47px;
+    box-sizing: border-box;
+  }
+
+  &__marker {
+    display: block;
+    width: 5px;
+    height: 5px;
+    background-color: #1d2e5b;
+    border-radius: 50%;
+    opacity: 0.3;
+
+    &--active {
+      opacity: 1;
+    }
+  }
+
+  &__list {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+
+  &__item {
+    padding: 24px;
+    padding-bottom: 22px;
+    margin-bottom: 10px;
+    background-color: #ffffff;
+    border-radius: 10px;
+  }
+
+  &__item-title-wrapper {
+    margin-bottom: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    font-size: 20px;
+    line-height: 20px;
+    font-weight: bold;
+  }
+
+  &__about-text {
+    margin: 0;
+    margin-bottom: 21px;
+    padding: 0;
+    font-size: 16px;
+    line-height: 22px;
+    color: #444444;
+  }
+
+  &__value-input {
+    margin-bottom: 21px;
+
+    &:last-of-type {
+      margin-bottom: 28px;
+    }
+  }
+
+  &__checkbox-input {
+    position: absolute;
+    visibility: hidden;
+  }
+
+  &__checkbox-label {
+    position: relative;
+    display: block;
+    padding-left: 40px;
+    margin-bottom: 25px;
+    font-size: 15px;
+    line-height: 15px;
+    color: #444444;
+
+    &:hover .add-plan__checkbox-mark {
+      border-color: #959bb2;
+    }
+
+    &:active .add-plan__checkbox-mark {
+      border-color: #e2e5f1;
+      background-color: #e2e5f1;
+    }
+
+    &:active .add-plan__checkbox-mark {
+      &::after {
+        opacity: 0.3;
+      }
+    }
+  }
+
+  &__checkbox-mark {
+    position: absolute;
+    display: block;
+    top: -8px;
+    left: 0;
+    width: 24px;
+    height: 24px;
+    border: 1px solid #ced1db;
+    border-radius: 3px;
+    background-color: #ffffff;
+  }
+
+  &__checkbox-input:checked + .add-plan__checkbox-mark {
+    &::after {
+      position: absolute;
+      content: "";
+      top: 8px;
+      left: 9px;
+      width: 9px;
+      height: 9px;
+      background: url(../../img/tick.svg) no-repeat 50% 50%;
+    }
+  }
+
+  &__calendar {
+    margin-bottom: 21px;
+  }
+}
