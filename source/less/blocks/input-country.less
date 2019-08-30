@@ -1,0 +1,377 @@
+.input-country {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+
+  &__input {
+    position: relative;
+    padding-top: 12px;
+    padding-bottom: 10px;
+    padding-left: 12px;
+    padding-right: 30px;
+    font-size: 14px;
+    line-height: 18px;
+    color: #1d2e5b;
+    text-transform: uppercase;
+    font-family: "Blogger Sans", "Arial", sans-serif;
+    border: 1px solid #cbced9;
+    border-radius: 5px;
+    letter-spacing: 1.5px;
+
+    &--default {
+      flex-grow: 1;
+      text-align: left;
+      background-color: #ffffff;
+
+      &:hover {
+        border-color: #959bb2;
+      }
+
+      &:hover .input-country__open-list-button--default {
+        opacity: 0.5;
+      }
+    }
+
+    &--open {
+      flex-grow: 1;
+      text-align: left;
+      border: none;
+      background-color: #1d2e5b;
+      color: #ffffff;
+
+      &:hover .input-country__open-list-button--open {
+        opacity: 1;
+      }
+
+      &:active .input-country__open-list-button--open {
+        opacity: 0.1;
+      }
+    }
+
+    &--add-country {
+      text-align: left;
+      flex-grow: 1;
+      background-color: #edeff6;
+      border-color: #edeff6;
+
+      &:hover {
+        background-color: #dfe3f0;
+      }
+
+      &:hover .input-country__open-list-button--add-country {
+        opacity: 0.3;
+      }
+
+      &:active span {
+        opacity: 0.3;
+      }
+    }
+  }
+
+  &__indicator {
+    display: block;
+    position: absolute;
+    top: 17px;
+    left: 164px;
+    width: 8px;
+    height: 8px;
+    background-color: #1d2e5b;
+    border-radius: 50%;
+    z-index: 10;
+
+    &::before {
+      position: absolute;
+      content: "";
+      top: -8px;
+      left: -41px;
+      width: 15px;
+      height: 20px;
+      background: linear-gradient(to left, #fff 15%, transparent 100%);
+    }
+
+    &--default {
+      width: 7px;
+      height: 7px;
+      background-color: #ffffff;
+      border: 1px solid #ced0db;
+
+      &::before {
+        display: none;
+      }
+    }
+
+    &--open {
+      display: none;
+    }
+
+    &--add-country {
+      width: 7px;
+      height: 7px;
+      background-color: #edeff6;
+      border: 1px solid #ced0db;
+
+      &::before {
+        display: none;
+      }
+    }
+  }
+
+  &__open-list-button {
+    position: absolute;
+    top: 18px;
+    right: 66px;
+    width: 12px;
+    height: 7px;
+    background: url("../../img/dropdown-form.svg") no-repeat 50% 50%;
+    border: none;
+    opacity: 0.3;
+
+    &--default {
+      top: 18px;
+      right: 15px;
+    }
+
+    &--open {
+      top: 15px;
+      right: 10px;
+      width: 9px;
+      height: 9px;
+      background: url("../../img/small-cross.svg") no-repeat;
+      opacity: 0.3;
+    }
+
+    &--add-country {
+      top: 14px;
+      right: 15px;
+      width: 14px;
+      height: 14px;
+      background: url("../../img/qty-plus-mobile.svg") no-repeat 50% 50%;
+      opacity: 0.2;
+
+      &::before {
+        display: none;
+      }
+    }
+  }
+
+  &__flag-wrapper {
+    position: relative;
+    margin-left: -1px;
+    padding: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #cbced9;
+    border-radius: 5px;
+    box-sizing: border-box;
+
+    &--default {
+      display: none;
+    }
+  }
+
+  &__flag-image {
+    display: block;
+    width: 35px;
+    height: 24px;
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    &--bosnia {
+      background-image: url("../../img/flag-bosnia.svg");
+    }
+
+    &--czech {
+      background-image: url("../../img/flag-czech.svg");
+    }
+  }
+
+  &__close-button {
+    position: absolute;
+    padding: 0;
+    padding-left: 6px;
+    top: -11px;
+    right: -9px;
+    width: 21px;
+    height: 21px;
+    background-color: #edeff6;
+    border-radius: 50%;
+    border: none;
+
+    & span {
+      display: block;
+      width: 9px;
+      height: 9px;
+      background-image: url(../../img/close.svg);
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
+      opacity: 0.1;
+    }
+
+    &:hover span {
+      opacity: 0.3;
+    }
+
+    &:active span {
+      opacity: 0.05;
+    }
+
+    &--open {
+      display: none;
+    }
+  }
+}
+
+@media (min-width: @tab-width) {
+  .input-country {
+    &__input {
+      width: 369px;
+      padding-top: 25px;
+      padding-bottom: 23px;
+      padding-left: 25px;
+      padding-right: 30px;
+      margin-right: 45px;
+      font-size: 20px;
+      line-height: 18px;
+      border-radius: 5px;
+      letter-spacing: 3.5px;
+      box-sizing: border-box;
+
+      &--default {
+        margin-right: 163px;
+      }
+
+      &--add-country {
+        margin-right: 163px;
+      }
+
+      &--open {
+        margin-right: 163px;
+      }
+    }
+
+    &__flag-wrapper {
+      margin-left: -1px;
+      padding: 8px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: none;
+
+      &--default {
+        display: none;
+      }
+    }
+
+    &__flag-image {
+      width: 71px;
+      height: 48px;
+    }
+
+    &__indicator {
+      top: 26px;
+      left: 388px;
+      width: 15px;
+      height: 15px;
+    }
+
+    &__open-list-button {
+      top: 31px;
+      right: 190px;
+      width: 18px;
+      height: 11px;
+
+      &--add-country {
+        top: 25px;
+        right: 190px;
+        width: 18px;
+        height: 18px;
+      }
+    }
+
+    &__close-button {
+      padding: 0;
+      top: 15px;
+      right: -22px;
+      width: 38px;
+      height: 38px;
+      background-color: #ffffff;
+      border-radius: 50%;
+      border: none;
+
+      & span {
+        width: 19px;
+        height: 19px;
+        opacity: 0.1;
+      }
+
+      &:hover span {
+        opacity: 0.3;
+      }
+
+      &:active span {
+        opacity: 0.05;
+      }
+
+      &--open {
+        display: none;
+      }
+    }
+  }
+}
+
+@media (min-width: @desk-width) {
+  .input-country {
+    &__input {
+      width: 730px;
+      padding-bottom: 21px;
+      padding-right: 30px;
+      margin-right: 77px;
+      font-size: 20px;
+      line-height: 18px;
+      letter-spacing: 2.5px;
+
+      &--default {
+        margin-right: 270px;
+      }
+
+      &--add-country {
+        margin-right: 270px;
+      }
+
+      &--open {
+        margin-right: 270px;
+      }
+    }
+
+    &__flag-wrapper {
+      margin-left: 0;
+      padding: 8px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      &--default {
+        display: none;
+      }
+    }
+
+    &__open-list-button {
+      right: 296px;
+
+      &--add-country {
+        top: 25px;
+        right: 296px;
+      }
+    }
+
+     &__indicator {
+      top: 26px;
+      left: 767px;
+    }
+
+    &__close-button {
+      right: -14px;
+    }
+  }
+}

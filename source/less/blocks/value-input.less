@@ -67,3 +67,84 @@
     }
   }
 }
+
+
+@media (min-width: @tab-width) {
+  .value-input {
+    padding-top: 22px;
+    border-top: 1px solid #d6d9e6;
+
+    &__label {
+      margin-bottom: 21px;
+      font-size: 20px;
+      line-height: 24px;
+    }
+
+    &__number-input {
+      font-size: 20px;
+      line-height: 18px;
+      padding-top: 24px;
+      padding-bottom: 22px;
+    }
+
+    &__button {
+      width: 20px;
+      height: 20px;
+
+      &--minus {
+        top: 92px;
+        left: 24px;
+        background: url("../../img/qty-minus.svg")no-repeat 50% 50%;
+      }
+
+      &--plus {
+        top: 92px;
+        right: 20px;
+        background: url("../../img/qty-plus.svg")no-repeat 50% 50%;
+      }
+    }
+  }
+}
+
+@media (min-width: @desk-width) {
+  .value-input {
+    position: relative;
+    width: 483px;
+    padding-top: 0;
+    margin-bottom: 60px;
+    border-top: none;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &__number-input {
+      position: absolute;
+      width: 180px;
+      top: -25px;
+      left: 220px;
+    }
+
+    &__label {
+      margin-bottom: 0;
+
+      & span {
+        opacity: 1;
+      }
+    }
+
+    &__button {
+      &--minus {
+        top: 0px;
+        left: 240px;
+        background: url("../../img/qty-minus.svg")no-repeat 50% 50%;
+      }
+
+      &--plus {
+        top: 0;
+        right: 102px;
+        background: url("../../img/qty-plus.svg")no-repeat 50% 50%;
+      }
+    }
+  }
+}
