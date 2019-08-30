@@ -168,6 +168,8 @@
                 <picture>
                   <source media="(min-width: 1440px)" type="image/webp" srcset="./img/about-desktop@1x.webp 1x, ./img/about-desktop@2x.webp 2x">
                   <source media="(min-width: 1440px)" srcset="./img/about-desktop@1x.png 1x, ./img/about-desktop@2x.png 2x">
+                  <source media="(min-width: 768px)" type="image/webp" srcset="./img/about-tablet@1x.webp 1x, ./img/about-tablet@2x.webp 2x">
+                  <source media="(min-width: 768px)" srcset="./img/about-tablet@1x.png 1x, ./img/about-tablet@2x.png 2x">
                   <source type="image/webp" srcset="./img/about-tablet@1x.webp 1x, ./img/about-tablet@2x.webp 2x">
                   <img class="about-service__image" src="./img/about-tablet@1x.png" alt="Про наши сервисы" width="376" height="548" srcset="./img/about-tablet@2x.png 2x">
                 </picture>
@@ -275,7 +277,10 @@
                   <li class="flags-list__item flags-list__item--seychelles"></li>
                 </ul>
                 <div class="people-card__wrapper">
-                  <h3 class="people-card__title people-card__title--offline">Таня Фирсова</h3>
+                  <div class="people-card__title-wrapper">
+                    <span class="people-card__indicator-index people-card__indicator-index--offline"></span>
+                    <h3 class="people-card__title">Таня Фирсова</h3>
+                  </div>
                   <p class="people-card__hashtags">#ЗОЖ #ПП #Фитнес #пляж #авокадо #смузи</p>
                   <ul class="people-card__vehicle-list vehicle-list">
                     <li class="vehicle-list__item vehicle-list__item--plane vehicle-list__item--active">
@@ -314,7 +319,10 @@
                   <li class="flags-list__item flags-list__item--czech"></li>
                 </ul>
                 <div class="people-card__wrapper">
-                  <h3 class="people-card__title people-card__title--online">Петя Демин</h3>
+                  <div class="people-card__title-wrapper">
+                    <span class="people-card__indicator-index people-card__indicator-index--online"></span>
+                    <h3 class="people-card__title">Петя Демин</h3>
+                  </div>
                   <p class="people-card__hashtags">#бургер #бар #футбол #концерт #крафт</p>
                   <ul class="people-card__vehicle-list vehicle-list">
                     <li class="vehicle-list__item vehicle-list__item--plane vehicle-list__item--active">
