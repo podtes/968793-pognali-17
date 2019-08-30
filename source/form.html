@@ -14,14 +14,14 @@
       <div class="container">
         <div class="page-header__wrapper">
           <div class="page-header__wrapper-menu wrapper-menu">
-            <a class="wrapper-menu__logo wrapper-menu__logo--blue wrapper-menu__logo--close" href="#">
+            <a class="wrapper-menu__logo wrapper-menu__logo--blue wrapper-menu__logo--close" href="index.html">
               <picture>
                 <source media="(min-width: 1440px)" srcset="./img/logo-desktop-blue@1x.png 1x, ./img/logo-desktop-blue@2x.png 2x">
                 <source media="(min-width: 768px)" srcset="./img/logo-tablet-blue@1x.png 1x, ./img/logo-tablet-blue@2x.png 2x">
                 <img class="wrapper-menu__logo-image" src="./img/logo-mobile-blue@1x.png" width="100" height="19" srcset="./img/logo-mobile-blue@2x.png 2x" alt="Логотип сервиса для поиска попутчиков поехали">
               </picture>
             </a>
-            <a class="wrapper-menu__logo wrapper-menu__logo--white wrapper-menu__logo--open" href="#">
+            <a class="wrapper-menu__logo wrapper-menu__logo--white wrapper-menu__logo--open" href="index.html">
               <picture>
                 <source media="(min-width: 1440px)" srcset="./img/logo-desktop-white@1x.png 1x, ./img/logo-desktop-white@2x.png 2x">
                 <source media="(min-width: 768px)" srcset="./img/logo-tablet-white@1x.png 1x, ./img/logo-tablet-white@2x.png 2x">
@@ -200,6 +200,7 @@
               </div>
               <ol class="add-plan__list">
                 <li class="add-plan__item">
+                  <a name="dates"></a>
                   <div class="add-plan__top-wrapper">
                     <div class="add-plan__text-wrapper">
                       <div class="add-plan__item-title-wrapper">
@@ -350,9 +351,10 @@
                         </tbody>
                       </table>
                     </div>
-                  <a href="#" class="add-plan__next-button next-button"><span class="next-button__title">Следующий шаг</span><span class="next-button__icon"></span></a>
+                  <a href="#route" class="add-plan__next-button next-button"><span class="next-button__title">Следующий шаг</span><span class="next-button__icon"></span></a>
                 </li>
                 <li class="add-plan__item add-plan__item--non-first">
+                  <a name="route"></a>
                   <div class="add-plan__top-wrapper">
                     <div class="add-plan__text-wrapper">
                       <div class="add-plan__item-title-wrapper">
@@ -421,11 +423,12 @@
                     </div>
                   </div>
                   <div class="add-plan__buttons-wrapper">
-                    <a href="#" class="add-plan__next-button add-plan__next-button--non-first next-button"><span class="next-button__title">Следующий шаг</span><span class="next-button__icon"></span></a>
-                    <a class="add-plan__prev-button" href="#"><span class="add-plan__prev-icon"></span><span>На шаг назад</span></a>
+                    <a href="#entertaiment" class="add-plan__next-button add-plan__next-button--non-first next-button"><span class="next-button__title">Следующий шаг</span><span class="next-button__icon"></span></a>
+                    <a class="add-plan__prev-button" href="#dates"><span class="add-plan__prev-icon"></span><span>На шаг назад</span></a>
                   </div>
                 </li>
                 <li class=" add-plan__item add-plan__item--non-first">
+                  <a name="entertaiment"></a>
                   <div class="add-plan__top-wrapper">
                     <div class="add-plan__text-wrapper">
                       <div class="add-plan__item-title-wrapper">
@@ -466,7 +469,7 @@
                       <span class="next-button__title">Отправить</span>
                       <span class="next-button__icon"></span>
                     </button>
-                    <a class="add-plan__prev-button" href="#">
+                    <a class="add-plan__prev-button" href="#route">
                       <span class="add-plan__prev-icon"></span>
                       <span>На шаг назад</span>
                     </a>
@@ -481,11 +484,11 @@
     <footer class="page-footer">
       <div class="container">
         <div class="page-footer__wrapper">
-          <a class="page-footer__logo" href="#">
+          <a class="page-footer__logo" href="index.html">
             <picture>
               <source media="(min-width: 1440px)" srcset="./img/logo-desktop-blue@1x.png 1x, ./img/logo-desktop-blue@2x.png 2x">
               <source media="(min-width: 768px)" srcset="./img/logo-tablet-blue@1x.png 1x, ./img/logo-tablet-blue@2x.png 2x">
-              <img class="page-footer__logo-image" src="./img/logo-mobile-blue@1x.png" alt="Логотип сервиса для поиска попутчиков поехали" width="97" height="15" srcset="./img/logo-mobile-blue@2x.png 2x">
+              <img class="page-footer__logo-image" src="./img/logo-mobile-blue@1x.png" alt="Логотип сервиса для поиска попутчиков поехали" width="100" height="15" srcset="./img/logo-mobile-blue@2x.png 2x">
             </picture>
           </a>
           <ul class="page-footer__social-list social-list social-list--footer">
@@ -520,9 +523,7 @@
         </div>
       </div>
     </footer>
-
-
-    <section class="modal">
+    <section class="modal modal__alphabet">
       <div class="alphabet-form__wrapper">
         <div class="alphabet-form__shadow-wrapper">
           <div class="alphabet-form">
