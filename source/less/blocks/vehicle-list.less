@@ -21,48 +21,16 @@
     border-radius: 50%;
     cursor: pointer;
 
-    &:hover::before {
+    &::before {
       display: none;
       position: absolute;
       content: "";
-      width: 18px;
-      height: 9px;
-      top: 33px;
-      left: 7px;
-      background: url("../../img/triangle-arrow-right.svg") no-repeat 50% 50%;
-      transform: rotate(-90deg);
-      z-index: 10;
-    }
-
-    &:hover::after {
-      display: none;
-      position: absolute;
-      content: "";
-      padding: 10px;
-      font-size: 20px;
-      line-height: 24px;
-      color: #ffffff;
-      top: 40px;
-      left: -45px;
-      background-color: #101d41;
-      border-radius: 5px;
-      z-index: 10;
-    }
-
-    &--plane:hover::after {
-      content: "Авиаперелёт";
-    }
-
-    &--bus:hover::after {
-      content: "Автотранспорт";
-    }
-
-    &--velo:hover::after {
-      content: "Велосипед";
-    }
-
-    &--foot:hover::after {
-      content: "Пешком";
+      top: 38px;
+      left: 10px;
+      width: 16px;
+      height: 8px;
+      background: url(../../img/triangle-arrow-left.svg) no-repeat 50% 50%;
+      transform: rotate(90deg);
     }
 
     &--active .vehicle-list__icon {
@@ -106,6 +74,33 @@
       background-color: #edeff6;
       opacity: 0.15;
     }
+  }
+
+  &__tooltip {
+    display: none;
+    position: absolute;
+    top: 44px;
+    left: -40px;
+    padding: 15px 18px;
+    background-color: #101d41;
+    border-radius: 5px;
+    white-space: nowrap;
+    z-index: 10;
+  }
+
+  &__item:hover::before {
+    display: block;
+  }
+
+  &__item:hover .vehicle-list__tooltip {
+    display: block;
+  }
+
+  &__tooltip-title {
+    display: block;
+    font-size: 20px;
+    line-height: 24px;
+    color: #ffffff;
   }
 
   &__icon {
@@ -171,7 +166,7 @@
       &--background {
         &:hover::before,
         &:hover::after {
-          display: none;
+          display: block;
         }
       }
     }

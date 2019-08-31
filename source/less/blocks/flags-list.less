@@ -15,77 +15,48 @@
     height: 23px;
     border-radius: 3px;
 
-    &:hover::before {
-      display: none;
-      position: absolute;
-      content: "";
-      width: 18px;
-      height: 9px;
-      top: 26px;
-      left: 9px;
-      background: url("../../img/triangle-arrow-right.svg") no-repeat 50% 50%;
-      transform: rotate(-90deg);
-      z-index: 10;
-    }
-
-    &:hover::after {
-      display: none;
-      position: absolute;
-      content: "";
-      padding: 10px;
-      font-size: 20px;
-      line-height: 24px;
-      color: #ffffff;
-      top: 33px;
-      left: -15px;
-      background-color: #101d41;
-      border-radius: 5px;
-      z-index: 10;
-    }
-
     &:last-child {
       margin-right: 0;
     }
 
-    &--sri-lanka {
-      background-image: url("../../img/flag-sri-lanka.svg");
-
-      &:hover::after {
-        content: "Шри-Ланка";
-      }
+    &::before {
+      display: none;
+      position: absolute;
+      content: "";
+      top: 23px;
+      left: 8px;
+      width: 16px;
+      height: 8px;
+      background: url(../../img/triangle-arrow-left.svg) no-repeat 50% 50%;
+      transform: rotate(90deg);
     }
+  }
 
-    &--thailand {
-      background-image: url("../../img/flag-thailand.svg");
+  &__tooltip {
+    display: none;
+    position: absolute;
+    top: 29px;
+    left: -38px;
+    padding: 15px 18px;
+    background-color: #101d41;
+    border-radius: 5px;
+    white-space: nowrap;
+    z-index: 10;
+  }
 
-      &:hover::after {
-        content: "Тайланд";
-      }
-    }
+  &__item:hover::before {
+    display: block;
+  }
 
-    &--seychelles {
-      background-image: url("../../img/flag-seychelles.svg");
+  &__item:hover .flags-list__tooltip {
+    display: block;
+  }
 
-      &:hover::after {
-        content: "Сейшеллские острова";
-      }
-    }
-
-    &--belgium {
-      background-image: url("../../img/flag-belgium.svg");
-
-      &:hover::after {
-        content: "Бельгия";
-      }
-    }
-
-    &--czech {
-      background-image: url("../../img/flag-czech.svg");
-
-      &:hover::after {
-        content: "Чехия";
-      }
-    }
+  &__tooltip-title {
+    display: block;
+    font-size: 20px;
+    line-height: 24px;
+    color: #ffffff;
   }
 }
 
@@ -96,11 +67,6 @@
       margin-right: 20px;
       width: 35px;
       height: 24px;
-
-      &:hover::before,
-      &:hover::after {
-        display: block;
-      }
     }
   }
 }

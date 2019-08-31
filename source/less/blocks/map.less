@@ -2,39 +2,16 @@
   margin-top: -30px;
 
   &__background {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-image: url("../../img/map-mobile@1x.jpg");
+    background-image: url("../../img/map-mobile_marker@1x.png");
     background-repeat: no-repeat;
     background-position: 0 2%;
-    width: 320px;
     height: 332px;
+    background-size: cover;
+    display: block;
 
     @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
-      background-image: url("../../img/map-mobile@2x.jpg");
+      background-image: url("../../img/map-mobile_marker@2x.png");
       background-size: cover;
-    }
-  }
-
-  &__marker {
-    position: relative;
-    top: -10px;
-    display: block;
-    width: 41px;
-    height: 41px;
-    background-color: #ffffff;
-    border-radius: 50%;
-
-    &::before {
-      position: absolute;
-      content: "";
-      background-color: #182044;
-      border-radius: 50%;
-      width: 18px;
-      height: 18px;
-      top: 11px;
-      left: 11px;
     }
   }
 }
@@ -44,27 +21,13 @@
     margin-top: -60px;
 
     &__background {
-      background-image: url("../../img/map-tablet@1x.jpg");
-      width: 768px;
+      background-image: url("../../img/map-tablet_marker@1x.png");
       height: 576px;
       background-position: 0 20%;
 
       @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
-        background-image: url("../../img/map-tablet@2x.jpg");
+        background-image: url("../../img/map-tablet_marker@2x.png");
         background-size: cover;
-      }
-    }
-
-    &__marker {
-      top: -15px;
-      width: 54px;
-      height: 54px;
-
-      &::before {
-        width: 24px;
-        height: 24px;
-        top: 14px;
-        left: 15px;
       }
     }
 
@@ -77,23 +40,13 @@
 @media (min-width: @desk-width) {
   .map {
     &__background {
-      background-image: url("../../img/map-desktop@1x.jpg");
-      width: 1440px;
+      background-image: url("../../img/map-desktop_marker@1x.png");
       height: 510px;
       background-position: 0 58%;
 
       @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
-        background-image: url("../../img/map-desktop@2x.jpg");
+        background-image: url("../../img/map-desktop_marker@2x.png");
         background-size: cover;
-      }
-    }
-
-    &__marker {
-      top: -22px;
-
-      &::before {
-        top: 14px;
-        left: 15px;
       }
     }
 
