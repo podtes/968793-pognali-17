@@ -1,8 +1,7 @@
 .wrapper-menu {
   &__logo {
-    &--open {
-      display: block;
-    }
+    cursor: pointer;
+    display: block;
 
     &--close {
       display: none;
@@ -11,18 +10,16 @@
 
   &__toggle {
     border: none;
+    cursor: pointer;
+    padding-top: 16px;
+    background: url("../../img/menu.svg") no-repeat 50% 50%;
+    width: 25px;
+    height: 12px;
 
     &--open {
       background: url("../../img/menu-close.svg") no-repeat 50% 50%;
       width: 20px;
       height: 20px;
-    }
-
-    &--close {
-      padding-top: 16px;
-      background: url("../../img/menu.svg") no-repeat 50% 50%;
-      width: 25px;
-      height: 12px;
     }
   }
 }
@@ -32,12 +29,10 @@
     width: 358px;
 
     &__toggle {
+      padding-top: 40px;
+
       &--open {
         height: 37px;
-      }
-
-      &--close {
-        padding-top: 40px;
       }
     }
 

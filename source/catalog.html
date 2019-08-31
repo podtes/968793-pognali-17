@@ -10,11 +10,11 @@
     <div style="display: none">
       <svg src="build/img/sprite.svg"></svg>
     </div>
-    <header class="page-header page-header--non-index page-header--close">
+    <header class="page-header page-header--non-index">
       <div class="container">
         <div class="page-header__wrapper">
           <div class="page-header__wrapper-menu wrapper-menu">
-            <a class="wrapper-menu__logo wrapper-menu__logo--blue wrapper-menu__logo--close" href="index.html">
+            <a class="wrapper-menu__logo wrapper-menu__logo--close wrapper-menu__logo--blue" href="index.html">
               <picture>
                 <source media="(min-width: 1440px)" srcset="./img/logo-desktop-blue@1x.png 1x, ./img/logo-desktop-blue@2x.png 2x">
                 <source media="(min-width: 768px)" srcset="./img/logo-tablet-blue@1x.png 1x, ./img/logo-tablet-blue@2x.png 2x">
@@ -28,9 +28,9 @@
                 <img class="wrapper-menu__logo-image" src="./img/logo-mobile-white@1x.png" width="100" height="19" srcset="./img/logo-mobile-white@2x.png 2x" alt="Логотип сервиса для поиска попутчиков поехали">
               </picture>
             </a>
-            <button class="wrapper-menu__toggle wrapper-menu__toggle--close" type="button"></button>
+            <button class="wrapper-menu__toggle" type="button"></button>
           </div>
-          <nav class="main-nav main-nav--close">
+          <nav class="main-nav">
             <ul class="main-nav__site-list site-list">
               <li>
                 <a class="site-list__item" href="#">О сервисе</a>
@@ -92,7 +92,7 @@
       <section class="intro-companions">
         <div class="intro-companions__wrapper">
           <div class="container">
-            <ul class="intro-companions__auto intro-companions__auto--close auto-list">
+            <ul class="intro-companions__auto auto-list">
               <li class="auto-list__login-button">
                 <a class="auto-list__link" href="#">Авторизация</a>
               </li>
@@ -1324,18 +1324,12 @@
 
       toggleHeader.addEventListener("click", function(evt) {
         evt.preventDefault();
-        header.classList.remove("page-header--close");
-        header.classList.add("page-header--open");
-        toggleHeader.classList.remove("wrapper-menu__toggle--close");
-        toggleHeader.classList.add("wrapper-menu__toggle--open");
-        mainNav.classList.remove("main-nav--close");
-        mainNav.classList.add("main-nav--open");
-        logoWhite.classList.remove("main-nav--open");
-        logoWhite.classList.add("main-nav--close");
-        logoBlue.classList.remove("main-nav--close");
-        logoBlue.classList.add("main-nav--open");
-        signUpButtonCatalog.classList.remove("intro-companions__auto--close");
-        signUpButtonCatalog.classList.add("intro-companions__auto--open");
+        header.classList.toggle("page-header--open");
+        toggleHeader.classList.toggle("wrapper-menu__toggle--open");
+        mainNav.classList.toggle("main-nav--open");
+        logoWhite.classList.toggle("wrapper-menu__logo--close");
+        logoBlue.classList.toggle("wrapper-menu__logo--close");
+        signUpButtonCatalog.classList.toggle("intro-companions__auto--open");
       });
     </script>
   </body>
