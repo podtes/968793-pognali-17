@@ -1,8 +1,8 @@
 .page-header {
   position: relative;
   padding-top: 27px;
-  padding-bottom: 129px;
   background-color: #161c35;
+  padding-bottom: 15px;
 
   &--non-index {
     padding-top: 19px;
@@ -14,22 +14,24 @@
     background-color: #ffffff;
   }
 
+  &--scroll {
+    position: sticky;
+    top: 0;
+    left: 0;
+    background-color: #ffffff;
+    z-index: 100;
+  }
+
   &__wrapper {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
   }
-
-  &__wrapper-menu {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
 }
 
 @media (min-width: @tab-width) {
   .page-header {
-    padding-top: 45px;
+    padding-top: 40px;
     padding-bottom: 38px;
     background-color: #182044;
 
@@ -40,6 +42,10 @@
     &--open {
       background-color: #ffffff;
     }
+
+    &--scroll {
+      background-color: #ffffff;
+    }
   }
 }
 
@@ -48,7 +54,13 @@
     margin: 0;
     padding: 0;
     padding-top: 48px;
+    padding-bottom: 5px;
     background-color: #161c34;
+
+    &--scroll {
+      padding-top: 20px;
+      background-color: #ffffff;
+    }
 
     &__wrapper {
       margin: 0;
@@ -61,8 +73,6 @@
       margin: 0;
       padding: 0;
       margin-bottom: 0;
-      width: 285px;
-      margin-right: 40px;
     }
   }
 }

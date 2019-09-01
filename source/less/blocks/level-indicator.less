@@ -16,7 +16,6 @@
     height: 45px;
     background-color: #ffffff;
     flex-direction: column;
-    border: 2px solid #ff8d30;
   }
 
   &--form {
@@ -29,11 +28,20 @@
   }
 
   &__number {
-    margin-bottom: 3px;
+    position: relative;
     font-size: 24px;
     line-height: 24px;
     font-weight: bold;
-    border-bottom: 1px solid #ffffff;
+
+    &::after {
+      position: absolute;
+      content: "";
+      top: 21px;
+      left: -2px;
+      width: 30px;
+      height: 1px;
+      background-color: #ffffff;
+    }
 
     &--catalog {
       margin-bottom: 0;

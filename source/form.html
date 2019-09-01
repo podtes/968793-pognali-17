@@ -33,10 +33,10 @@
           <nav class="main-nav">
             <ul class="main-nav__site-list site-list">
               <li>
-                <a class="site-list__item" href="#">О сервисе</a>
+                <a class="site-list__item" href="index.html">О сервисе</a>
               </li>
               <li>
-                <a class="site-list__item" href="form.html">Направления</a>
+                <a class="site-list__item" href="#">Направления</a>
               </li>
               <li>
                 <a class="site-list__item" href="catalog.html">Попутчики</a>
@@ -379,7 +379,7 @@
                   </div>
                   <span class="add-plan__lines"></span>
                   <div class="add-plan__input-country input-country">
-                    <input class="input-country__input" type="text" value="Босния и Герцеговина" name="country" readonly>
+                    <input class="input-country__field" type="text" value="Босния и Герцеговина" name="country" readonly>
                     <span class="input-country__indicator"></span>
                     <button type="button" class="input-country__open-list-button"></button>
                     <div class="input-country__flag-wrapper">
@@ -391,7 +391,7 @@
                   </div>
                   <span class="add-plan__arrow-bottom"></span>
                   <div class="add-plan__input-country input-country">
-                    <input class="input-country__input" type="text" value="Чехословакия" name="country" readonly>
+                    <input class="input-country__field" type="text" value="Чехословакия" name="country" readonly>
                     <span class="input-country__indicator"></span>
                     <button type="button" class="input-country__open-list-button"></button>
                     <div class="input-country__flag-wrapper">
@@ -403,24 +403,23 @@
                   </div>
                   <span class="add-plan__arrow-bottom"></span>
                   <div class="add-plan__input-country input-country input-country--choose-country">
-                    <button class="input-country__input input-country__input--default" type="button">Выберите страну</button>
+                    <button class="input-country__field input-country__field--default" type="button">Выберите страну</button>
                     <span class="input-country__indicator input-country__indicator--default"></span>
-                    <button type="button" class="input-country__open-list-button input-country__open-list-button--default"></button>
+                    <span class="input-country__open-list-button input-country__open-list-button--default"></span>
                     <div class="input-country__flag-wrapper input-country__flag-wrapper--default">
                       <span class="input-country__flag-image input-country__flag-image--czech"></span>
                     </div>
-                    <button type="button" class="input-country__close-button input-country__close-button--default">
+                    <button type="button" class="input-country__close-button input-country__close-button--choose-country">
                       <span></span>
                     </button>
                   </div>
                   <span class="add-plan__arrow-bottom"></span>
                   <div class="add-plan__input-country input-country">
-                    <button type="button" class="input-country__input input-country__input--add-country"><span>Добавить страну</span></button>
+                    <button type="button" class="input-country__field input-country__field--add-country">
+                      <span>Добавить страну</span>
+                    </button>
                     <span class="input-country__indicator input-country__indicator--add-country"></span>
-                    <button type="button" class="input-country__open-list-button input-country__open-list-button--add-country"></button>
-                    <div class="input-country__flag-wrapper input-country__flag-wrapper--default">
-                      <span class="input-country__flag-image input-country__flag-image--czech"></span>
-                    </div>
+                    <span class="input-country__open-list-button input-country__open-list-button--add-country"></span>
                   </div>
                   <div class="add-plan__buttons-wrapper">
                     <a href="#entertaiment" class="add-plan__next-button add-plan__next-button--non-first next-button"><span class="next-button__title">Следующий шаг</span><span class="next-button__icon"></span></a>
@@ -463,7 +462,7 @@
                     <p class="add-plan__entertaiment-title">Чехословакия</p>
                     <img class="add-plan__entertaiment-flag" src="./img/flag-czech.svg" alt="Чехия" width="35" height="24">
                   </div>
-                  <textarea class="add-plan__entertaiment-input" type="text" name="entertaiment-plan" placeholder="План действий" required>Пить пиво и лазить по старым замкам, наслаждаться аритектурой и вот это все.</textarea>
+                  <textarea class="add-plan__entertaiment-input" type="text" name="entertaiment-plan" placeholder="План действий" required>Пить пиво и лазить по старым замкам, наслаждаться архитектурой и вот это все.</textarea>
                   <div class="add-plan__buttons-wrapper">
                     <button type="submit" class="add-plan__submit-button add-plan__next-button next-button">
                       <span class="next-button__title">Отправить</span>
@@ -661,12 +660,10 @@
       var signUpButtonCatalog = document.querySelector(".intro-companions__auto");
       var logoBlue = document.querySelector(".wrapper-menu__logo--blue");
       var logoWhite = document.querySelector(".wrapper-menu__logo--white");
-      var chooseItem = document.querySelector(".input-country--choose-country");
-      var addCountryToOpen = chooseItem.querySelector(".input-country__input");
-      var indicator = chooseItem.querySelector(".input-country__indicator");
-      var сhooseButton = chooseItem.querySelector(".input-country__open-list-button");
-      var closeButton = chooseItem.querySelector(".input-country__close-button");
-
+      var chooseButton = document.querySelector(".input-country__field--default");
+      var inlineCloseButton = document.querySelector(".input-country__open-list-button--default");
+      var closeButton = document.querySelector(".input-country__close-button--choose-country");
+      var alphabet = document.querySelector(".modal__alphabet");
 
       toggleHeader.addEventListener("click", function(evt) {
         evt.preventDefault();
@@ -678,17 +675,14 @@
         signUpButtonCatalog.classList.toggle("intro-companions__auto--open");
       });
 
-      addCountryToOpen.addEventListener("click", function(evt) {
+      chooseButton.addEventListener("click", function(evt) {
         evt.preventDefault();
-        addCountryToOpen.classList.remove("input-country__input--default");
-        addCountryToOpen.classList.add("input-country__input--open");
-        indicator.classList.remove("input-country__indicator--default");
-        indicator.classList.add("input-country__indicator--open");
-        closeButton.classList.remove("input-country__close-button--default");
-        closeButton.classList.add("input-country__close-button--open");
-        chooseButton.classList.remove("input-country__open-list-button--default");
-        chooseButton.classList.add("input-country__open-list-button--open");
+        chooseButton.classList.toggle("input-country__field--open");
+        inlineCloseButton.classList.toggle("input-country__open-list-button--open");
+        closeButton.classList.toggle("input-country__close-button--open");
+        alphabet.classList.toggle("modal--show");
       });
+
     </script>
   </body>
 </html>

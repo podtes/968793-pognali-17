@@ -3,7 +3,7 @@
   display: flex;
   flex-wrap: wrap;
 
-  &__input {
+  &__field {
     position: relative;
     padding-top: 12px;
     padding-bottom: 10px;
@@ -27,7 +27,7 @@
         border-color: #959bb2;
       }
 
-      &:hover .input-country__open-list-button--default {
+      &:hover ~ .input-country__open-list-button--default {
         opacity: 0.5;
       }
     }
@@ -35,15 +35,16 @@
     &--open {
       flex-grow: 1;
       text-align: left;
-      border: none;
+      border: 1px solid #1d2e5b;
       background-color: #1d2e5b;
       color: #ffffff;
+      z-index: 20;
 
-      &:hover .input-country__open-list-button--open {
+      &:hover ~ .input-country__open-list-button--open {
         opacity: 1;
       }
 
-      &:active .input-country__open-list-button--open {
+      &:active ~ .input-country__open-list-button--open {
         opacity: 0.1;
       }
     }
@@ -59,12 +60,16 @@
         background-color: #dfe3f0;
       }
 
-      &:hover .input-country__open-list-button--add-country {
+      &:hover ~ .input-country__open-list-button--add-country {
         opacity: 0.3;
       }
 
       &:active span {
         opacity: 0.3;
+      }
+
+       &:active ~ .input-country__open-list-button--add-country {
+        opacity: 0.1;
       }
     }
   }
@@ -131,15 +136,17 @@
     &--default {
       top: 18px;
       right: 15px;
+      pointer-events: none;
     }
 
     &--open {
-      top: 15px;
-      right: 10px;
+      top: 16px;
+      right: 16px;
       width: 9px;
       height: 9px;
       background: url("../../img/small-cross.svg") no-repeat;
       opacity: 0.3;
+      z-index: 40;
     }
 
     &--add-country {
@@ -219,7 +226,7 @@
 
 @media (min-width: @tab-width) {
   .input-country {
-    &__input {
+    &__field {
       width: 369px;
       padding-top: 25px;
       padding-bottom: 23px;
@@ -317,7 +324,7 @@
 
 @media (min-width: @desk-width) {
   .input-country {
-    &__input {
+    &__field {
       width: 730px;
       padding-bottom: 21px;
       padding-right: 30px;

@@ -29,6 +29,7 @@
               </picture>
             </a>
             <button class="wrapper-menu__toggle" type="button"></button>
+            <a class="wrapper-menu__autorization" href="#">Авторизация</a>
           </div>
           <nav class="main-nav">
             <ul class="main-nav__site-list site-list">
@@ -276,6 +277,14 @@
                 <span class="people-card__level level-indicator">
                   <span class="level-indicator__number">99</span>
                   <span class="level-indicator__title">level</span>
+                  <svg version="1.1" width="100px" height="100px" class="progress">
+                    <linearGradient id="progress-fill">
+                      <stop offset="0" class="color-one" />
+                      <stop offset="1" class="color-two" />
+                    </linearGradient>
+                    <circle r="30" cx="54" cy="50" fill="transparent" stroke-width="10" stroke="transparent"></circle>
+                    <circle r="30" cx="54" cy="50" class="progress__circle" stroke-width="10" stroke-dashoffset="50"></circle>
+                  </svg>
                 </span>
                 <ul class="people-card__flags-list flags-list">
                   <li class="flags-list__item flags-list__item--sri-lanka">
@@ -346,6 +355,14 @@
                 <span class="people-card__level level-indicator">
                   <span class="level-indicator__number">80</span>
                   <span class="level-indicator__title">level</span>
+                  <svg version="1.1" width="100px" height="100px" class="progress">
+                    <linearGradient id="progress-fill">
+                      <stop offset="0" class="color-one" />
+                      <stop offset="1" class="color-two" />
+                    </linearGradient>
+                    <circle r="30" cx="54" cy="50" fill="transparent" stroke-width="10" stroke="transparent"></circle>
+                    <circle r="30" cx="54" cy="50" class="progress__circle progress__circle--80" stroke-width="10" stroke-dashoffset="50"></circle>
+                  </svg>
                 </span>
                 <ul class="people-card__flags-list flags-list">
                   <li class="flags-list__item flags-list__item--belgium">
@@ -608,6 +625,13 @@
         evt.preventDefault();
         businessTariffs.classList.remove("modal--show");
       });
+
+//      window.addEventListener("scroll", function() {
+//        header.classList.add('page-header--scroll');
+//        logoWhite.classList.add("wrapper-menu__logo--close");
+//        logoBlue.classList.remove("wrapper-menu__logo--close");
+//        toggleHeader.classList.add('wrapper-menu__toggle--scroll');
+//      });
     </script>
   </body>
 </html>

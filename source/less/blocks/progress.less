@@ -1,0 +1,40 @@
+.progress {
+  position: absolute;
+  transform: rotate(-90deg);
+
+  &__circle {
+    fill: transparent;
+    stroke: #ff8d30;
+    stroke-width: 3;
+    stroke-dasharray: 230;
+    transition: stroke-dashoffset ease-out .4s;
+
+    &--80 {
+      stroke-dasharray: 205;
+    }
+  }
+
+  &__circle-catalog {
+    fill: transparent;
+    stroke: #ff8d30;
+    stroke-width: 3;
+    stroke-dasharray: 177;
+    transition: stroke-dashoffset ease-out .4s;
+
+    &--80 {
+      stroke-dasharray: 160;
+    }
+
+    &--25 {
+      stroke-dasharray: 91;
+    }
+
+    &--50 {
+      stroke-dasharray: 117;
+    }
+  }
+}
+
+@media (min-width: @tab-width) {
+
+}
