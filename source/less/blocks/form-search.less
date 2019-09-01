@@ -20,10 +20,14 @@
     padding-top: 12px;
     margin-bottom: 15px;
     border-top: 1px solid #f3c72b;
+
+    &:nth-of-type(4) {
+      margin-bottom: 29px;
+    }
   }
 
   &__title-wrapper {
-    margin-bottom: 11px;
+    margin-bottom: 12px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -100,7 +104,8 @@
   &__range-input {
     display: block;
     position: relative;
-    padding: 10px 0;
+    padding-top: 10px;
+    padding-bottom: 6px;
     text-align: center;
     width: 50%;
     border: 1px solid #cbced9;
@@ -164,7 +169,7 @@
 
   &__range-indicator-wrapper {
     padding-left: 67px;
-    margin-bottom: 8px;
+    margin-bottom: 4px;
     display: flex;
     justify-content: space-between;
   }
@@ -288,7 +293,7 @@
   &__vehicle-checkbox:not(:checked) + label::before {
     content: "";
     position: absolute;
-    left: 3px;
+    left: 0;
     top: 0;
     width: 32px;
     height: 32px;
@@ -325,7 +330,7 @@
   &__vehicle-checkbox-plane:checked + label::after,
   &__vehicle-checkbox-plane:not(:checked) + label::after {
     top: 8px;
-    left: 10px;
+    left: 7px;
     width: 14px;
     height: 16px;
     background: url("../../img/plane.svg") no-repeat;
@@ -334,7 +339,7 @@
   &__vehicle-checkbox-bus:checked + label::after,
   &__vehicle-checkbox-bus:not(:checked) + label::after {
     top: 8px;
-    left: 12px;
+    left: 10px;
     width: 13px;
     height: 16px;
     background: url("../../img/bus.svg") no-repeat;
@@ -343,7 +348,7 @@
   &__vehicle-checkbox-velo:checked + label::after,
   &__vehicle-checkbox-velo:not(:checked) + label::after {
     top: 8px;
-    left: 10px;
+    left: 6px;
     width: 19px;
     height: 17px;
     background: url("../../img/bike.svg") no-repeat;
@@ -352,7 +357,7 @@
   &__vehicle-checkbox-foot:checked + label::after,
   &__vehicle-checkbox-foot:not(:checked) + label::after {
     top: 8px;
-    left: 10px;
+    left: 8px;
     width: 15px;
     height: 17px;
     background: url("../../img/run.svg") no-repeat;
@@ -424,9 +429,10 @@
 
   &__button {
     display: block;
-    padding-top: 10px;
-    padding-bottom: 5px;
-    width: 100%;
+    width: 230px;
+    padding-top: 7px;
+    padding-bottom: 3px;
+    transform: translateX(-5px);
     background-color: #ffffff;
     border: none;
     border-radius: 20px;
@@ -490,10 +496,6 @@
         margin-bottom: 8px;
       }
 
-      &--vehicle {
-        margin-bottom: 16px;
-      }
-
       &--level {
         padding-bottom: 24px;
         margin-bottom: 35px;
@@ -535,6 +537,10 @@
       padding-top: 0;
       margin-bottom: 0;
       border: none;
+
+      &:nth-of-type(4) {
+        margin-bottom: 15px;
+      }
     }
 
     &__field {
@@ -691,12 +697,14 @@
     }
 
     &__button {
-      padding-top: 11px;
-      padding-bottom: 10px;
+      width: 618px;
+      padding-top: 14px;
+      padding-bottom: 8px;
       font-size: 20px;
       line-height: 30px;
       font-weight: bold;
       border-radius: 25px;
+      transform: translateX(1px);
     }
   }
 }
@@ -869,6 +877,10 @@
         top: 0;
         left: 0;
       }
+    }
+
+    &__button {
+      width: 100%;
     }
   }
 }

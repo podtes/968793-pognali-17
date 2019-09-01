@@ -29,6 +29,7 @@
               </picture>
             </a>
             <button class="wrapper-menu__toggle" type="button"></button>
+            <a class="wrapper-menu__autorization" href="#">Авторизация</a>
           </div>
           <nav class="main-nav">
             <ul class="main-nav__site-list site-list">
@@ -92,11 +93,6 @@
       <section class="intro-companions">
         <div class="intro-companions__wrapper">
           <div class="container">
-            <ul class="intro-companions__auto auto-list">
-              <li class="auto-list__login-button">
-                <a class="auto-list__link" href="#">Авторизация</a>
-              </li>
-            </ul>
             <h1 class="visually-hidden">Выбор подходящего попутчика</h1>
             <div class="intro-companions__wrapper-link">
               <h2 class="intro-companions__title">Попутчики</h2>
@@ -236,9 +232,6 @@
                 </li>
                 <li class="all-countries__country-name">
                   <a href="#">Бурунди</a>
-                </li>
-                <li class="all-countries__country-name">
-                  <a href="#">Бутано</a>
                 </li>
               </ul>
             </li>
@@ -635,7 +628,7 @@
                   <a href="#">Сан-Марино</a>
                 </li>
                 <li class="all-countries__country-name">
-                  <a href="#">Сан-Томе и Принсипи</a>
+                  <a href="#">Сан-Томе</a>
                 </li>
                 <li class="all-countries__country-name">
                   <a href="#">Саудовская Аравия</a>
@@ -1042,11 +1035,11 @@
                     <span class="level-indicator__title level-indicator__title--catalog">level</span>
                     <svg version="1.1" width="100px" height="100px" class="progress">
                       <linearGradient id="progress-fill">
-                        <stop offset="0" class="color-one" />
-                        <stop offset="1" class="color-two" />
+                        <stop offset="0" class="color-one"/>
+                        <stop offset="1" class="color-two"/>
                       </linearGradient>
-                      <circle r="21" cx="52" cy="50" fill="transparent" stroke-width="10" stroke="transparent"></circle>
-                      <circle r="21" cx="52" cy="50" class="progress__circle-catalog progress__circle-catalog" stroke-width="10" stroke-dashoffset="50"></circle>
+                      <circle r="21" cx="51" cy="50" fill="transparent" stroke-width="10" stroke="transparent"></circle>
+                      <circle r="21" cx="51" cy="50" class="progress__circle-catalog progress__circle-catalog" stroke-width="10" stroke-dashoffset="50"></circle>
                     </svg>
                   </span>
                 </div>
@@ -1411,6 +1404,13 @@
         logoBlue.classList.toggle("wrapper-menu__logo--close");
         signUpButtonCatalog.classList.toggle("intro-companions__auto--open");
       });
+
+//      window.addEventListener("scroll", function() {
+//        header.classList.add('page-header--scroll');
+//        logoWhite.classList.add("wrapper-menu__logo--close");
+//        logoBlue.classList.remove("wrapper-menu__logo--close");
+//        toggleHeader.classList.add('wrapper-menu__toggle--scroll');
+//      });
     </script>
   </body>
 </html>

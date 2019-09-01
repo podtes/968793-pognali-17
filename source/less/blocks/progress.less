@@ -22,7 +22,7 @@
     transition: stroke-dashoffset ease-out .4s;
 
     &--80 {
-      stroke-dasharray: 160;
+      stroke-dasharray: 165;
     }
 
     &--25 {
@@ -33,8 +33,48 @@
       stroke-dasharray: 117;
     }
   }
+
+  &__circle-form {
+    fill: transparent;
+    stroke: #ff8d30;
+    stroke-width: 3;
+    stroke-dasharray: 301;
+    transition: stroke-dashoffset ease-out .4s;
+    r: 48;
+    cx: 82;
+    cy: 74;
+  }
 }
 
 @media (min-width: @tab-width) {
+  .progress {
+    &__circle-catalog {
+      r: 29px;
+      cx: 53px;
+      stroke-dasharray: 230;
 
+      &--80 {
+        stroke-dasharray: 202;
+      }
+
+      &--25 {
+        stroke-dasharray: 116;
+      }
+
+      &--50 {
+        stroke-dasharray: 141;
+      }
+    }
+
+    &__circle-form {
+      fill: transparent;
+      stroke: #ff8d30;
+      stroke-width: 3;
+      stroke-dasharray: 290;
+      transition: stroke-dashoffset ease-out .4s;
+      r: 46;
+      cx: 80;
+      cy: 75;
+    }
+  }
 }

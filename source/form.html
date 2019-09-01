@@ -29,6 +29,7 @@
               </picture>
             </a>
             <button class="wrapper-menu__toggle" type="button"></button>
+            <a class="wrapper-menu__autorization" href="#">Авторизация</a>
           </div>
           <nav class="main-nav">
             <ul class="main-nav__site-list site-list">
@@ -92,11 +93,6 @@
       <section class="intro-destination">
         <div class="intro-destination__wrapper">
           <div class="container">
-            <ul class="intro-companions__auto auto-list">
-              <li class="auto-list__login-button">
-                <a class="auto-list__link" href="#">Авторизация</a>
-              </li>
-            </ul>
             <h1 class="visually-hidden">Выбор подходящего попутчика</h1>
             <div class="intro-destination__wrapper-link">
               <h2 class="intro-destination__title">Направления</h2>
@@ -115,6 +111,14 @@
                   <div class="my-profile__level-indicator level-indicator level-indicator--form">
                     <span class="level-indicator__number level-indicator__number--form">80</span>
                     <span class="level-indicator__title level-indicator__title--form">level</span>
+                    <svg version="1.1" width="150px" height="150px" class="progress">
+                      <linearGradient id="progress-fill">
+                        <stop offset="0" class="color-one" />
+                        <stop offset="1" class="color-two" />
+                      </linearGradient>
+                      <circle r="21" cx="52" cy="50" fill="transparent" stroke-width="10" stroke="transparent"></circle>
+                      <circle r="21" cx="52" cy="50" class="progress__circle-form" stroke-width="10" stroke-dashoffset="50"></circle>
+                    </svg>
                   </div>
                   <picture>
                     <source media="(min-width: 1440px)" type="image/webp" srcset="./img/demin-desktop@1x.webp 1x, ./img/demin-desktop@2x.webp 2x">
@@ -682,7 +686,13 @@
         closeButton.classList.toggle("input-country__close-button--open");
         alphabet.classList.toggle("modal--show");
       });
-
+//
+//      window.addEventListener("scroll", function() {
+//        header.classList.add('page-header--scroll');
+//        logoWhite.classList.add("wrapper-menu__logo--close");
+//        logoBlue.classList.remove("wrapper-menu__logo--close");
+//        toggleHeader.classList.add('wrapper-menu__toggle--scroll');
+//      });
     </script>
   </body>
 </html>
