@@ -231,7 +231,7 @@
                     <source media="(min-width: 1440px)" type="image/webp" srcset="./img/czech-desktop@1x.webp, ./img/czech-desktop@2x.webp 2x">
                     <source media="(min-width: 1440px)" srcset="./img/czech-desktop@1x.jpg 1x, ./img/czech-desktop@2x.jpg 2x">
                     <source type="image/webp" srcset="./img/czech-mobile@1x.webp, ./img/czech-mobile@2x.webp 2x">
-                    <img class="country-card__image" src="./img/thczech-mobile@1x.jpg" alt="Прага - столица Чехии" width="270" height="110" srcset="./img/thczech-mobile@2x.jpg 2x">
+                    <img class="country-card__image" src="./img/czech-mobile@1x.jpg" alt="Прага - столица Чехии" width="270" height="110" srcset="./img/czech-mobile@2x.jpg 2x">
                   </picture>
                 </div>
                 <div class="country-card__wrapper">
@@ -596,48 +596,5 @@
       </button>
     </section>
     <script src="./js/script.js"></script>
-<!--
-    <script>
-      var jsChecker = document.querySelector(".no-js");
-      var toggleHeader = document.querySelector(".wrapper-menu__toggle");
-      var header = document.querySelector(".page-header");
-      var mainNav = document.querySelector(".main-nav");
-      var logoBlue = document.querySelector(".wrapper-menu__logo--blue");
-      var logoWhite = document.querySelector(".wrapper-menu__logo--white");
-      var signUpButton = document.querySelector(".intro__sign-up");
-      var businessTariffs = document.querySelector(".modal-business-tariffs");
-      var businessOpen = document.querySelector(".tariffs__business-tariffs");
-      var businessClose = document.querySelector(".modal-business-tariffs__button");
-
-      jsChecker.classList.remove("no-js");
-
-      toggleHeader.addEventListener("click", function(evt) {
-        evt.preventDefault();
-        header.classList.toggle("page-header--open");
-        toggleHeader.classList.toggle("wrapper-menu__toggle--open");
-        mainNav.classList.toggle("main-nav--open");
-        logoWhite.classList.toggle("wrapper-menu__logo--close");
-        logoBlue.classList.toggle("wrapper-menu__logo--close");
-        signUpButton.classList.toggle("intro__sign-up--open");
-      });
-
-      businessOpen.addEventListener("click", function(evt) {
-        evt.preventDefault();
-        businessTariffs.classList.add("modal--show");
-      });
-
-      businessClose.addEventListener("click", function(evt) {
-        evt.preventDefault();
-        businessTariffs.classList.remove("modal--show");
-      });
-
-      window.addEventListener("scroll", function() {
-        header.classList.add('page-header--scroll');
-        logoWhite.classList.add("wrapper-menu__logo--close");
-        logoBlue.classList.remove("wrapper-menu__logo--close");
-        toggleHeader.classList.add('wrapper-menu__toggle--scroll');
-      });
-    </script>
--->
   </body>
 </html>

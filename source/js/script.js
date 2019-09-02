@@ -30,11 +30,11 @@ businessClose.addEventListener("click", function(evt) {
   businessTariffs.classList.remove("modal--show");
 });
 
-//window.addEventListener("scroll", function() {
-//  header.classList.add('page-header--scroll');
-//  logoWhite.classList.add("wrapper-menu__logo--close");
-//  logoBlue.classList.remove("wrapper-menu__logo--close");
-//  toggleHeader.classList.add('wrapper-menu__toggle--scroll');
-//});
+window.addEventListener("scroll", function() {
+  header.classList.add('page-header--scroll');
+  logoWhite.classList.add("wrapper-menu__logo--close");
+  logoBlue.classList.remove("wrapper-menu__logo--close");
+  toggleHeader.classList.add('wrapper-menu__toggle--scroll');
+});
 
 //Набрросок смены состояния шапки при скролле вниз.
