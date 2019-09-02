@@ -6,7 +6,7 @@
     <title>HTML Academy: Погнали</title>
     <link rel="stylesheet" href="css/style.min.css">
   </head>
-  <body>
+  <body class="no-js">
     <div style="display: none">
       <svg src="build/img/sprite.svg"></svg>
     </div>
@@ -228,25 +228,23 @@
                       </ul>
                     </div>
                   <div class="add-plan__inputs-wrapper">
-                      <div class="add-plans__value-inputs-wrapper">
-                        <div class="add-plan__value-input value-input">
-                          <label class="value-input__label" for="companions-value-field">Ищу попутчиков:<span>чел.</span></label>
-                          <input class="value-input__number-input" name="companions-value" id="companions-value-field" type="text" value="2">
-                          <button class="value-input__button value-input__button--minus" type="button"></button>
-                          <button class="value-input__button value-input__button--plus" type="button"></button>
-                        </div>
-                        <div class="add-plan__value-input value-input">
-                          <label class="value-input__label" for="days-value-field">Длительность:<span>дн.</span></label>
-                          <input class="value-input__number-input" name="days-value" id="days-value-field" type="text" value="2">
-                          <button class="value-input__button value-input__button--minus" type="button"></button>
-                          <button class="value-input__button value-input__button--plus" type="button"></button>
-                        </div>
+                      <div class="add-plan__value-input value-input">
+                        <label class="value-input__label" for="companions-value-field">Ищу попутчиков:<span>чел.</span></label>
+                        <input class="value-input__number-input" name="companions-value" id="companions-value-field" type="text" value="2">
+                        <button class="value-input__button value-input__button--minus" type="button"></button>
+                        <button class="value-input__button value-input__button--plus" type="button"></button>
+                      </div>
+                      <div class="add-plan__value-input value-input">
+                        <label class="value-input__label" for="days-value-field">Длительность<span>дн.</span></label>
+                        <input class="value-input__number-input" name="days-value" id="days-value-field" type="text" value="2">
+                        <button class="value-input__button value-input__button--minus" type="button"></button>
+                        <button class="value-input__button value-input__button--plus" type="button"></button>
                       </div>
                       <label class="add-plan__checkbox-label">
-                      <input class="add-plan__checkbox-input" type="checkbox" name="childs" checked>
-                      <span class="add-plan__checkbox-mark"></span>
-                      Можно с детьми
-                    </label>
+                        <input class="add-plan__checkbox-input" type="checkbox" name="childs" checked>
+                        <span class="add-plan__checkbox-mark"></span>
+                        Можно с детьми
+                      </label>
                   </div>
                   <div class="add-plan__calendar calendar">
                       <div class="calendar__title-wrapper">
@@ -460,7 +458,7 @@
                     <p class="add-plan__entertaiment-title">Босния и герцеговина</p>
                     <img class="add-plan__entertaiment-flag" src="./img/flag-bosnia.svg" alt="Босния" width="35" height="24">
                   </div>
-                  <textarea class="add-plan__entertaiment-input" type="text" name="entertaiment-plan" placeholder="План действий" required></textarea>
+                  <textarea class="add-plan__entertaiment-input add-plan__entertaiment-input--error" type="text" name="entertaiment-plan" placeholder="План действий" required></textarea>
                   <div class="add-plan__fun-wrapper">
                     <span class="add-plan__entertaiment-circle add-plan__entertaiment-circle--last-item"></span>
                     <p class="add-plan__entertaiment-title">Чехословакия</p>
@@ -655,44 +653,6 @@
         </div>
       </div>
     </section>
-
-    <script>
-      var toggleHeader = document.querySelector(".wrapper-menu__toggle");
-      var header = document.querySelector(".page-header");
-      var mainNav = document.querySelector(".main-nav");
-      var signUpButton = document.querySelector(".intro__sign-up");
-      var signUpButtonCatalog = document.querySelector(".intro-companions__auto");
-      var logoBlue = document.querySelector(".wrapper-menu__logo--blue");
-      var logoWhite = document.querySelector(".wrapper-menu__logo--white");
-      var chooseButton = document.querySelector(".input-country__field--default");
-      var inlineCloseButton = document.querySelector(".input-country__open-list-button--default");
-      var closeButton = document.querySelector(".input-country__close-button--choose-country");
-      var alphabet = document.querySelector(".modal__alphabet");
-
-      toggleHeader.addEventListener("click", function(evt) {
-        evt.preventDefault();
-        header.classList.toggle("page-header--open");
-        toggleHeader.classList.toggle("wrapper-menu__toggle--open");
-        mainNav.classList.toggle("main-nav--open");
-        logoWhite.classList.toggle("wrapper-menu__logo--close");
-        logoBlue.classList.toggle("wrapper-menu__logo--close");
-        signUpButtonCatalog.classList.toggle("intro-companions__auto--open");
-      });
-
-      chooseButton.addEventListener("click", function(evt) {
-        evt.preventDefault();
-        chooseButton.classList.toggle("input-country__field--open");
-        inlineCloseButton.classList.toggle("input-country__open-list-button--open");
-        closeButton.classList.toggle("input-country__close-button--open");
-        alphabet.classList.toggle("modal--show");
-      });
-//
-//      window.addEventListener("scroll", function() {
-//        header.classList.add('page-header--scroll');
-//        logoWhite.classList.add("wrapper-menu__logo--close");
-//        logoBlue.classList.remove("wrapper-menu__logo--close");
-//        toggleHeader.classList.add('wrapper-menu__toggle--scroll');
-//      });
-    </script>
+    <script src="./js/script-form.js"></script>
   </body>
 </html>

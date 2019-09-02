@@ -6,7 +6,7 @@
     <title>HTML Academy: Погнали</title>
     <link rel="stylesheet" href="css/style.min.css">
   </head>
-  <body>
+  <body class="no-js">
     <div style="display: none">
       <svg src="build/img/sprite.svg"></svg>
     </div>
@@ -1383,34 +1383,6 @@
         </div>
       </div>
     </footer>
-    <script>
-      var toggleHeader = document.querySelector(".wrapper-menu__toggle");
-      var header = document.querySelector(".page-header");
-      var mainNav = document.querySelector(".main-nav");
-      var logoBlue = document.querySelector(".wrapper-menu__logo--blue");
-      var logoWhite = document.querySelector(".wrapper-menu__logo--white");
-      var signUpButton = document.querySelector(".intro__sign-up");
-      var businessTariffs = document.querySelector(".modal-business-tariffs");
-      var businessOpen = document.querySelector(".tariffs__business-tariffs");
-      var businessClose = document.querySelector(".modal-business-tariffs__button");
-      var signUpButtonCatalog = document.querySelector(".intro-companions__auto");
-
-      toggleHeader.addEventListener("click", function(evt) {
-        evt.preventDefault();
-        header.classList.toggle("page-header--open");
-        toggleHeader.classList.toggle("wrapper-menu__toggle--open");
-        mainNav.classList.toggle("main-nav--open");
-        logoWhite.classList.toggle("wrapper-menu__logo--close");
-        logoBlue.classList.toggle("wrapper-menu__logo--close");
-        signUpButtonCatalog.classList.toggle("intro-companions__auto--open");
-      });
-
-//      window.addEventListener("scroll", function() {
-//        header.classList.add('page-header--scroll');
-//        logoWhite.classList.add("wrapper-menu__logo--close");
-//        logoBlue.classList.remove("wrapper-menu__logo--close");
-//        toggleHeader.classList.add('wrapper-menu__toggle--scroll');
-//      });
-    </script>
+    <script src="./js/script.js"></script>
   </body>
 </html>

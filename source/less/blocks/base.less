@@ -39,9 +39,47 @@ img {
   height: auto;
 }
 
+.no-js {
+  & .page-header {
+    background-color: #ffffff;
+  }
+
+  & .wrapper-menu__logo--blue {
+    display: block;
+  }
+
+  & .wrapper-menu__logo--white {
+    display: none;
+  }
+
+  & .wrapper-menu__toggle {
+    display: none;
+  }
+
+  & .main-nav {
+    display: flex;
+  }
+}
+
 @media (min-width: @tab-width) {
   body {
     font-size: 28px;
     line-height: 33px;
+  }
+}
+
+@media (min-width: @desk-width) {
+  .no-js {
+    & .page-header {
+      background-color: #161c35;
+    }
+
+    & .wrapper-menu__logo--blue {
+      display: none;
+    }
+
+    & .wrapper-menu__logo--white {
+      display: block;
+    }
   }
 }

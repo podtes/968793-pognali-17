@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="css/style.min.css">
     <title>HTML Academy: Погнали</title>
   </head>
-  <body>
+  <body class="no-js">
     <div style="display: none">
       <svg src="build/img/sprite.svg"></svg>
     </div>
@@ -594,8 +594,10 @@
         <span>Закрыть окно</span>
       </button>
     </section>
-
+    <script src="./js/script.js"></script>
+<!--
     <script>
+      var jsChecker = document.querySelector(".no-js");
       var toggleHeader = document.querySelector(".wrapper-menu__toggle");
       var header = document.querySelector(".page-header");
       var mainNav = document.querySelector(".main-nav");
@@ -605,6 +607,8 @@
       var businessTariffs = document.querySelector(".modal-business-tariffs");
       var businessOpen = document.querySelector(".tariffs__business-tariffs");
       var businessClose = document.querySelector(".modal-business-tariffs__button");
+
+      jsChecker.classList.remove("no-js");
 
       toggleHeader.addEventListener("click", function(evt) {
         evt.preventDefault();
@@ -626,12 +630,13 @@
         businessTariffs.classList.remove("modal--show");
       });
 
-//      window.addEventListener("scroll", function() {
-//        header.classList.add('page-header--scroll');
-//        logoWhite.classList.add("wrapper-menu__logo--close");
-//        logoBlue.classList.remove("wrapper-menu__logo--close");
-//        toggleHeader.classList.add('wrapper-menu__toggle--scroll');
-//      });
+      window.addEventListener("scroll", function() {
+        header.classList.add('page-header--scroll');
+        logoWhite.classList.add("wrapper-menu__logo--close");
+        logoBlue.classList.remove("wrapper-menu__logo--close");
+        toggleHeader.classList.add('wrapper-menu__toggle--scroll');
+      });
     </script>
+-->
   </body>
 </html>
