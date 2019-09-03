@@ -1,7 +1,6 @@
 .input-country {
   position: relative;
   display: flex;
-  flex-wrap: wrap;
 
   &__field {
     position: relative;
@@ -17,6 +16,7 @@
     border: 1px solid #cbced9;
     border-radius: 5px;
     letter-spacing: 1.5px;
+    box-sizing: border-box;
 
     &--default {
       flex-grow: 1;
@@ -89,10 +89,10 @@
       position: absolute;
       content: "";
       top: -8px;
-      left: -41px;
+      left: -38px;
       width: 15px;
       height: 20px;
-      background: linear-gradient(to left, #ffffff 15%, transparent 100%);
+      background: linear-gradient(to left, #ffffff 15%, rgba(255, 255, 255, 0) 100%);
     }
 
     &--default {

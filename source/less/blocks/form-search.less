@@ -182,8 +182,7 @@
     cursor: pointer;
 
     &:hover {
-      width: 19px;
-      height: 19px;
+      transform: scale(1.9);
     }
 
     &:active {
@@ -193,21 +192,11 @@
     &--left {
       top: 0;
       left: 67px;
-
-      &:hover {
-        top: -5px;
-        left: 62px;
-      }
     }
 
     &--right {
       top: 0;
       left: 210px;
-
-      &:hover {
-        top: -5px;
-        left: 215px;
-      }
     }
   }
 
@@ -586,7 +575,7 @@
 
     &__input-checkbox:checked + label::after,
     &__input-checkbox:not(:checked) + label::after {
-      left: 6px;
+      left: 8px;
       top: 3px;
     }
 
@@ -710,28 +699,17 @@
       height: 13px;
 
       &:hover {
-        width: 19px;
-        height: 19px;
+        transform: scale(1.5);
       }
 
       &--left {
         top: 31px;
         left: 72px;
-
-        &:hover {
-          top: 28px;
-          left: 69px;
-        }
       }
 
       &--right {
         top: 31px;
         left: 272px;
-
-        &:hover {
-          top: 28px;
-          left: 269px;
-        }
       }
     }
 
@@ -908,21 +886,11 @@
       &--left {
         top: 31px;
         left: 61px;
-
-        &:hover {
-          top: 28px;
-          left: 69px;
-        }
       }
 
       &--right {
         top: 31px;
         left: 180px;
-
-        &:hover {
-          top: 28px;
-          left: 269px;
-        }
       }
     }
 
