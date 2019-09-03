@@ -8,6 +8,8 @@ var chooseButton = document.querySelector(".input-country__field--default");
 var inlineCloseButton = document.querySelector(".input-country__open-list-button--default");
 var closeButton = document.querySelector(".input-country__close-button--choose-country");
 var alphabet = document.querySelector(".modal__alphabet");
+var header = document.querySelector(".page-header");
+var currentScroll = 0;
 
 jsChecker.classList.remove("no-js");
 
@@ -26,4 +28,22 @@ chooseButton.addEventListener("click", function(evt) {
   inlineCloseButton.classList.toggle("input-country__open-list-button--open");
   closeButton.classList.toggle("input-country__close-button--open");
   alphabet.classList.toggle("modal--show");
+});
+
+window.addEventListener("scroll", function () {
+  currentScroll = window.pageYOffset < 150 ? 0 : window.pageYOffset;
+
+  if (currentScroll) {
+    header.classList.add("page-header--scroll");
+    logoWhite.classList.add("wrapper-menu__logo--close");
+    logoBlue.classList.remove("wrapper-menu__logo--close");
+    toggleHeader.classList.add('wrapper-menu__toggle--scroll');
+  }
+
+  else {
+    header.classList.remove('page-header--scroll');
+    logoWhite.classList.remove("wrapper-menu__logo--close");
+    logoBlue.classList.add("wrapper-menu__logo--close");
+    toggleHeader.classList.remove('wrapper-menu__toggle--scroll');
+  }
 });

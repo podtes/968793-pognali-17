@@ -34,7 +34,7 @@ gulp.task("css", function () {
 });
 
 gulp.task("compressJs", function () {
-  return gulp.src("source/*.js")
+  return gulp.src("source/js/*.js")
     .pipe(uglify())
     .pipe(gulp.dest("build/js"))
     .pipe(server.stream());
@@ -42,12 +42,12 @@ gulp.task("compressJs", function () {
 
 gulp.task("images", function() {
   return gulp.src("source/img/**/*.{img, png, svg}")
-   .pipe(imagemin([
-     imagemin.optipng({optimizationLevel: 3}),
-     imagemin.jpegtran({progressive: true}),
-     imagemin.svgo()
-   ]))
-   .pipe(gulp.dest("source/img"));
+    .pipe(imagemin([
+      imagemin.optipng({optimizationLevel: 3}),
+      imagemin.jpegtran({progressive: true}),
+      imagemin.svgo()
+    ]))
+    .pipe(gulp.dest("source/img"));
 });
 
 gulp.task("sprite", function() {

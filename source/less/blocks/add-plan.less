@@ -270,6 +270,10 @@
     }
   }
 
+  &__textarea-wrapper {
+    position: relative;
+  }
+
   &__entertaiment-input {
     padding-top: 10px;
     padding-left: 14px;
@@ -299,20 +303,37 @@
       opacity: 0.3;
     }
 
-    &--error {
-      border-color: #f47e7e;
-
-      &::before {
-        display: block;
-        position: absolute;
-        content: "";
-        top: 40px;
-        left: 0;
-        width: 727px;
-        height: 57px;
-        background-color: #ffefef;
-      }
+    &:default,
+    &:empty {
+      border-color: #cbced9;
     }
+
+    &:invalid {
+      border-color: #f47e7e;
+    }
+  }
+
+  &__error-field {
+    display: none;
+    position: absolute;
+    padding: 5px 10px;
+    box-sizing: border-box;
+    top: 179px;
+    right: 1px;
+    width: 220px;
+    height: 40px;
+    background-color: #ffefef;
+    border-radius: 4px;
+
+    & span {
+      font-size: 14px;
+      line-height: 16px;
+      color: #ff0000;
+    }
+  }
+
+  &__entertaiment-input:invalid ~ .add-plan__error-field {
+    display: block;
   }
 
   &__submit-button {
@@ -534,6 +555,18 @@
       line-height: 24px;
     }
 
+    &__error-field {
+      top: 101px;
+      right: 32px;
+      width: 497px;
+      height: 40px;
+
+      & span {
+        font-size: 16px;
+        line-height: 18px;
+      }
+    }
+
     &__entertaiment-circle {
       top: 42px;
       left: 520px;
@@ -588,7 +621,7 @@
       padding-top: 100px;
       padding-left: 160px;
       padding-right: 160px;
-      padding-bottom: 104px;
+      padding-bottom: 105px;
       margin-bottom: 44px;
       border-radius: 60px;
     }
@@ -698,16 +731,33 @@
       margin-right: 117px;
     }
 
+    &__textarea-wrapper {
+      margin-bottom: 43px;
+
+      &--last {
+        margin-bottom: 56px;
+      }
+    }
+
     &__entertaiment-input {
       position: relative;
       padding-top: 24px;
+      margin-bottom: 0;
       padding-left: 24px;
-      margin-bottom: 45px;
       transform: translateX(0);
       width: 730px;
+    }
 
-      &:last-of-type {
-        margin-bottom: 55px;
+    &__error-field {
+      padding: 10px 20px;
+      top: 91px;
+      right: 271px;
+      width: 728px;
+      height: 50px;
+
+      & span {
+        font-size: 20px;
+        line-height: 24px;
       }
     }
 

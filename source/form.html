@@ -7,9 +7,6 @@
     <link rel="stylesheet" href="css/style.min.css">
   </head>
   <body class="no-js">
-    <div style="display: none">
-      <svg src="build/img/sprite.svg"></svg>
-    </div>
     <header class="page-header page-header--non-index">
       <div class="container">
         <div class="page-header__wrapper">
@@ -204,7 +201,7 @@
               </div>
               <ol class="add-plan__list">
                 <li class="add-plan__item">
-                  <a name="dates"></a>
+                  <a id="dates"></a>
                   <div class="add-plan__top-wrapper">
                     <div class="add-plan__text-wrapper">
                       <div class="add-plan__item-title-wrapper">
@@ -356,7 +353,7 @@
                   <a href="#route" class="add-plan__next-button next-button"><span class="next-button__title">Следующий шаг</span><span class="next-button__icon"></span></a>
                 </li>
                 <li class="add-plan__item add-plan__item--non-first">
-                  <a name="route"></a>
+                  <a id="route"></a>
                   <div class="add-plan__top-wrapper">
                     <div class="add-plan__text-wrapper">
                       <div class="add-plan__item-title-wrapper">
@@ -429,7 +426,7 @@
                   </div>
                 </li>
                 <li class=" add-plan__item add-plan__item--non-first">
-                  <a name="entertaiment"></a>
+                  <a id="entertaiment"></a>
                   <div class="add-plan__top-wrapper">
                     <div class="add-plan__text-wrapper">
                       <div class="add-plan__item-title-wrapper">
@@ -458,13 +455,19 @@
                     <p class="add-plan__entertaiment-title">Босния и герцеговина</p>
                     <img class="add-plan__entertaiment-flag" src="./img/flag-bosnia.svg" alt="Босния" width="35" height="24">
                   </div>
-                  <textarea class="add-plan__entertaiment-input add-plan__entertaiment-input--error" type="text" name="entertaiment-plan" placeholder="План действий" required></textarea>
+                  <div class="add-plan__textarea-wrapper">
+                    <textarea class="add-plan__entertaiment-input add-plan__entertaiment-input--error" name="entertaiment-plan" placeholder="План действий" required></textarea>
+                    <div class="add-plan__error-field"><span>Это поле должно быть заполнено</span></div>
+                  </div>
                   <div class="add-plan__fun-wrapper">
                     <span class="add-plan__entertaiment-circle add-plan__entertaiment-circle--last-item"></span>
                     <p class="add-plan__entertaiment-title">Чехословакия</p>
                     <img class="add-plan__entertaiment-flag" src="./img/flag-czech.svg" alt="Чехия" width="35" height="24">
                   </div>
-                  <textarea class="add-plan__entertaiment-input" type="text" name="entertaiment-plan" placeholder="План действий" required>Пить пиво и лазить по старым замкам, наслаждаться архитектурой и вот это все.</textarea>
+                  <div class="add-plan__textarea-wrapper add-plan__textarea-wrapper--last">
+                    <textarea class="add-plan__entertaiment-input" name="entertaiment-plan" placeholder="План действий" required>Пить пиво и лазить по старым замкам, наслаждаться архитектурой и вот это все.</textarea>
+                    <div class="add-plan__error-field"><span>Это поле должно быть заполнено</span></div>
+                  </div>
                   <div class="add-plan__buttons-wrapper">
                     <button type="submit" class="add-plan__submit-button add-plan__next-button next-button">
                       <span class="next-button__title">Отправить</span>
@@ -482,7 +485,7 @@
         </form>
       </section>
     </main>
-    <footer class="page-footer">
+    <footer class="page-footer page-footer--form">
       <div class="container">
         <div class="page-footer__wrapper">
           <a class="page-footer__logo" href="index.html">
@@ -525,6 +528,7 @@
       </div>
     </footer>
     <section class="modal modal__alphabet">
+      <h2 class="visually-hidden">Модальное окно выбора направления и страны</h2>
       <div class="alphabet-form__wrapper">
         <div class="alphabet-form__shadow-wrapper">
           <div class="alphabet-form">
