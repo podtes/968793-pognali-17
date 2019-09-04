@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Погнали</title>
     <link rel="stylesheet" href="css/style.min.css">
+    <link rel="preload" href="./fonts/bloggersans.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="./fonts/bloggersans-bold.woff2" as="font">
+    <link rel="preload" href="./fonts/bloggersans-light.woff2" as="font">
   </head>
   <body class="no-js">
     <header class="page-header page-header--non-index">
@@ -47,16 +50,20 @@
             </ul>
             <ul class="main-nav__contacts-list contacts-list">
               <li class="contacts-list__item">
-                <button class="contacts-list__button contacts-list__button--phone">
-                  <span class="contacts-list__icon-phone"></span>
-                </button>
-                <span class="contacts-list__text contacts-list__text--tel">8 800 555-86-28</span>
+                <a href="tel:88005558628">
+                  <span class="contacts-list__button contacts-list__button--phone">
+                    <span class="contacts-list__icon-phone"></span>
+                  </span>
+                  <span class="contacts-list__text contacts-list__text--tel">8 800 555-86-28</span>
+                </a>
               </li>
               <li class="contacts-list__item">
-                <button class="contacts-list__button contacts-list__button--email">
-                  <span class="contacts-list__icon-email"></span>
-                </button>
-                <span class="contacts-list__text">mail@htmlacademy.ru</span>
+                <a href="mailto:mail@htmlacademy.ru">
+                  <span class="contacts-list__button contacts-list__button--email">
+                    <span class="contacts-list__icon-email"></span>
+                  </span>
+                  <span class="contacts-list__text">mail@htmlacademy.ru</span>
+                </a>
               </li>
             </ul>
             <ul class="main-nav__social-list social-list">
@@ -854,7 +861,7 @@
                       <span class="form-search__indicator-icon form-search__indicator-icon--open"></span>
                     </div>
                     <div class="form-search__field form-search__field--open">
-                      <input class="form-search__input-checkbox" type="checkbox" name="hobby" value="sport" id="hobby-sport-field">
+                      <input class="form-search__input-checkbox" type="checkbox" name="hobby" value="sport" id="hobby-sport-field" checked>
                       <label for="hobby-sport-field">Спортзал</label><br>
                       <input class="form-search__input-checkbox" type="checkbox" name="hobby" value="hookah" id="hobby-hookah-field">
                       <label for="hobby-hookah-field">Кальян</label><br>
@@ -872,7 +879,7 @@
                       <span class="form-search__indicator-icon form-search__indicator-icon--open"></span>
                     </div>
                     <div class="form-search__field form-search__field--open">
-                      <input class="form-search__input-checkbox" type="checkbox" name="music" value="hardrock" id="music-hardrock-field">
+                      <input class="form-search__input-checkbox" type="checkbox" name="music" value="hardrock" id="music-hardrock-field" checked>
                       <label for="music-hardrock-field">Тяжелый рок</label><br>
                       <input class="form-search__input-checkbox" type="checkbox" name="music" value="rurap" id="music-rurap-field">
                       <label for="music-rurap-field">Русский рэп</label><br>
@@ -890,7 +897,7 @@
                       <span class="form-search__indicator-icon form-search__indicator-icon--open"></span>
                     </div>
                     <div class="form-search__field form-search__field--open">
-                      <input class="form-search__input-checkbox" type="checkbox" name="food" value="meat" id="food-meat-field">
+                      <input class="form-search__input-checkbox" type="checkbox" name="food" value="meat" id="food-meat-field" checked>
                       <label for="food-meat-field">Мясоед</label><br>
                       <input class="form-search__input-checkbox" type="checkbox" name="food" value="healthy-food" id="healthy-food-field">
                       <label for="healthy-food-field">Сидит на ПП</label><br>
@@ -1147,7 +1154,7 @@
                       <source media="(min-width: 1440px)" srcset="./img/smolov-desktop@1x.jpg 1x, ./img/smolov-desktop@2x.jpg 2x">
                       <source media="(min-width: 768px)" type="image/webp" srcset="./img/smolov-tablet@1x.webp, ./img/smolov-tablet@2x.webp 2x">
                       <source media="(min-width: 768px)" srcset="./img/smolov-tablet@1x.jpg 1x, ./img/smolov-tablet@2x.jpg 2x">
-                      <source type="image/webp" srcset="./img/smolov-mobile@1x.webp 1x, ./img/demin-mobile@2x.webp 2x">
+                      <source type="image/webp" srcset="./img/smolov-mobile@1x.webp 1x, ./img/smolov-mobile@2x.webp 2x">
                       <img class="companions-list__image" src="./img/smolov-mobile@1x.jpg" alt="Марк Смолов" width="70" height="70" srcset="./img/smolov-mobile@2x.jpg 2x">
                     </picture>
                   </a>

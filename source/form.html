@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Погнали</title>
     <link rel="stylesheet" href="css/style.min.css">
+    <link rel="preload" href="./fonts/bloggersans.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="./fonts/bloggersans-bold.woff2" as="font">
+    <link rel="preload" href="./fonts/bloggersans-light.woff2" as="font">
   </head>
   <body class="no-js">
     <header class="page-header page-header--non-index">
@@ -47,37 +50,41 @@
             </ul>
             <ul class="main-nav__contacts-list contacts-list">
               <li class="contacts-list__item">
-                <button class="contacts-list__button contacts-list__button--phone">
-                  <span class="contacts-list__icon-phone"></span>
-                </button>
-                <span class="contacts-list__text contacts-list__text--tel">8 800 555-86-28</span>
+                <a href="tel:88005558628">
+                  <span class="contacts-list__button contacts-list__button--phone">
+                    <span class="contacts-list__icon-phone"></span>
+                  </span>
+                  <span class="contacts-list__text contacts-list__text--tel">8 800 555-86-28</span>
+                </a>
               </li>
               <li class="contacts-list__item">
-                <button class="contacts-list__button contacts-list__button--email">
-                  <span class="contacts-list__icon-email"></span>
-                </button>
-                <span class="contacts-list__text">mail@htmlacademy.ru</span>
+                <a href="mailto:mail@htmlacademy.ru">
+                  <span class="contacts-list__button contacts-list__button--email">
+                    <span class="contacts-list__icon-email"></span>
+                  </span>
+                  <span class="contacts-list__text">mail@htmlacademy.ru</span>
+                </a>
               </li>
             </ul>
             <ul class="main-nav__social-list social-list">
               <li>
                 <a class="social-list__item social-list__item--header" href="#">
                   <svg class="social-list__icon social-list__icon--fb" width="11" height="22">
-                    <use xlink:href="./img/sprite.svg#icon-facebook"></use>
+                    <use xlink:href="./sprite.svg#icon-facebook"></use>
                   </svg>
                 </a>
               </li>
               <li>
                 <a class="social-list__item social-list__item--header" href="#">
                   <svg class="social-list__icon social-list__icon--vk" width="23" height="12">
-                    <use xlink:href="./img/sprite.svg#icon-vk"></use>
+                    <use xlink:href="./sprite.svg#icon-vk"></use>
                   </svg>
                 </a>
               </li>
               <li>
                 <a class="social-list__item social-list__item--header" href="#">
                   <svg class="social-list__icon social-list__icon--insta" width="18" height="18">
-                    <use xlink:href="./img/sprite.svg#icon-instagram"></use>
+                    <use xlink:href="./sprite.svg#icon-instagram"></use>
                   </svg>
                 </a>
               </li>
@@ -485,7 +492,7 @@
         </form>
       </section>
     </main>
-    <footer class="page-footer page-footer--form">
+    <footer class="page-footer">
       <div class="container">
         <div class="page-footer__wrapper">
           <a class="page-footer__logo" href="index.html">

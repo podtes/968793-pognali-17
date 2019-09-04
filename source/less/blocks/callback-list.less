@@ -1,27 +1,33 @@
 .callback-list {
   &__item {
+    list-style: none;
     padding: 0;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    color: #ffd74b;
-    font-size: 16px;
-    line-height: 22px;
-    font-weight: bold;
-    text-transform: uppercase;
-    cursor: pointer;
+    margin: 0;
 
-    &:hover {
-      color: #ffbd30;
-    }
+    & a {
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      color: #ffd74b;
+      font-size: 16px;
+      line-height: 22px;
+      font-weight: bold;
+      text-transform: uppercase;
+      cursor: pointer;
 
-    &:hover .callback-list__icon-email,
-    &:hover .callback-list__icon-phone {
-      fill: #ffbd30;
-    }
+      &:hover {
+        color: #ffbd30;
+      }
 
-    &:active {
-      opacity: 0.3;
+      &:hover .callback-list__icon-email,
+      &:hover .callback-list__icon-phone {
+        fill: #ffbd30;
+      }
+
+      &:active {
+        opacity: 0.3;
+      }
     }
   }
 
@@ -43,9 +49,12 @@
 @media (min-width: @tab-width) {
   .callback-list {
     &__item {
-      font-size: 28px;
-      line-height: 28px;
       margin-bottom: 0;
+
+      & a {
+        font-size: 28px;
+        line-height: 28px;
+      }
     }
 
     &__button {
