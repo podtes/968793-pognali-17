@@ -37,13 +37,13 @@ window.addEventListener("scroll", function () {
     header.classList.add("page-header--scroll");
     logoWhite.classList.add("wrapper-menu__logo--close");
     logoBlue.classList.remove("wrapper-menu__logo--close");
-    toggleHeader.classList.add('wrapper-menu__toggle--scroll');
+    toggleHeader.classList.add("wrapper-menu__toggle--scroll");
   }
 
   else {
-    header.classList.remove('page-header--scroll');
+    header.classList.remove("page-header--scroll");
     logoWhite.classList.remove("wrapper-menu__logo--close");
     logoBlue.classList.add("wrapper-menu__logo--close");
-    toggleHeader.classList.remove('wrapper-menu__toggle--scroll');
+    toggleHeader.classList.remove("wrapper-menu__toggle--scroll");
   }
 });

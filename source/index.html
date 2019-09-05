@@ -9,6 +9,7 @@
     <link rel="preload" href="./fonts/bloggersans-bold.woff2" as="font">
     <link rel="preload" href="./fonts/bloggersans-light.woff2" as="font">
     <script src="picturefill.js" async></script>
+    <script src="svguse.js" defer></script>
     <title>HTML Academy: Погнали</title>
   </head>
   <body class="no-js">
@@ -30,7 +31,7 @@
                 <img class="wrapper-menu__logo-image" src="./img/logo-mobile-white@1x.png" width="100" height="19" srcset="./img/logo-mobile-white@2x.png 2x" alt="Логотип сервиса для поиска попутчиков поехали">
               </picture>
             </a>
-            <button class="wrapper-menu__toggle" type="button"></button>
+            <button class="wrapper-menu__toggle" type="button">Кнопка открытия и закрытия меню</button>
             <a class="wrapper-menu__autorization" href="#">Авторизация</a>
           </div>
           <nav class="main-nav">
@@ -63,6 +64,7 @@
             <ul class="main-nav__social-list social-list">
               <li>
                 <a class="social-list__item social-list__item--header" href="#">
+                  Погнали Фейсбук
                   <svg class="social-list__icon social-list__icon--fb" width="11" height="22">
                     <use xlink:href="./sprite.svg#icon-facebook"></use>
                   </svg>
@@ -70,6 +72,7 @@
               </li>
               <li>
                 <a class="social-list__item social-list__item--header" href="#">
+                  Погнали Вконтакте
                   <svg class="social-list__icon social-list__icon--vk" width="23" height="12">
                     <use xlink:href="./sprite.svg#icon-vk"></use>
                   </svg>
@@ -77,6 +80,7 @@
               </li>
               <li>
                 <a class="social-list__item social-list__item--header" href="#">
+                  Погнали Инстаграм
                   <svg class="social-list__icon social-list__icon--insta" width="18" height="18">
                     <use xlink:href="./sprite.svg#icon-instagram"></use>
                   </svg>
@@ -542,12 +546,15 @@
           <ul class="page-footer__social-list social-list social-list--footer">
             <li>
               <a class="social-list__item social-list__item--footer" href="#">
+                Погнали Фейсбук
                 <svg class="social-list__icon social-list__icon--footer social-list__icon--fb" width="11" height="22">
-                  <use xlink:href="./img/sprite.svg#icon-facebook"></use></svg>
+                  <use xlink:href="./img/sprite.svg#icon-facebook"></use>
+                </svg>
               </a>
             </li>
             <li>
               <a class="social-list__item social-list__item--footer" href="#">
+                Погнали Вконтакте
                 <svg class="social-list__icon social-list__icon--footer social-list__icon--vk" width="23" height="12">
                   <use xlink:href="./img/sprite.svg#icon-vk"></use>
                 </svg>
@@ -555,6 +562,7 @@
             </li>
             <li>
               <a class="social-list__item social-list__item--footer" href="#">
+                Погнали Инстаграм
                 <svg class="social-list__icon social-list__icon--footer social-list__icon--insta" width="18" height="18">
                   <use xlink:href="./img/sprite.svg#icon-instagram"></use>
                 </svg>
@@ -605,6 +613,5 @@
       </button>
     </section>
     <script src="./js/script.js"></script>
-    <script defer src="node_modules/svgxuse/svgxuse.js"></script>
   </body>
 </html>

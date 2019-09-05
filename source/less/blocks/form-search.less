@@ -261,6 +261,11 @@
     background-color: #ffffff;
   }
 
+  &__input-checkbox:checked:focus + label::before,
+  &__input-checkbox:not(:checked):focus + label::before {
+    outline: 1px solid blue;
+  }
+
   &__input-checkbox:checked + label::after,
   &__input-checkbox:not(:checked) + label::after {
     content: "";
@@ -403,6 +408,11 @@
     width: 15px;
     height: 17px;
     background: url("../../img/run.svg") no-repeat;
+  }
+
+  &__vehicle-checkbox:not(:checked):focus + label::before,
+  &__vehicle-checkbox:checked:focus + label::before {
+    outline: 1px solid blue;
   }
 
   &__vehicle-checkbox:not(:checked) + label::after {

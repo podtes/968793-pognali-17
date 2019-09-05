@@ -1,8 +1,10 @@
-.alphabet-form {
-  display: flex;
-  flex-wrap: wrap;
-  background-color: #ffffff;
-  color: #000000;
+.alphabet {
+  &__form {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #ffffff;
+    color: #000000;
+  }
 
   &__wrapper {
     position: relative;
@@ -80,10 +82,12 @@
 }
 
 @media (min-width: @tab-width) {
-  .alphabet-form {
-    width: 316px;
-    padding: 35px 25px;
-    padding-left: 28px;
+  .alphabet {
+    &__form {
+      width: 316px;
+      padding: 35px 25px;
+      padding-left: 28px;
+    }
 
     &__wrapper {
       display: flex;
@@ -125,13 +129,15 @@
 }
 
 @media (min-width: @desk-width) {
-  .alphabet-form {
-    width: 461px;
-    padding: 35px 25px;
-    padding-top: 35px;
-    padding-left: 28px;
-    padding-bottom: 16px;
-    padding-right: 0;
+  .alphabet {
+    &__form {
+      width: 461px;
+      padding: 35px 25px;
+      padding-top: 35px;
+      padding-left: 28px;
+      padding-bottom: 16px;
+      padding-right: 0;
+    }
 
     &__wrapper {
       display: flex;

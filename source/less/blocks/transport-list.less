@@ -1,0 +1,309 @@
+.transport-list {
+  padding: 10px;
+  padding-top: 14px;
+  padding-bottom: 25px;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  border: 1px solid #cbced9;
+  border-radius: 10px;
+
+  &__vehicle-checkbox:checked,
+  &__vehicle-checkbox:not(:checked) {
+    position: absolute;
+    left: -9999px;
+  }
+
+  &__vehicle-checkbox:checked + label,
+  &__vehicle-checkbox:not(:checked) + label {
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    padding-left: 28px;
+    cursor: pointer;
+  }
+
+  &__vehicle-checkbox:checked + label::before,
+  &__vehicle-checkbox:not(:checked) + label::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: #ffffff;
+  }
+
+  &__vehicle-checkbox:checked + .transport-list__vehicle-label--form::before,
+  &__vehicle-checkbox:not(:checked) + .transport-list__vehicle-label--form::before {
+    content: "";
+    position: absolute;
+    left: -1px;
+    top: -11px;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: #ffffff;
+
+    &:hover {
+      background-color: #e2e5f1;
+    }
+  }
+
+  &__vehicle-checkbox:checked + label::after,
+  &__vehicle-checkbox:not(:checked) + label::after {
+    content: "";
+    position: absolute;
+    left: 10px;
+    top: 7px;
+    width: 12px;
+    height: 12px;
+  }
+
+  &__vehicle-checkbox-plane:checked + label::after,
+  &__vehicle-checkbox-plane:not(:checked) + label::after {
+    top: 8px;
+    left: 7px;
+    width: 14px;
+    height: 16px;
+    background: url("../../img/plane.svg") no-repeat;
+  }
+
+  &__vehicle-checkbox-bus:checked + label::after,
+  &__vehicle-checkbox-bus:not(:checked) + label::after {
+    top: 8px;
+    left: 10px;
+    width: 13px;
+    height: 16px;
+    background: url("../../img/bus.svg") no-repeat;
+  }
+
+  &__vehicle-checkbox-velo:checked + label::after,
+  &__vehicle-checkbox-velo:not(:checked) + label::after {
+    top: 8px;
+    left: 6px;
+    width: 19px;
+    height: 17px;
+    background: url("../../img/bike.svg") no-repeat;
+  }
+
+  &__vehicle-checkbox-foot:checked + label::after,
+  &__vehicle-checkbox-foot:not(:checked) + label::after {
+    top: 8px;
+    left: 8px;
+    width: 15px;
+    height: 17px;
+    background: url("../../img/run.svg") no-repeat;
+  }
+
+  &__vehicle-checkbox-plane:checked + .transport-list__vehicle-label--form::after,
+  &__vehicle-checkbox-plane:not(:checked) + .transport-list__vehicle-label--form::after {
+    top: -2px;
+    left: 6px;
+    width: 14px;
+    height: 16px;
+    background: url("../../img/plane.svg") no-repeat;
+  }
+
+  &__vehicle-checkbox-bus:checked + .transport-list__vehicle-label--form::after,
+  &__vehicle-checkbox-bus:not(:checked) + .transport-list__vehicle-label--form::after {
+    top: -2px;
+    left: 9px;
+    width: 13px;
+    height: 16px;
+    background: url("../../img/bus.svg") no-repeat;
+  }
+
+  &__vehicle-checkbox-velo:checked + .transport-list__vehicle-label--form::after,
+  &__vehicle-checkbox-velo:not(:checked) + .transport-list__vehicle-label--form::after {
+    top: -4px;
+    left: 6px;
+    width: 19px;
+    height: 17px;
+    background: url("../../img/bike.svg") no-repeat;
+  }
+
+  &__vehicle-checkbox-foot:checked + .transport-list__vehicle-label--form::after,
+  &__vehicle-checkbox-foot:not(:checked) + .transport-list__vehicle-label--form::after {
+    top: -3px;
+    left: 7px;
+    width: 15px;
+    height: 17px;
+    background: url("../../img/run.svg") no-repeat;
+  }
+
+  &__vehicle-checkbox:not(:checked) + label::after {
+    opacity: 0.3;
+  }
+
+  &__vehicle-checkbox:checked + label::after {
+    opacity: 1;
+  }
+
+  &__vehicle-checkbox + label:hover::before {
+    box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.1);
+  }
+
+  &__vehicle-checkbox:not(:checked) + .transport-list__vehicle-label--form::after {
+    opacity: 0.15;
+  }
+
+  &__vehicle-checkbox + .transport-list__vehicle-label--form:active::before {
+    background-color: #e2e5f1;
+  }
+
+  &__vehicle-checkbox:focus + .transport-list__vehicle-label--form::before {
+    outline: 2px solid blue;
+  }
+
+  &__vehicle-checkbox:active + .transport-list__vehicle-label--form::before {
+    background-color: #e2e5f1;
+  }
+
+  &__vehicle-checkbox:not(:checked) + .transport-list__vehicle-label--form:hover::after {
+    opacity: 0.3;
+  }
+
+  &__vehicle-checkbox:checked + .transport-list__vehicle-label--form:active::after {
+    opacity: 0.3;
+  }
+}
+
+@media (min-width: @tab-width) {
+  .transport-list {
+    padding-top: 21px;
+    padding-left: 56px;
+    padding-bottom: 38px;
+    padding-right: 46px;
+    border: 1px solid #cbced9;
+    border-radius: 10px;
+
+    &__vehicle-checkbox:checked + label::before,
+    &__vehicle-checkbox:not(:checked) + label::before {
+      left: 0;
+      top: -13px;
+      width: 43px;
+      height: 43px;
+    }
+
+    &__vehicle-checkbox:checked + .transport-list__vehicle-label--form::before,
+    &__vehicle-checkbox:not(:checked) + .transport-list__vehicle-label--form::before {
+      left: 0;
+      top: -13px;
+      width: 43px;
+      height: 43px;
+    }
+
+    &__vehicle-checkbox-plane:checked + label::after,
+    &__vehicle-checkbox-plane:not(:checked) + label::after {
+      width: 19px;
+      height: 21px;
+      top: -2px;
+      left: 10px;
+      background-image: url("../../img/plane.svg");
+    }
+
+    &__vehicle-checkbox-bus:checked + label::after,
+    &__vehicle-checkbox-bus:not(:checked) + label::after {
+      width: 17px;
+      height: 21px;
+      top: -2px;
+      left: 13px;
+      background: url("../../img/bus.svg");
+    }
+
+    &__vehicle-checkbox-velo:checked + label::after,
+    &__vehicle-checkbox-velo:not(:checked) + label::after {
+      width: 24px;
+      height: 21px;
+      top: -2px;
+      left: 8px;
+      background: url("../../img/bike.svg");
+    }
+
+    &__vehicle-checkbox-foot:checked + label::after,
+    &__vehicle-checkbox-foot:not(:checked) + label::after {
+      width: 20px;
+      height: 21px;
+      top: -2px;
+      left: 10px;
+      background: url("../../img/run.svg");
+    }
+
+    &__vehicle-checkbox-plane:checked + .transport-list__vehicle-label--form::after,
+    &__vehicle-checkbox-plane:not(:checked) + .transport-list__vehicle-label--form::after {
+      width: 19px;
+      height: 21px;
+      top: -2px;
+      left: 10px;
+      background-image: url("../../img/plane.svg");
+    }
+
+    &__vehicle-checkbox-bus:checked + .transport-list__vehicle-label--form::after,
+    &__vehicle-checkbox-bus:not(:checked) + .transport-list__vehicle-label--form::after {
+      width: 17px;
+      height: 21px;
+      top: -2px;
+      left: 13px;
+      background: url("../../img/bus.svg");
+    }
+
+    &__vehicle-checkbox-velo:checked + .transport-list__vehicle-label--form::after,
+    &__vehicle-checkbox-velo:not(:checked) + .transport-list__vehicle-label--form::after {
+      width: 24px;
+      height: 21px;
+      top: -2px;
+      left: 8px;
+      background: url("../../img/bike.svg");
+    }
+
+    &__vehicle-checkbox-foot:checked + .transport-list__vehicle-label--form::after,
+    &__vehicle-checkbox-foot:not(:checked) + .transport-list__vehicle-label--form::after {
+      width: 20px;
+      height: 21px;
+      top: -2px;
+      left: 10px;
+      background: url("../../img/run.svg");
+    }
+  }
+}
+
+@media (min-width: @desk-width) {
+  .transport-list {
+    padding-top: 22px;
+    padding-bottom: 38px;
+    padding-left: 51px;
+
+    &__vehicle-checkbox:checked + label,
+    &__vehicle-checkbox:not(:checked) + label {
+      padding-left: 20px;
+    }
+
+    &__vehicle-checkbox-plane:checked + label::after,
+    &__vehicle-checkbox-plane:not(:checked) + label::after {
+      top: 10px;
+    }
+
+    &__vehicle-checkbox-bus:checked + label::after,
+    &__vehicle-checkbox-bus:not(:checked) + label::after {
+      top: 10px;
+    }
+
+    &__vehicle-checkbox-velo:checked + label::after,
+    &__vehicle-checkbox-velo:not(:checked) + label::after {
+      top: 10px;
+    }
+
+    &__vehicle-checkbox-foot:checked + label::after,
+    &__vehicle-checkbox-foot:not(:checked) + label::after {
+      top: 10px;
+    }
+
+    & label:first-of-type,
+    & label:nth-of-type(2) {
+      width: auto;
+    }
+  }
+}

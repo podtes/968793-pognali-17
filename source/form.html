@@ -10,6 +10,7 @@
     <link rel="preload" href="./fonts/bloggersans-bold.woff2" as="font">
     <link rel="preload" href="./fonts/bloggersans-light.woff2" as="font">
     <script src="picturefill.js" async></script>
+    <script src="svguse.js" defer></script>
   </head>
   <body class="no-js">
     <header class="page-header page-header--non-index">
@@ -30,7 +31,7 @@
                 <img class="wrapper-menu__logo-image" src="./img/logo-mobile-white@1x.png" width="100" height="19" srcset="./img/logo-mobile-white@2x.png 2x" alt="Логотип сервиса для поиска попутчиков поехали">
               </picture>
             </a>
-            <button class="wrapper-menu__toggle" type="button"></button>
+            <button class="wrapper-menu__toggle" type="button">Кнопка открытия и закрытия меню</button>
             <a class="wrapper-menu__autorization" href="#">Авторизация</a>
           </div>
           <nav class="main-nav">
@@ -71,6 +72,7 @@
             <ul class="main-nav__social-list social-list">
               <li>
                 <a class="social-list__item social-list__item--header" href="#">
+                  Погнали Фейсбук
                   <svg class="social-list__icon social-list__icon--fb" width="11" height="22">
                     <use xlink:href="./sprite.svg#icon-facebook"></use>
                   </svg>
@@ -78,6 +80,7 @@
               </li>
               <li>
                 <a class="social-list__item social-list__item--header" href="#">
+                  Погнали Вконтакте
                   <svg class="social-list__icon social-list__icon--vk" width="23" height="12">
                     <use xlink:href="./sprite.svg#icon-vk"></use>
                   </svg>
@@ -85,6 +88,7 @@
               </li>
               <li>
                 <a class="social-list__item social-list__item--header" href="#">
+                  Погнали Инстаграм
                   <svg class="social-list__icon social-list__icon--insta" width="18" height="18">
                     <use xlink:href="./sprite.svg#icon-instagram"></use>
                   </svg>
@@ -108,7 +112,7 @@
       </section>
       <section class="my-form">
         <h2 class="visually-hidden">Форма с подробными шагами для выбора подходящего попутчика</h2>
-        <form class="my-form__form" action="https://echo.htmlacademy.ru" method="post">
+        <form class="my-form__form-search" action="https://echo.htmlacademy.ru" method="post">
           <div class="my-form__my-profile my-profile">
             <h3 class="visually-hidden">Настройки моих предпочтений и аватара</h3>
             <div class="container">
@@ -144,24 +148,24 @@
                     <label class="my-profile__label my-profile__label--hashtags" for="hashtags-field">Тэги</label>
                     <textarea class="my-profile__hashtags" name="hashtags" id="hashtags-field" placeholder="Коротко о себе в виде 5-8 хештэгов">#бургер #бар #футбол #концерт #крафт</textarea>
                   </div>
-                  <div class="my-profile__vehicle-wrapper">
-                    <span class="my-profile__label my-profile__label--vehicle">Транспорт</span>
-                    <ul class="my-profile__vehicle-list">
+                  <div class="my-profile__transport-wrapper">
+                    <span class="my-profile__label my-profile__label--transport">Транспорт</span>
+                    <ul class="my-profile__transport-list transport-list">
                       <li>
-                        <input class="form-search__vehicle-checkbox form-search__vehicle-checkbox-plane" type="checkbox" name="vehicle" value="plane" id="plane-field" checked>
-                        <label class="form-search__vehicle-label form-search__vehicle-label--form" for="plane-field"></label>
+                        <input class="transport-list__vehicle-checkbox transport-list__vehicle-checkbox-plane" type="checkbox" name="vehicle" value="plane" id="plane-field" checked>
+                        <label class="transport-list__vehicle-label transport-list__vehicle-label--form" for="plane-field"></label>
                       </li>
                       <li>
-                        <input class="form-search__vehicle-checkbox form-search__vehicle-checkbox-bus" type="checkbox" name="vehicle" value="bus" id="bus-field" checked>
-                        <label class="form-search__vehicle-label form-search__vehicle-label--form" for="bus-field"></label>
+                        <input class="transport-list__vehicle-checkbox transport-list__vehicle-checkbox-bus" type="checkbox" name="vehicle" value="bus" id="bus-field" checked>
+                        <label class="transport-list__vehicle-label transport-list__vehicle-label--form" for="bus-field"></label>
                       </li>
                       <li>
-                        <input class="form-search__vehicle-checkbox form-search__vehicle-checkbox-velo" type="checkbox" name="vehicle" value="velo" id="velo-field">
-                        <label class="form-search__vehicle-label form-search__vehicle-label--form" for="velo-field"></label>
+                        <input class="transport-list__vehicle-checkbox transport-list__vehicle-checkbox-velo" type="checkbox" name="vehicle" value="velo" id="velo-field">
+                        <label class="transport-list__vehicle-label transport-list__vehicle-label--form" for="velo-field"></label>
                       </li>
                       <li>
-                        <input class="form-search__vehicle-checkbox form-search__vehicle-checkbox-foot" type="checkbox" name="vehicle" value="foot" id="foot-field" checked>
-                        <label class="form-search__vehicle-label form-search__vehicle-label--form" for="foot-field"></label>
+                        <input class="transport-list__vehicle-checkbox transport-list__vehicle-checkbox-foot" type="checkbox" name="vehicle" value="foot" id="foot-field" checked>
+                        <label class="transport-list__vehicle-label transport-list__vehicle-label--form" for="foot-field"></label>
                       </li>
                     </ul>
                   </div>
@@ -237,26 +241,26 @@
                       <div class="add-plan__value-input value-input">
                         <label class="value-input__label" for="companions-value-field">Ищу попутчиков:<span>чел.</span></label>
                         <input class="value-input__number-input" name="companions-value" id="companions-value-field" type="text" value="2">
-                        <button class="value-input__button value-input__button--minus" type="button"></button>
-                        <button class="value-input__button value-input__button--plus" type="button"></button>
+                        <button class="value-input__button value-input__button--minus" type="button">Минус один</button>
+                        <button class="value-input__button value-input__button--plus" type="button">Плюс один</button>
                       </div>
                       <div class="add-plan__value-input value-input">
                         <label class="value-input__label" for="days-value-field">Длительность<span>дн.</span></label>
                         <input class="value-input__number-input" name="days-value" id="days-value-field" type="text" value="2">
-                        <button class="value-input__button value-input__button--minus" type="button"></button>
-                        <button class="value-input__button value-input__button--plus" type="button"></button>
+                        <button class="value-input__button value-input__button--minus" type="button">Минус один</button>
+                        <button class="value-input__button value-input__button--plus" type="button">Плюс один</button>
                       </div>
                       <label class="add-plan__checkbox-label">
                         <input class="add-plan__checkbox-input" type="checkbox" name="childs" checked>
-                        <span class="add-plan__checkbox-mark"></span>
                         Можно с детьми
+                        <span class="add-plan__checkbox-mark"></span>
                       </label>
                   </div>
                   <div class="add-plan__calendar calendar">
                       <div class="calendar__title-wrapper">
-                        <button class="calendar__prev-month"></button>
+                        <button class="calendar__prev-month">На месяц назад</button>
                         <p class="calendar__month">Март 2019</p>
-                        <button class="calendar__next-month"></button>
+                        <button class="calendar__next-month">На месяц вперед</button>
                       </div>
                       <table class="calendar__table">
                         <thead>
@@ -293,68 +297,68 @@
                         </thead>
                         <tbody>
                           <tr>
-                            <td class="calendar__day">23</td>
-                            <td class="calendar__day">24</td>
-                            <td class="calendar__day">25</td>
-                            <td class="calendar__day">26</td>
-                            <td class="calendar__day">27</td>
-                            <td class="calendar__day">28</td>
+                            <td class="calendar__day"><span>23</span></td>
+                            <td class="calendar__day"><span>24</span></td>
+                            <td class="calendar__day"><span>25</span></td>
+                            <td class="calendar__day"><span>26</span></td>
+                            <td class="calendar__day"><span>27</span></td>
+                            <td class="calendar__day"><span>28</span></td>
                             <td class="calendar__day">
                                 <span class="calendar__day-name calendar__day-name--mobile-month">1</span>
                                 <span class="calendar__day-name calendar__day-name--desktop">1 мар</span>
                             </td>
                           </tr>
                           <tr>
-                            <td class="calendar__day">2</td>
-                            <td class="calendar__day">3</td>
-                            <td class="calendar__day">4</td>
-                            <td class="calendar__day">5</td>
-                            <td class="calendar__day">6</td>
-                            <td class="calendar__day">7</td>
-                            <td class="calendar__day">8</td>
+                            <td class="calendar__day"><span>2</span></td>
+                            <td class="calendar__day"><span>3</span></td>
+                            <td class="calendar__day"><span>4</span></td>
+                            <td class="calendar__day"><span>5</span></td>
+                            <td class="calendar__day"><span>6</span></td>
+                            <td class="calendar__day"><span>7</span></td>
+                            <td class="calendar__day"><span>8</span></td>
                           </tr>
                           <tr>
-                            <td class="calendar__day">9</td>
-                            <td class="calendar__day">10</td>
-                            <td class="calendar__day">11</td>
-                            <td class="calendar__day">12</td>
-                            <td class="calendar__day">13</td>
-                            <td class="calendar__day">14</td>
-                            <td class="calendar__day">15</td>
+                            <td class="calendar__day"><span>9</span></td>
+                            <td class="calendar__day"><span>10</span></td>
+                            <td class="calendar__day"><span>11</span></td>
+                            <td class="calendar__day"><span>12</span></td>
+                            <td class="calendar__day"><span>13</span></td>
+                            <td class="calendar__day"><span>14</span></td>
+                            <td class="calendar__day"><span>15</span></td>
                           </tr>
                           <tr>
-                            <td class="calendar__day">16</td>
-                            <td class="calendar__day">17</td>
-                            <td class="calendar__day">18</td>
-                            <td class="calendar__day">19</td>
-                            <td class="calendar__day">20</td>
-                            <td class="calendar__day">21</td>
-                            <td class="calendar__day">22</td>
+                            <td class="calendar__day"><span>16</span></td>
+                            <td class="calendar__day"><span>17</span></td>
+                            <td class="calendar__day"><span>18</span></td>
+                            <td class="calendar__day"><span>19</span></td>
+                            <td class="calendar__day"><span>20</span></td>
+                            <td class="calendar__day"><span>21</span></td>
+                            <td class="calendar__day"><span>22</span></td>
                           </tr>
                           <tr>
-                            <td class="calendar__day">23</td>
-                            <td class="calendar__day">24</td>
-                            <td class="calendar__day">25</td>
+                            <td class="calendar__day"><span>23</span></td>
+                            <td class="calendar__day"><span>24</span></td>
+                            <td class="calendar__day"><span>25</span></td>
                             <td class="calendar__day calendar__day--select calendar__day--current">
                               <span class="calendar__arrival-date">26</span>
                             </td>
-                            <td class="calendar__day calendar__day--select">27</td>
+                            <td class="calendar__day calendar__day--select"><span>27</span></td>
                             <td class="calendar__day calendar__day--select">
                               <span class="calendar__departure-date">28</span>
                             </td>
-                            <td class="calendar__day calendar__day--future">29</td>
+                            <td class="calendar__day calendar__day--future"><span>29</span></td>
                           </tr>
                           <tr>
-                            <td class="calendar__day calendar__day--future">30</td>
-                            <td class="calendar__day calendar__day--future">31</td>
+                            <td class="calendar__day calendar__day--future"><span>30</span></td>
+                            <td class="calendar__day calendar__day--future"><span>31</span></td>
                             <td class="calendar__day calendar__day--future">
                               <span class="calendar__day-name calendar__day-name--mobile-month">1</span>
                               <span class="calendar__day-name calendar__day-name--desktop">1 апр</span>
                             </td>
-                            <td class="calendar__day calendar__day--future">2</td>
-                            <td class="calendar__day calendar__day--future">3</td>
-                            <td class="calendar__day calendar__day--future">4</td>
-                            <td class="calendar__day calendar__day--future">5</td>
+                            <td class="calendar__day calendar__day--future"><span>2</span></td>
+                            <td class="calendar__day calendar__day--future"><span>3</span></td>
+                            <td class="calendar__day calendar__day--future"><span>4</span></td>
+                            <td class="calendar__day calendar__day--future"><span>5</span></td>
                           </tr>
                         </tbody>
                       </table>
@@ -389,11 +393,14 @@
                   <div class="add-plan__input-country input-country">
                     <input class="input-country__field" type="text" value="Босния и Герцеговина" name="country" readonly>
                     <span class="input-country__indicator"></span>
-                    <button type="button" class="input-country__open-list-button"></button>
+                    <button type="button" class="input-country__open-list-button">
+                      Открыть меню выбора страны
+                    </button>
                     <div class="input-country__flag-wrapper">
                       <img class="input-country__flag-image" src="./img/flag-bosnia.svg" alt="Босния" width="35" height="24">
                     </div>
                     <button type="button" class="input-country__close-button">
+                      Закрыть меню выбора страны
                       <span></span>
                     </button>
                   </div>
@@ -401,11 +408,14 @@
                   <div class="add-plan__input-country input-country">
                     <input class="input-country__field" type="text" value="Чехословакия" name="country" readonly>
                     <span class="input-country__indicator"></span>
-                    <button type="button" class="input-country__open-list-button"></button>
+                    <button type="button" class="input-country__open-list-button">
+                      Открыть меню выбора страны
+                    </button>
                     <div class="input-country__flag-wrapper">
                       <img class="input-country__flag-image" src="./img/flag-czech.svg" alt="Босния" width="35" height="24">
                     </div>
                     <button type="button" class="input-country__close-button">
+                      Закрыть меню выбора страны
                       <span></span>
                     </button>
                   </div>
@@ -418,6 +428,7 @@
                       <span class="input-country__flag-image input-country__flag-image--czech"></span>
                     </div>
                     <button type="button" class="input-country__close-button input-country__close-button--choose-country">
+                      Закрыть меню выбора страны
                       <span></span>
                     </button>
                   </div>
@@ -507,6 +518,7 @@
           <ul class="page-footer__social-list social-list social-list--footer">
             <li>
               <a class="social-list__item social-list__item--footer" href="#">
+                Погнали Фейсбук
                 <svg class="social-list__icon social-list__icon--footer social-list__icon--fb" width="11" height="22">
                   <use xlink:href="./img/sprite.svg#icon-facebook"></use>
                 </svg>
@@ -514,6 +526,7 @@
             </li>
             <li>
               <a class="social-list__item social-list__item--footer" href="#">
+                Погнали Вконтакте
                 <svg class="social-list__icon social-list__icon--footer social-list__icon--vk" width="23" height="12">
                   <use xlink:href="./img/sprite.svg#icon-vk"></use>
                 </svg>
@@ -521,6 +534,7 @@
             </li>
             <li>
               <a class="social-list__item social-list__item--footer" href="#">
+                Погнали Инстаграм
                 <svg class="social-list__icon social-list__icon--footer social-list__icon--insta" width="18" height="18">
                   <use xlink:href="./img/sprite.svg#icon-instagram"></use>
                 </svg>
@@ -536,130 +550,130 @@
         </div>
       </div>
     </footer>
-    <section class="modal modal__alphabet">
+    <section class="modal modal__alphabet alphabet">
       <h2 class="visually-hidden">Модальное окно выбора направления и страны</h2>
-      <div class="alphabet-form__wrapper">
-        <div class="alphabet-form__shadow-wrapper">
-          <div class="alphabet-form">
-            <div class="alphabet-form__letter-wrapper alphabet-form__letter-wrapper--active">
-              <span class="alphabet-form__letter">А</span>
+      <div class="alphabet__wrapper">
+        <div class="alphabet__shadow-wrapper">
+          <div class="alphabet__form">
+            <div class="alphabet__letter-wrapper alphabet__letter-wrapper--active">
+              <span class="alphabet__letter">А</span>
             </div>
-            <div class="alphabet-form__letter-wrapper">
-              <span class="alphabet-form__letter">Б</span>
+            <div class="alphabet__letter-wrapper">
+              <span class="alphabet__letter">Б</span>
             </div>
-            <div class="alphabet-form__letter-wrapper">
-              <span class="alphabet-form__letter">В</span>
+            <div class="alphabet__letter-wrapper">
+              <span class="alphabet__letter">В</span>
             </div>
-            <div class="alphabet-form__letter-wrapper">
-              <span class="alphabet-form__letter">Г</span>
+            <div class="alphabet__letter-wrapper">
+              <span class="alphabet__letter">Г</span>
             </div>
-            <div class="alphabet-form__letter-wrapper">
-              <span class="alphabet-form__letter">Д</span>
+            <div class="alphabet__letter-wrapper">
+              <span class="alphabet__letter">Д</span>
             </div>
-            <div class="alphabet-form__letter-wrapper">
-              <span class="alphabet-form__letter">Е</span>
+            <div class="alphabet__letter-wrapper">
+              <span class="alphabet__letter">Е</span>
             </div>
-            <div class="alphabet-form__letter-wrapper">
-              <span class="alphabet-form__letter">Ё</span>
+            <div class="alphabet__letter-wrapper">
+              <span class="alphabet__letter">Ё</span>
             </div>
-            <div class="alphabet-form__letter-wrapper">
-              <span class="alphabet-form__letter">Ж</span>
+            <div class="alphabet__letter-wrapper">
+              <span class="alphabet__letter">Ж</span>
             </div>
-            <div class="alphabet-form__letter-wrapper">
-              <span class="alphabet-form__letter">З</span>
+            <div class="alphabet__letter-wrapper">
+              <span class="alphabet__letter">З</span>
             </div>
-            <div class="alphabet-form__letter-wrapper">
-              <span class="alphabet-form__letter">И</span>
+            <div class="alphabet__letter-wrapper">
+              <span class="alphabet__letter">И</span>
             </div>
-            <div class="alphabet-form__letter-wrapper">
-              <span class="alphabet-form__letter">Й</span>
+            <div class="alphabet__letter-wrapper">
+              <span class="alphabet__letter">Й</span>
             </div>
-            <div class="alphabet-form__letter-wrapper">
-              <span class="alphabet-form__letter">К</span>
+            <div class="alphabet__letter-wrapper">
+              <span class="alphabet__letter">К</span>
             </div>
-            <div class="alphabet-form__letter-wrapper">
-              <span class="alphabet-form__letter">Л</span>
+            <div class="alphabet__letter-wrapper">
+              <span class="alphabet__letter">Л</span>
             </div>
-            <div class="alphabet-form__letter-wrapper">
-              <span class="alphabet-form__letter">М</span>
+            <div class="alphabet__letter-wrapper">
+              <span class="alphabet__letter">М</span>
             </div>
-            <div class="alphabet-form__letter-wrapper">
-              <span class="alphabet-form__letter">Н</span>
+            <div class="alphabet__letter-wrapper">
+              <span class="alphabet__letter">Н</span>
             </div>
-            <div class="alphabet-form__letter-wrapper">
-              <span class="alphabet-form__letter">О</span>
+            <div class="alphabet__letter-wrapper">
+              <span class="alphabet__letter">О</span>
             </div>
-            <div class="alphabet-form__letter-wrapper">
-              <span class="alphabet-form__letter">П</span>
+            <div class="alphabet__letter-wrapper">
+              <span class="alphabet__letter">П</span>
             </div>
-            <div class="alphabet-form__letter-wrapper">
-              <span class="alphabet-form__letter">Р</span>
+            <div class="alphabet__letter-wrapper">
+              <span class="alphabet__letter">Р</span>
             </div>
-            <div class="alphabet-form__letter-wrapper">
-              <span class="alphabet-form__letter">С</span>
+            <div class="alphabet__letter-wrapper">
+              <span class="alphabet__letter">С</span>
             </div>
-            <div class="alphabet-form__letter-wrapper">
-              <span class="alphabet-form__letter">Т</span>
+            <div class="alphabet__letter-wrapper">
+              <span class="alphabet__letter">Т</span>
             </div>
-            <div class="alphabet-form__letter-wrapper">
-              <span class="alphabet-form__letter">У</span>
+            <div class="alphabet__letter-wrapper">
+              <span class="alphabet__letter">У</span>
             </div>
-            <div class="alphabet-form__letter-wrapper">
-              <span class="alphabet-form__letter">Ф</span>
+            <div class="alphabet__letter-wrapper">
+              <span class="alphabet__letter">Ф</span>
             </div>
-            <div class="alphabet-form__letter-wrapper">
-              <span class="alphabet-form__letter">Х</span>
+            <div class="alphabet__letter-wrapper">
+              <span class="alphabet__letter">Х</span>
             </div>
-            <div class="alphabet-form__letter-wrapper">
-              <span class="alphabet-form__letter">Ц</span>
+            <div class="alphabet__letter-wrapper">
+              <span class="alphabet__letter">Ц</span>
             </div>
-            <div class="alphabet-form__letter-wrapper">
-              <span class="alphabet-form__letter">Ч</span>
+            <div class="alphabet__letter-wrapper">
+              <span class="alphabet__letter">Ч</span>
             </div>
-            <div class="alphabet-form__letter-wrapper">
-              <span class="alphabet-form__letter">Ш</span>
+            <div class="alphabet__letter-wrapper">
+              <span class="alphabet__letter">Ш</span>
             </div>
-            <div class="alphabet-form__letter-wrapper">
-              <span class="alphabet-form__letter">Щ</span>
+            <div class="alphabet__letter-wrapper">
+              <span class="alphabet__letter">Щ</span>
             </div>
-            <div class="alphabet-form__letter-wrapper">
-              <span class="alphabet-form__letter">Э</span>
+            <div class="alphabet__letter-wrapper">
+              <span class="alphabet__letter">Э</span>
             </div>
-            <div class="alphabet-form__letter-wrapper">
-              <span class="alphabet-form__letter">Ю</span>
+            <div class="alphabet__letter-wrapper">
+              <span class="alphabet__letter">Ю</span>
             </div>
-            <div class="alphabet-form__letter-wrapper">
-              <span class="alphabet-form__letter">Я</span>
+            <div class="alphabet__letter-wrapper">
+              <span class="alphabet__letter">Я</span>
             </div>
           </div>
-          <div class="alphabet-form__list-wrapper">
-            <ul class="alphabet-form__list">
+          <div class="alphabet__list-wrapper">
+            <ul class="alphabet__list">
               <li>
-                <p class="alphabet-form__country">Афганистан</p>
+                <p class="alphabet__country">Афганистан</p>
               </li>
               <li>
-                <p class="alphabet-form__country">Албания</p>
+                <p class="alphabet__country">Албания</p>
               </li>
               <li>
-                <p class="alphabet-form__country">Алгерия</p>
+                <p class="alphabet__country">Алгерия</p>
               </li>
               <li>
-                <p class="alphabet-form__country">Андорра</p>
+                <p class="alphabet__country">Андорра</p>
               </li>
               <li>
-                <p class="alphabet-form__country">Аргентина</p>
+                <p class="alphabet__country">Аргентина</p>
               </li>
               <li>
-                <p class="alphabet-form__country">Армения</p>
+                <p class="alphabet__country">Армения</p>
               </li>
               <li>
-                <p class="alphabet-form__country">Австралия</p>
+                <p class="alphabet__country">Австралия</p>
               </li>
               <li>
-                <p class="alphabet-form__country">Австрия</p>
+                <p class="alphabet__country">Австрия</p>
               </li>
               <li>
-                <p class="alphabet-form__country">Азербайджан</p>
+                <p class="alphabet__country">Азербайджан</p>
               </li>
             </ul>
           </div>
@@ -667,6 +681,5 @@
       </div>
     </section>
     <script src="./js/script-form.js"></script>
-    <script defer src="node_modules/svgxuse/svgxuse.js"></script>
   </body>
 </html>

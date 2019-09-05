@@ -22,6 +22,10 @@
     color: #1d2e5b;
   }
 
+  &__inputs-wrapper {
+    margin-bottom: 22px;
+  }
+
   &__markers-wrapper {
     display: flex;
     flex-wrap: wrap;
@@ -96,61 +100,64 @@
     margin-bottom: 21px;
 
     &:last-of-type {
-      margin-bottom: 28px;
+      margin-bottom: 24px;
     }
   }
 
   &__checkbox-input {
+    opacity: 0;
+    width: 0;
     position: absolute;
-    visibility: hidden;
   }
 
-  &__checkbox-label {
-    position: relative;
+  &__checkbox-input:checked + .add-plan__checkbox-mark::before {
     display: block;
-    padding-left: 40px;
-    margin-bottom: 25px;
-    font-size: 15px;
-    line-height: 15px;
-    color: #444444;
-    cursor: pointer;
+  }
 
-    &:hover .add-plan__checkbox-mark {
-      border-color: #959bb2;
-    }
-
-    &:active .add-plan__checkbox-mark {
-      border-color: #e2e5f1;
-      background-color: #e2e5f1;
-
-      &::after {
-        opacity: 0.3;
-      }
-    }
+  &__checkbox-input:focus + .add-plan__checkbox-mark {
+    outline: 1px solid blue;
   }
 
   &__checkbox-mark {
     position: absolute;
-    display: block;
-    top: -8px;
-    left: 0;
+    top: 439px;
+    left: 50px;
     width: 24px;
     height: 24px;
-    border: 1px solid #ced1db;
+    border: 1px solid #cbced9;
     border-radius: 3px;
     background-color: #ffffff;
+
+    &::before {
+      position: absolute;
+      display: none;
+      content: "";
+      top: 8px;
+      left: 8px;
+      width: 10px;
+      height: 10px;
+      background: url("../../img/tick.svg") no-repeat 50% 50%;
+    }
+  }
+
+  &__checkbox-label {
+    padding-left: 40px;
+    font-size: 15px;
+    line-height: 15px;
+    color: #444444;
     cursor: pointer;
   }
 
-  &__checkbox-input:checked + .add-plan__checkbox-mark {
-    &::after {
-      position: absolute;
-      content: "";
-      top: 8px;
-      left: 9px;
-      width: 9px;
-      height: 9px;
-      background: url("../../img/tick.svg") no-repeat 50% 50%;
+  &__checkbox-label:hover .add-plan__checkbox-mark {
+    border-color: #959bb2;
+  }
+
+  &__checkbox-input:active + .add-plan__checkbox-mark {
+    border-color: #e2e5f1;
+    background-color: #e2e5f1;
+
+    &::before {
+      opacity: 0.3;
     }
   }
 
@@ -426,18 +433,16 @@
     }
 
     &__checkbox-mark {
-      top: -10px;
-      left: 1px;
+      top: 526px;
+      left: 119px;
       width: 34px;
       height: 34px;
-    }
 
-    &__checkbox-input:checked + .add-plan__checkbox-mark {
-      &::after {
+      &::before {
         top: 11px;
         left: 10px;
-        width: 15px;
-        height: 12px;
+        width: 16px;
+        height: 13px;
       }
     }
 
@@ -656,6 +661,7 @@
 
     &__inputs-wrapper {
       padding-top: 55px;
+      margin-bottom: 0;
       padding-bottom: 0;
       max-height: 160px;
       justify-content: flex-start;
@@ -673,6 +679,11 @@
       top: 427px;
       right: 223px;
       margin-bottom: 0;
+    }
+
+    &__checkbox-mark {
+      top: -10px;
+      left: 0;
     }
 
     &__calendar {
